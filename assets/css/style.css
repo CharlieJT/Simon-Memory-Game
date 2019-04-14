@@ -31,7 +31,7 @@ body {
 }
 
 .controlContainer {
-    display: inline;  
+    display: inline;
     width: 100%;
 }
 
@@ -86,7 +86,7 @@ body {
 }
 
 .controlLabel {
-   display: block; 
+    display: block;
 }
 
 .simonLabel {
@@ -117,12 +117,14 @@ body {
 }
 
 .onOffSwitch {
+    position: relative;
+    bottom: 12px;
     width: 70px;
     height: 35px;
     float: right;
     background-color: #000;
     border-radius: 3.25rem;
-    margin-right: 46px;
+    margin-right: 42px;
 }
 
 .onOffSlider {
@@ -139,21 +141,32 @@ body {
     line-height: 3em;
     font-weight: bold;
     text-shadow: none;
+    -o-text-shadow: none;
+    -moz-text-shadow: none;
+    -webkit-text-shadow: none;
 }
 
 .startBtn {
     float: left;
-    margin-left: 60px;
+    margin-left: 40px;
+    margin-top: 18px;
+    padding: 8px;
     cursor: pointer;
     line-height: 3em;
     font-weight: bold;
-    background-color: #ff0000;
-    height: 30px;
-    width: 30px;
-    font-size: 0.7em;
+    background-color: #58e23e;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
-    border: solid 2.5px #791919;
+    border: solid 2.5px #256319;
+    text-shadow: none;
+    -o-text-shadow: none;
+    -moz-text-shadow: none;
+    -webkit-text-shadow: none;
     box-shadow: 2px 2px 15px #000000;
+    -o-box-shadow: 2px 2px 15px #000000;
+    -moz-box-shadow: 2px 2px 15px #000000;
+    -webkit-box-shadow: 2px 2px 15px #000000;
 }
 
 
@@ -161,5 +174,4 @@ body {
     background-color: #58e23e;
     float: right;
     border-color: #3b942a;
-    font-size: 0.7em;
 }
