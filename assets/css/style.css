@@ -15,12 +15,12 @@ body {
 
 /*---------------------------------- Containers */
 
-.headingContainer {
+.heading-container {
     margin: auto;
     width: 100%;
 }
 
-.boardContainer {
+.board-container {
     display: flex;
     margin: 0 auto;
     margin-top: 50px;
@@ -30,7 +30,7 @@ body {
     border-radius: 50%;
 }
 
-.controlContainer {
+.control-container {
     display: inline;
     width: 100%;
 }
@@ -50,22 +50,22 @@ body {
     box-shadow: 6px 7px 10px 3px rgba(0, 0, 0, 0.75);
 }
 
-.simonBoard .green {
+.simon-board .green {
     background-color: #58e23e;
     border-radius: 100% 0 0 0;
 }
 
-.simonBoard .red {
+.simon-board .red {
     background-color: #ff0000;
     border-radius: 0 100% 0 0;
 }
 
-.simonBoard .yellow {
+.simon-board .yellow {
     background-color: #fffb00;
     border-radius: 0 0 0 100%;
 }
 
-.simonBoard .blue {
+.simon-board .blue {
     background-color: #0000ff;
     border-radius: 0 0 100% 0;
 }
@@ -85,17 +85,17 @@ body {
     line-height: 60px;
 }
 
-.controlLabel {
+.control-label {
     display: block;
 }
 
-.simonLabel {
+.simon-label {
     font-size: 1.6em;
     font-weight: bold;
     margin-top: 10px;
 }
 
-.numDisplay {
+.num-display {
     color: #da2d2d;
     background-color: #000;
     width: 85px;
@@ -106,17 +106,17 @@ body {
     font-size: 1.6em;
 }
 
-.startLabel {
+.start-label {
     display: inline;
     margin-right: 35px;
     line-height: 2.5em;
 }
 
-.strictLabel {
+.strict-label {
     display: inline;
 }
 
-.onOffSwitch {
+.on-off-switch {
     position: relative;
     bottom: 12px;
     width: 70px;
@@ -127,7 +127,7 @@ body {
     margin-right: 42px;
 }
 
-.onOffSlider {
+.on-off-slider {
     width: 30px;
     height: 30px;
     border-radius: 2.25rem;
@@ -136,7 +136,7 @@ body {
     cursor: pointer;
 }
 
-.onOffLabel {
+.on-off-label {
     font-size: 0.7em;
     line-height: 3em;
     font-weight: bold;
@@ -146,7 +146,7 @@ body {
     -webkit-text-shadow: none;
 }
 
-.startBtn {
+.start-btn {
     float: left;
     margin-left: 40px;
     margin-top: 18px;
@@ -170,7 +170,7 @@ body {
 }
 
 
-.powerOn {
+.power-on {
     background-color: #58e23e;
     float: right;
     border-color: #3b942a;
