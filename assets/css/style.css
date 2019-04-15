@@ -45,29 +45,47 @@ body {
     border: solid 4px #000;
     width: 292px;
     height: 292px;
-    -webkit-box-shadow: 6px 7px 10px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 7px 10px 3px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 7px 10px 3px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    box-shadow: 2px 2px 15px #000000;
+    -o-box-shadow: 2px 2px 15px #000000;
+    -moz-box-shadow: 2px 2px 15px #000000;
+    -webkit-box-shadow: 2px 2px 15px #000000;
 }
 
-.simon-board .green {
-    background-color: #58e23e;
+.green {
+    background-color: #4fce37;
     border-radius: 100% 0 0 0;
 }
 
-.simon-board .red {
-    background-color: #ff0000;
+.red {
+    background-color: #dc0000;
     border-radius: 0 100% 0 0;
 }
 
-.simon-board .yellow {
-    background-color: #fffb00;
+.yellow {
+    background-color: #dcd900;
     border-radius: 0 0 0 100%;
 }
 
-.simon-board .blue {
-    background-color: #0000ff;
+.blue {
+    background-color: #0101e4;
     border-radius: 0 0 100% 0;
+}
+
+.green-light {
+    background-color: rgba(79, 206, 55, 0.4);
+}
+
+.red-light {
+    background-color: rgba(220, 0, 0, 0.4);
+}
+
+.yellow-light {
+    background-color: rgba(219, 217, 55, 0.4);
+}
+
+.blue-light {
+    background-color: rgba(1, 0, 255, 0.4);
 }
 
 /*---------------------------------- Simon Board Controls */
