@@ -11,46 +11,63 @@
 	<!-- Favicon -->
 	<link class="favicon" rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
-	<!-- CSS Links -->
+	<!-- CSS Link -->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+	<!-- jQuery Link -->
+	<script type="text/javascript" src="assets/js/jquery-3.3.1.js"></script>
+
+	<!-- Sound Clips -->
+	<audio id="sound-1">
+    	<source src="assets/sounds/sounds-1.mp3" type="audio/mpeg"/>
+    </audio>
+    <audio id="sound-2">
+    	<source src="assets/sounds/sounds-2.mp3" type="audio/mpeg"/>
+    </audio>
+    <audio id="sound-3">
+    	<source src="assets/sounds/sounds-3.mp3" type="audio/mpeg"/>
+    </audio>
+    <audio id="sound-4">
+    	<source src="assets/sounds/sounds-4.mp3" type="audio/mpeg"/>
+    </audio>
 
 </head>
 
 <body>
+	<!-- Main Title -->
 	<div class="container headingContainer">
 		<div class="row">
 			<h1>SIMON GAME</h1>
 		</div>
 	</div>
+	<!-- Simon Board -->
 	<div class="container boardContainer">
 		<div class="simonBoard">
+			<!-- Pad Colours -->
 			<div id="0" class="pad green"></div>
 			<div id="1" class="pad red"></div>
 			<div id="2" class="pad yellow"></div>
 			<div id="3" class="pad blue"></div>
+			<!-- pad.colors -->
 			<div class="controls">
 				<div class="controlLabel simonLabel">Simon</div>
 				<div class="controlLabel numDisplay">00</div>
-				<div class="startLabel">START</div>
+				<div class="startBtn">Start
+				</div>
 				<div class="strictLabel">STRICT</div>
-				<br>
 				<div class="container controlContainer">
-					<div class="startBtn">
-						OFF
-					</div>
 					<div class="onOffSwitch">
-						<div class="onOffSlider">
-							<div class="onOffLabel">OFF</div>
-						</div>
+						<div class="onOffSlider"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+	<!-- simon.board -->
+
 	<!-- JavaScript Links, Scripts located at the bottom of the body to insure page is fully loaded before execution -->
 	<script type="text/javascript" src="assets/js/script.js"></script>
-	<script type="text/javascript" src="assets/js/jquery-3.3.1.js"></script>
+
 </body>
 
 </html>
