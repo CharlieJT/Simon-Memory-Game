@@ -3,6 +3,7 @@
 var playerSeq = [];
 var compSeq = [];
 var active = false;
+var turnTick = 0;
 var id, color, lvl = 0; // id, color & lvl are all initialised at 0
 var greenSound = document.getElementById("sound-green"); //for audio
 var redSound = document.getElementById("sound-red");
@@ -16,16 +17,14 @@ $(document).ready(function() {
     $(".start-btn").on("click", function() {
         lvl = 0;
         compSeq = [];
-        playerSeq = [];
-        lvl++;
         startPlay();
     });
-    
+
     $(".pad").on("click", function() {
         id = $(this).attr("id");
         color = $(this).attr("class").split(" ")[1];
         playerSeq.push(id);
-        console.log(id+" "+color);
+        console.log(id + " " + color);
         addSoundClass(id, color);
         // Checking player sequence
         if (!PersonSequenceCheck()) {
@@ -38,6 +37,9 @@ $(document).ready(function() {
             playerSeq = [];
             startPlay();
         }
+        else {
+            active = false;
+        }
     });
 });
 
@@ -45,8 +47,7 @@ function showError() {
     console.log("Error!");
     var count = 0;
     var myError = setInterval(function() {
-        $(".num-display").text("Error");
-        
+        $(".num-display").text("Lose!");
         count++;
         if (count == 3) {
             $(".num-display").text(lvl);
@@ -60,13 +61,13 @@ function showError() {
 
 // This checks to ensure Player Sequence is the same as Computer Sequence
 function PersonSequenceCheck() {
-    for(var i = 0; i < playerSeq.length; i++) {
+    for (var i = 0; i < playerSeq.length; i++) {
         if (playerSeq[i] != compSeq[i]) {
             return false;
         }
     }
     return true;
-}
+};
 
 // Computer Sequence.
 function startPlay() {
@@ -74,10 +75,10 @@ function startPlay() {
     $(".num-display").text(lvl);
     getRandomNumber();
     var i = 0;
-    var myInterval = setInterval(function () {
+    var myInterval = setInterval(function() {
         id = compSeq[i];
-        color = $("#"+id).attr("class").split(" ")[1];
-        console.log(id+" "+color)
+        color = $("#" + id).attr("class").split(" ")[1];
+        console.log(id + " " + color)
         addSoundClass(id, color);
         i++;
         if (i == compSeq.length) {
@@ -95,12 +96,44 @@ function getRandomNumber() {
 
 // A Light & sound will be generated
 function addSoundClass(id, color) {
-    $("#"+id).addClass(color+"-light");
-    blueSoundGenerate();
+    $("#" + id).addClass(color + "-light");
+    if (id === 0) {
+        greenSound.play();
+    } else if (id === 1) {
+        redSound.play();  
+    } else if (id === 2) {
+        yellowSound.play();  
+    } else if (id === 3) {
+        blueSound.play();  
+    };
+    $("#0").on("click", function() {
+        greenSound.play();
+    });
+    $("#1").on("click", function() {
+        redSound.play();
+    });
+    $("#2").on("click", function() {
+        yellowSound.play();
+    });
+    $("#3").on("click", function() {
+        blueSound.play();
+    });
     setTimeout(function() {
-      $("#"+id).removeClass(color+"-light");  
+        $("#" + id).removeClass(color + "-light");
     }, 500);
 }
+
+function greenSoundGenerate() {
+    greenSound.play();
+};
+
+function redSoundGenerate() {
+    redSound.play();
+};
+
+function yellowSoundGenerate() {
+    yellowSound.play();
+};
 
 function blueSoundGenerate() {
     blueSound.play();
