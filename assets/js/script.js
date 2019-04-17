@@ -10,7 +10,7 @@ var blueSound = document.getElementById("sound-blue");
 var gameOverSound = document.getElementById("sound-lost");
 
 
-// Initialising sequence.
+// Initialise sequence.
 $(document).ready(function() {
     $(".start-btn").on("click", function() {
         lvl = 0;
@@ -24,9 +24,9 @@ $(document).ready(function() {
         playerSeq.push(id);
         console.log(id + " " + color);
         addSoundClass(id, color);
-        // Checking player sequence
+        // Check player sequence
 
-        if (!PersonSequenceCheck()) {
+        if (!playerSequenceCheck()) {
             showError();
             playerSeq = [];
 
@@ -44,6 +44,9 @@ $(document).ready(function() {
         else {
             active = false;
         }
+    });
+    $(".on-off-slider").on("click", function() {
+        $(this).toggleClass("power-on");
     });
 });
 
@@ -64,8 +67,8 @@ function showError() {
     }, 200);
 };
 
-// Checks to ensure Player Sequence is the same as Computer Sequence
-function PersonSequenceCheck() {
+// Check to ensure Player Sequence is the same as Computer Sequence
+function playerSequenceCheck() {
     for (var i = 0; i < playerSeq.length; i++) {
         if (playerSeq[i] != compSeq[i]) {
             return false;
