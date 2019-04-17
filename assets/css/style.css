@@ -88,6 +88,10 @@ body {
     background-color: rgba(1, 0, 255, 0.4);
 }
 
+.disabled {
+    pointer-events: none; 
+}
+
 /*---------------------------------- Simon Board Controls */
 
 .controls {
