@@ -62,8 +62,11 @@ body {
 
 .strict-container {
     position: absolute;
-    margin-top: 125px;
+    margin-top: 149px;
+    margin-left: 50px;
     padding: 0px;
+    width: 29%;
+    line-height: 0;
 }
 
 /*---------------------------------- Simon Board Colors */
@@ -201,7 +204,7 @@ body {
     float: right;
     background-color: #000;
     border-radius: 3.25rem;
-    margin-right: 33px;
+    margin: 30px auto;
 }
 
 .on-off-slider {
@@ -276,21 +279,39 @@ body {
         margin-top: 22.8vw;
         padding: 1.6vw 1.4vw;
     }
+    .strict-container {
+        font-size: 2.6vw;
+        margin-top: 24.7vw;
+        margin-left: 8.3vw;
+    }
+    .on-off-switch {
+        width: 11.6vw;
+        height: 5.8vw;
+        margin-top: 5.4vw;
+    }
+    .on-off-slider {
+        width: 5.8vw;
+        height: 5.8vw;
+    }
 }
 
 @media (max-width:500px) {
-    
-    .start-btn {
-        margin-top: 22.8vw;
+    .on-off-switch {
+        margin-top: 6vw;
     }
 }
 
 @media (max-width:400px) {
-    
+    .on-off-switch {
+        margin-top: 6.1vw;
+    }
 }
 
 @media (max-width:350px) {
     .heading-container h1 {
         font-size: 1.8em;
+    }
+    .on-off-switch {
+        margin-top: 6.8vw;
     }
 }
