@@ -31,7 +31,7 @@
 	<!-- main.title -->
 	<button type="button" class="rules-button btn btn-primary" data-toggle="modal" data-target="#rulesModal">
   		<div class="game-rules-icon">
-			<p><i class="fa fa-question-circle"></i> How to Play</p>
+			<p><i class="fa fa-question-circle"></i> Game Info</p>
 		</div>
 	</button>
 	<!-- Simon Board -->
@@ -63,7 +63,7 @@
 		</div>
 	</div>
 	<!-- simon.board -->
-	
+
 	<!-- Footer -->
 	<div class="container-fluid footer-container">
 		<div class="row">
@@ -77,13 +77,26 @@
 		<div class="modal-dialog modal-dialog-scrollable" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalScrollableTitle">Simon Game Rules</h5>
+					<h5 class="modal-title" id="exampleModalScrollableTitle">Game Information</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           				<span aria-hidden="true">&times;</span>
         			</button>
 				</div>
 				<div class="modal-body">
-					...
+					<div class="buttons-box m-2 px-2 py-2">
+						<h3 class="text-center"><b>Buttons:</b></h3>
+						<p><b>1. Start - </b>To begin the game, press 'START' & your first sequence will commence. Also, click 'START' to begin a new game when it's game over!</p>
+						<p><b>1. Strict - </b>When 'STRICT' mode is activated (green), if you at any point get your sequence wrong, it will be game over. If 'STRICT' mode is not activated (red), then you can keep trying the current sequence over & over until you get it correct
+							& move to the next sequence.</p>
+						<p><b>2. Green Button - </b><i class="fa fa-music"></i> (D#).</p>
+						<p><b>3. Red Button - </b><i class="fa fa-music"></i> (G).</p>
+						<p><b>4. Yellow Button - </b><i class="fa fa-music"></i> (A#).</p>
+						<p><b>5. Blue Button - </b><i class="fa fa-music"></i> (D#).</p><br>
+						<h3 class="text-center"><b>Rules:</b></h3>
+						<p>When you press the 'START' button, the game will begin with a flashing colour of 1 of the 4 coloured pads from the board & will increment by 1 on the number display with each pattern you've followed correctly. Your goal is to repeat the pattern that has been generated 
+						by the computer until you get the sequence wrong. This game is a great test of skill & memory so be careful not to make a mistake!
+						</p><br>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700');
 
 /*---------------------------------- SPECIAL HELPERS */
 
@@ -31,6 +32,10 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
+}
+
+b {
+    font-size: 1.3em;
 }
 
 /*---------------------------------- CONTAINERS */
@@ -271,6 +276,7 @@ body {
     max-height: 61px;
     border-radius: 20px;
     margin: 20px;
+    padding-top: 0.6vw;
 }
 
 .fa-question-circle {
@@ -290,21 +296,23 @@ body {
     text-shadow: 1px 1px 6px #000000;
     -webkit-text-shadow: 1px 1px 6px #000000;
     -moz-text-shadow: 1px 1px 6px #000000;
-    top: 15vh;
+    top: 3vh;
     width: 100%;
 }
 
 .modal-title {
     text-align: center;
     width: 100%;
+    font-size: 2em;
 }
 
-.close {
-    color: #fff;
-}
-
+.close,
 .close:hover {
     color: #fff;
+}
+
+.modal-body {
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -347,7 +355,7 @@ body {
     }
     .rules-button {
         font-size: 2.8vw;
-        padding: 5px 0; 
+        padding: 0.6vw;
     }
 }
 
