@@ -3,10 +3,17 @@
 /*---------------------------------- Special Helpers */
 
 body {
+    
+    background: url(../images/simon-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: 'Orbitron', sans-serif;
     text-shadow: 1px 1px 6px #000000;
     -webkit-text-shadow: 1px 1px 6px #000000;
     -moz-text-shadow: 1px 1px 6px #000000;
+    margin: 0;
 }
 
 .row {
@@ -16,8 +23,16 @@ body {
 /*---------------------------------- Containers */
 
 .heading-container {
+    background-color: #000;
+    border-bottom: 1px solid #fff;
     margin: auto;
     width: 100%;
+    color: white;
+}
+
+.heading-container h1 {
+    margin: 0;
+    padding: 20px;
 }
 
 .board-container {
@@ -28,6 +43,7 @@ body {
     height: 600px;
     border: solid 6px #000;
     border-radius: 50%;
+    background-color: white;
 }
 
 .control-container {

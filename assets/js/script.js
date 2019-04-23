@@ -25,28 +25,24 @@ $(document).ready(function() {
         console.log(id + " " + color);
         addSoundClass(id, color);
         // Check player sequence
-
         if (!playerSequenceCheck()) {
             showError();
             playerSeq = [];
-
         }
         // End of Sequence
         if (playerSeq.length == compSeq.length) {
             lvl++;
-            $(".pad").addClass('disabled');
             setTimeout(function() {
                 startPlay();
                 playerSeq = [];
             }, 600);
-
         }
         else {
             active = false;
         }
     });
     $(".on-off-slider").on("click", function() {
-        $(this).toggleClass("power-on");
+        $(this).toggleClass("power-on")
     });
 });
 
@@ -96,7 +92,6 @@ function startPlay() {
             $(".pad").addClass('disabled');
         }
     }, 700);
-
 }
 
 // A Random number is generated
@@ -107,7 +102,6 @@ function getRandomNumber() {
 
 // A Light & sound will be generated
 function addSoundClass(id, color) {
-
     $("#" + id).addClass(color + "-light");
     $(".pad").addClass('disabled');
     if (id === 0) {
