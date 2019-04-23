@@ -149,7 +149,7 @@ body {
     max-height: 270px;
     border: solid 10px #000;
     border-radius: 50%;
-    line-height: 5vw;
+    line-height: 55px;
 }
 
 .control-label {
@@ -157,18 +157,23 @@ body {
 }
 
 .simon-label {
-    font-size: 1.6vw;
+    position: absolute;
+    font-size: 1.6em;
     font-weight: bold;
     margin-top: 10px;
 }
 
 
 .num-display {
+    position: absolute;
+    top: 55px;
     color: #da2d2d;
     background-color: #000;
-    width: 85px;
-    height: 56px;
-    margin: auto;
+    width: 13vw;
+    height: 10vw;
+    max-width: 78px;
+    max-height: 53px;
+    margin: 0 auto;
     border: solid 2px #da2d2d;
     border-radius: 15px;
     font-size: 1.6em;
@@ -176,9 +181,9 @@ body {
 
 
 .start-label {
+    position: absolute;
     display: inline;
     margin-right: 35px;
-    line-height: 2.5em;
 }
 
 .strict-label {
@@ -245,4 +250,25 @@ body {
     float: right;
     border-color: #3b942a;
 }
-*/
+
+/*---------------------------------- Media Queries */
+
+@media (max-width:600px) {
+    .simon-label {
+        font-size: 4.2vw;
+        line-height: 9.5vw;
+    }
+    .num-display {
+        top: 5.6vh;
+        width: 13vw;
+        height: 9vw;
+        font-size: 3.7vw;
+        line-height: 9.5vw;
+        border-radius: 2.3vw;
+    }
+}
+@media (max-width:400px) {
+    .num-display {
+        top: 4.7vh;
+    }
+}
