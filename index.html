@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="description" content="Simon Memory Game">
-    <meta name="keywords" content="Simon Memory, Memory Game, Brain Training, Memory, Game, Puzzle, Fun, Challenge">
-    <meta name="author" content="Charlie Tipton">
+	<meta name="keywords" content="Simon Memory, Memory Game, Brain Training, Memory, Game, Puzzle, Fun, Challenge">
+	<meta name="author" content="Charlie Tipton">
 	<title>Simon Game</title>
 
 	<!-- Favicon -->
@@ -27,20 +27,13 @@
 		<div class="row">
 			<h1>SIMON GAME</h1>
 		</div>
-		<div class="game-rules-icon">
-			<i class="fa fa-question-circle"></i>
-		</div>
 	</div>
 	<!-- main.title -->
-	<!-- High Scores -->
-	<div class="container-fluid high-scores-container">
-		<div class="row">
-			<div class="high-scores col-xs-12 col-sm-12">
-
-			</div>
+	<button type="button" class="rules-button btn btn-primary" data-toggle="modal" data-target="#rulesModal">
+  		<div class="game-rules-icon">
+			<p><i class="fa fa-question-circle"></i> How to Play</p>
 		</div>
-	</div>
-	<!-- high.scores -->
+	</button>
 	<!-- Simon Board -->
 	<div class="container-fluid board-container">
 		<div class="row">
@@ -70,6 +63,26 @@
 		</div>
 	</div>
 	<!-- simon.board -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalScrollableTitle">Simon Game Rules</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          				<span aria-hidden="true">&times;</span>
+        			</button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Sound Clips -->
 	<audio id="sound-green" src="assets/sounds/sound-1.mp3"></audio>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:100,200,300,400,500,600,700');
 
-/*---------------------------------- Special Helpers */
+/*---------------------------------- SPECIAL HELPERS */
 
 html,
 body {
@@ -33,19 +33,12 @@ body {
     margin: 0;
 }
 
-/*---------------------------------- Containers */
+/*---------------------------------- CONTAINERS */
 
 .heading-container {
-    background-color: rgba(112, 112, 112, 0.2);
+    background-color: rgba(112, 112, 112, 0.3);
     color: white;
     text-align: center;
-}
-
-.game-rules-icon {
-    color: #fff;
-    float: right;
-    margin: 20px;
-    font-size: 20px;
 }
 
 .board-container {
@@ -69,7 +62,7 @@ body {
     line-height: 0;
 }
 
-/*---------------------------------- Simon Board Colors */
+/*---------------------------------- SIMON BOARD COLOURS */
 
 .pad {
     position: relative;
@@ -88,22 +81,22 @@ body {
 }
 
 .green {
-    background-color: #4fce37;
+    background-color: #3da22a;
     border-radius: 100% 0 0 0;
 }
 
 .red {
-    background-color: #dc0000;
+    background-color: #a90202;
     border-radius: 0 100% 0 0;
 }
 
 .yellow {
-    background-color: #dcd900;
+    background-color: #b5b301;
     border-radius: 0 0 0 100%;
 }
 
 .blue {
-    background-color: #0101e4;
+    background-color: #0100a5;
     border-radius: 0 0 100% 0;
 }
 
@@ -127,7 +120,7 @@ body {
     pointer-events: none;
 }
 
-/*---------------------------------- Simon Board Layout */
+/*---------------------------------- SIMON BOARD LAYOUT */
 
 .heading-container h1 {
     width: 100%;
@@ -139,7 +132,7 @@ body {
     padding: 0;
 }
 
-/*---------------------------------- Simon Board Controls */
+/*---------------------------------- SIMON BOARD CONTROLS */
 
 .controls {
     display: flex;
@@ -256,7 +249,50 @@ body {
     border-color: #3b942a;
 }
 
-/*---------------------------------- Media Queries */
+/*---------------------------------- MODALS */
+
+/* Modal Buttons */
+
+.rules-button {
+    width: 153px;
+    height: 61px;
+    border-radius: 20px;
+    margin: 20px;
+    
+}
+
+.fa-question-circle {
+    display: block;
+}
+
+/* Modal Body */
+
+.modal-content {
+    background: url(../images/simon-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 1px 1px 6px #000000;
+    -webkit-text-shadow: 1px 1px 6px #000000;
+    -moz-text-shadow: 1px 1px 6px #000000;
+    top: 15vh;
+    width: 100%;
+}
+
+.modal-title {
+    text-align: center;
+    width: 100%;
+}
+
+.close {
+    color: #fff;
+}
+
+
+/*---------------------------------- MEDIA QUERIES */
 
 @media (max-width:600px) {
     .simon-label {
