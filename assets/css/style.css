@@ -2,8 +2,16 @@
 
 /*---------------------------------- Special Helpers */
 
+html,
 body {
-    
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
     background: url(../images/simon-background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -14,10 +22,15 @@ body {
     -webkit-text-shadow: 1px 1px 6px #000000;
     -moz-text-shadow: 1px 1px 6px #000000;
     margin: 0;
+    width: 100%;
 }
 
 .row {
     text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 /*---------------------------------- Containers */
@@ -25,6 +38,7 @@ body {
 .heading-container {
     background-color: rgba(112, 112, 112, 0.2);
     color: white;
+    text-align: center;
 }
 
 .game-rules-icon {
@@ -36,11 +50,13 @@ body {
 
 .board-container {
     display: flex;
+    padding: 0;
     margin: 0 auto;
     margin-top: 50px;
-    width: 600px;
-    height: 600px;
-    border: solid 6px #000;
+    width: 100%;
+    height: 100vw;
+    max-width: 600px;
+    max-height: 600px;
     border-radius: 50%;
     background-color: #fff;
 }
@@ -56,10 +72,11 @@ body {
     position: relative;
     float: left;
     display: inline-block;
-    width: 40%;
-    border: solid 9px #000;
-    width: 294px;
-    height: 294px;
+    width: 50%;
+    height: 50vw;
+    border: solid 5px #000;
+    max-width: 300px;
+    max-height: 300px;
     cursor: pointer;
     box-shadow: 2px 2px 15px #000000;
     -o-box-shadow: 2px 2px 15px #000000;
@@ -104,15 +121,13 @@ body {
 }
 
 .disabled {
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 /*---------------------------------- Simon Board Layout */
 
 .heading-container h1 {
-    margin: auto;
     width: 100%;
-    padding: 20px;
 }
 
 .simon-board {
@@ -122,16 +137,19 @@ body {
 /*---------------------------------- Simon Board Controls */
 
 .controls {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    text-align: center;
-    margin: 0 auto;
-    margin: 158px 0 0 158px;
-    background-color: #FFF;
-    width: 270px;
-    height: 270px;
-    border: solid 12px #000;
+    background-color: #fff;
+    top: 27%;
+    left: 27%;
+    width: 46vw;
+    height: 46vw;
+    max-width: 270px;
+    max-height: 270px;
+    border: solid 10px #000;
     border-radius: 50%;
-    line-height: 60px;
+    line-height: 5vw;
 }
 
 .control-label {
@@ -139,10 +157,11 @@ body {
 }
 
 .simon-label {
-    font-size: 1.6em;
+    font-size: 1.6vw;
     font-weight: bold;
     margin-top: 10px;
 }
+
 
 .num-display {
     color: #da2d2d;
@@ -154,6 +173,7 @@ body {
     border-radius: 15px;
     font-size: 1.6em;
 }
+
 
 .start-label {
     display: inline;
@@ -225,3 +245,4 @@ body {
     float: right;
     border-color: #3b942a;
 }
+*/

@@ -102,6 +102,7 @@ function getRandomNumber() {
 
 // A Light & sound will be generated
 function addSoundClass(id, color) {
+
     $("#" + id).addClass(color + "-light");
     $(".pad").addClass('disabled');
     if (id === 0) {
