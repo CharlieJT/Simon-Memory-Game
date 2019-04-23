@@ -4,7 +4,7 @@
 <head>
 	<!-- Meta Data -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Simon Game</title>
 
@@ -12,56 +12,66 @@
 	<link class="favicon" rel="icon" href="assets/images/favicon.ico" type="image/ico">
 
 	<!-- CSS Link -->
-	<link rel="stylesheet" href="https://fontawesome.bootstrapcheatsheets.com/"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-	
+
 </head>
 
 <body>
 	<!-- Main Title -->
-	<div class="container heading-container">
+	<div class="container-fluid heading-container text-center">
 		<div class="row">
 			<h1>SIMON GAME</h1>
 		</div>
+		<div class="game-rules-icon">
+			<i class="fa fa-question-circle"></i>
+		</div>
 	</div>
+
 	<!-- Simon Board -->
-	<div class="container board-container">
-		<div class="simon-board">
-			<!-- Pad Colours -->
-			<div id="0" class="pad green disabled"></div>
-			<div id="1" class="pad red disabled"></div>
-			<div id="2" class="pad yellow disabled"></div>
-			<div id="3" class="pad blue disabled"></div>
-			<!-- pad.colors -->
-			<div class="controls">
-				<div class="control-label simon-label">Simon</div>
-				<div class="control-label num-display">-</div>
-				<div class="start-btn">Start
-				</div>
-				<div class="strict-label">STRICT</div>
-				<div class="container control-container">
-					<div class="on-off-switch">
-						<div class="on-off-slider"></div>
+	<div class="container-fluid board-container">
+		<div class="row">
+			<div class="simon-board col-xs-12 col-sm-12">
+				<!-- Pad Colours -->
+				<div id="0" class="pad green disabled"></div>
+				<div id="1" class="pad red disabled"></div>
+				<div id="2" class="pad yellow disabled"></div>
+				<div id="3" class="pad blue disabled"></div>
+				<!-- pad.colors -->
+				<div class="controls">
+					<div class="control-label simon-label">Simon</div>
+					<div class="control-label num-display">-</div>
+					<div class="start-btn">Start
+					</div>
+					<div class="strict-label">STRICT</div>
+					<div class="container control-container">
+						<div class="on-off-switch">
+							<div class="on-off-slider"></div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- simon.board -->
-	
+
 	<!-- Sound Clips -->
 	<audio id="sound-green" src="assets/sounds/sound-1.mp3"></audio>
 	<audio id="sound-red" src="assets/sounds/sound-2.mp3"></audio>
 	<audio id="sound-yellow" src="assets/sounds/sound-3.mp3"></audio>
 	<audio id="sound-blue" src="assets/sounds/sound-4.mp3"></audio>
 	<audio id="sound-lost" src="assets/sounds/lost-game.mp3"></audio>
-    <!-- sound.clips -->
+	<!-- sound.clips -->
 
 	<!-- JavaScript Links, Scripts located at the bottom of the body to ensure page is fully loaded before execution -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="assets/js/jquery-3.3.1.js"></script>
 	<script src="assets/js/script.js"></script>
-	
+
 
 </body>
 
