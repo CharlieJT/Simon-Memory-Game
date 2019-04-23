@@ -61,6 +61,7 @@ body {
 }
 
 .strict-container {
+    position: absolute;
     margin-top: 125px;
     padding: 0px;
 }
@@ -187,8 +188,9 @@ body {
     margin-right: 35px;
 }
 
-.strict-label {
-    margin-right: 8px;
+.strict-label p {
+    margin: 0;
+    padding: 0;
 }
 
 .on-off-switch {
@@ -199,7 +201,7 @@ body {
     float: right;
     background-color: #000;
     border-radius: 3.25rem;
-    margin-right: 42px;
+    margin-right: 33px;
 }
 
 .on-off-slider {
@@ -223,7 +225,7 @@ body {
 
 .start-btn {
     float: left;
-    margin-left: 40px;
+    margin-right: 90px;
     margin-top: 137px;
     padding: 9px 9px;
     cursor: pointer;
@@ -259,7 +261,7 @@ body {
         line-height: 9.5vw;
     }
     .num-display {
-        top: 7.5vh;
+        top: 11.5vw;
         width: 13vw;
         height: 9vw;
         font-size: 3.7vw;
@@ -270,29 +272,21 @@ body {
         font-size: 2.6vw;
         height: 11.3vw;
         width: 11.3vw;
-        margin-left: 40px;
+        margin-right: 16.2vw;
         margin-top: 22.8vw;
         padding: 1.6vw 1.4vw;
     }
 }
 
 @media (max-width:500px) {
-    .num-display {
-        top: 6.5vh;
-    }
+    
     .start-btn {
-        margin-left: 43px;
-        margin-top: 21.8vw;
+        margin-top: 22.8vw;
     }
 }
 
 @media (max-width:400px) {
-    .num-display {
-        top: 5.5vh;
-    }
-    .start-btn {
-        margin-left: 47px;
-    }
+    
 }
 
 @media (max-width:350px) {
