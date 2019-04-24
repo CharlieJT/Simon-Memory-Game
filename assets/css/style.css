@@ -115,37 +115,89 @@ b {
 .green {
     background-color: #3da22a;
     border-radius: 100% 0 0 0;
+    box-shadow: inset 0 0 50px #31822c,
+    inset 20px 0 80px #2a4c14,
+    inset -20px 0 80px #37bd2b,
+    inset 20px 0 300px #a5ce8d,
+    inset -20px 0 300px #254e00,
+    1px 0 #000;
 }
 
 .red {
     background-color: #a90202;
     border-radius: 0 100% 0 0;
+    box-shadow: inset 0 0 50px #e00b0b,
+    inset 20px 0 80px #542727,
+    inset -20px 0 80px #bd2b2b,
+    inset 0px 0 300px #ef8787,
+    inset -20px 0 300px #961717,
+    1px 0 #000;
 }
 
 .yellow {
     background-color: #b5b301;
     border-radius: 0 0 0 100%;
+    box-shadow: inset 0 0 50px #efdb2f,
+    inset 20px 0 80px #50490d,
+    inset -20px 0 80px #f5df1f,
+    inset 20px 0 300px #c1b97a,
+    inset -20px 0 300px #ab9d23,
+    1px 0 #000;
 }
 
 .blue {
     background-color: #0100a5;
     border-radius: 0 0 100% 0;
+    box-shadow: inset 0 0 50px #2f3eef,
+    inset 20px 0 80px #101842,
+    inset -20px 0 80px #13029c,
+    inset 20px 0 300px #aebaf1,
+    inset -20px 0 300px #3836b9,
+    1px 0 #000;
 }
 
 .green-light {
     background-color: rgba(79, 206, 55, 0.4);
+    box-shadow: inset 0 0 50px #31822c,
+    inset 20px 0 80px #5fb928,
+    inset -20px 0 80px #37bd2b,
+    inset 20px 0 300px #deffca,
+    inset -20px 0 300px #254e00,
+    0 0 50px #1b7915,
+    1px 0 #000;
 }
 
 .red-light {
     background-color: rgba(220, 0, 0, 0.4);
+    box-shadow: inset 0 0 50px #e00b0b,
+    inset 20px 0 80px #d61f1f,
+    inset -20px 0 80px #bd2b2b,
+    inset 0px 0 300px #ffc6c6,
+    inset -20px 0 300px #961717,
+    0 0 50px #730d0d,
+    1px 0 #000;
 }
 
 .yellow-light {
     background-color: rgba(219, 217, 55, 0.4);
+    box-shadow: inset 0 0 50px #efdb2f,
+    inset 20px 0 80px #c3b21e,
+    inset -20px 0 80px #f5df1f,
+    inset 20px 0 300px #fffad2,
+    inset -20px 0 300px #ab9d23,
+    0 0 50px #736915,
+    1px 0 #000;
 }
 
 .blue-light {
     background-color: rgba(1, 0, 255, 0.4);
+    box-shadow: inset 0 0 50px #2f3eef,
+    inset 20px 0 80px #425fff,
+    inset -20px 0 80px #13029c,
+    inset 20px 0 300px #cad2f7,
+    inset -20px 0 300px #3836b9,
+    0 0 50px #0100a5,
+    1px 0 #000;
 }
 
 .disabled {
@@ -300,7 +352,7 @@ b {
     max-height: 61px;
     border-radius: 20px;
     margin: 20px;
-    padding-top: 0.6vw;
+    padding-top: 5px;
     border: none;
     text-shadow: 1px 1px 6px #000000;
     -o-text-shadow: 1px 1px 6px #000000;
@@ -409,7 +461,7 @@ b {
         width: 5.8vw;
         height: 5.8vw;
     }
-    .rules-button {
+    #rules-button {
         font-size: 2.8vw;
         padding: 0.6vw;
     }

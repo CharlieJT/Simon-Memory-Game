@@ -1,7 +1,7 @@
 // Variables
 
 var playerSeq = [];
-var compSeq = [];
+var compSeq = [0,0,0];
 var id, color, lvl = 0; // id, color & lvl are all initialised at 0
 var greenSound = document.getElementById("sound-green"); //for audio
 var redSound = document.getElementById("sound-red");
