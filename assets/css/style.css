@@ -114,7 +114,7 @@ b {
 
 .green {
     background-color: #3da22a;
-    border-radius: 100% 0 0 0;
+    border-top-left-radius: 300px;
     box-shadow: inset 0 0 50px #31822c,
     inset 20px 0 80px #2a4c14,
     inset -20px 0 80px #37bd2b,
@@ -125,7 +125,7 @@ b {
 
 .red {
     background-color: #a90202;
-    border-radius: 0 100% 0 0;
+    border-top-right-radius: 300px;
     box-shadow: inset 0 0 50px #e00b0b,
     inset 20px 0 80px #542727,
     inset -20px 0 80px #bd2b2b,
@@ -136,7 +136,7 @@ b {
 
 .yellow {
     background-color: #b5b301;
-    border-radius: 0 0 0 100%;
+    border-bottom-left-radius: 300px;
     box-shadow: inset 0 0 50px #efdb2f,
     inset 20px 0 80px #50490d,
     inset -20px 0 80px #f5df1f,
@@ -147,7 +147,7 @@ b {
 
 .blue {
     background-color: #0100a5;
-    border-radius: 0 0 100% 0;
+    border-bottom-right-radius: 300px;
     box-shadow: inset 0 0 50px #2f3eef,
     inset 20px 0 80px #101842,
     inset -20px 0 80px #13029c,
