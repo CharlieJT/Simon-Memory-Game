@@ -111,12 +111,12 @@ b {
     -moz-box-shadow: 2px 2px 15px #000000;
     -o-box-shadow: 2px 2px 15px #000000;
     box-shadow: 2px 2px 15px #000000;
-    
+
 }
 
 .green {
     background-color: #3da22a;
-    border-top-left-radius: 95%;
+    border-top-left-radius: 96%;
     box-shadow: inset 0 0 50px #31822c,
     inset 20px 0 80px #2a4c14,
     inset -20px 0 80px #37bd2b,
@@ -127,7 +127,7 @@ b {
 
 .red {
     background-color: #a90202;
-    border-top-right-radius: 95%;
+    border-top-right-radius: 96%;
     box-shadow: inset 0 0 50px #e00b0b,
     inset 20px 0 80px #542727,
     inset -20px 0 80px #bd2b2b,
@@ -138,7 +138,7 @@ b {
 
 .yellow {
     background-color: #b5b301;
-    border-bottom-left-radius: 95%;
+    border-bottom-left-radius: 96%;
     box-shadow: inset 0 0 50px #efdb2f,
     inset 20px 0 80px #50490d,
     inset -20px 0 80px #f5df1f,
@@ -149,7 +149,7 @@ b {
 
 .blue {
     background-color: #0100a5;
-    border-bottom-right-radius: 95%;
+    border-bottom-right-radius: 96%;
     box-shadow: inset 0 0 50px #2f3eef,
     inset 20px 0 80px #101842,
     inset -20px 0 80px #13029c,
@@ -427,6 +427,24 @@ b {
 
 
 /*---------------------------------- MEDIA QUERIES */
+
+@media (min-width:601) {
+    .green {
+        border-top-left-radius: 80px;
+    }
+
+    .red {
+        border-top-right-radius: 91%;
+    }
+
+    .yellow {
+        border-bottom-left-radius: 91%;
+    }
+
+    .blue {
+        border-bottom-right-radius: 91%;
+    }
+}
 
 @media (max-width:600px) {
     .simon-label {
