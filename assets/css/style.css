@@ -1,3 +1,5 @@
+/*---------------------------------- FONTS */
+
 @import url('https://fonts.googleapis.com/css?family=Orbitron:100,200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700');
 
@@ -38,6 +40,16 @@ body {
 .wrapper {
     width: 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:visited {
+    border: none;
+    box-shadow: none;
 }
 
 b {
@@ -224,7 +236,7 @@ b {
     width: 35px;
     height: 35px;
     border-radius: 2.25rem;
-    background-color: #ff0000;
+    background-color: #da0000;
     border: solid 2.5px #791919;
     cursor: pointer;
 }
@@ -263,7 +275,7 @@ b {
 }
 
 
-.power-on {
+.power-on-strict {
     background-color: #58e23e;
     float: right;
     border-color: #3b942a;
@@ -281,7 +293,7 @@ b {
 
 /* Modal Buttons */
 
-.rules-button {
+#rules-button {
     width: 22.1vw;
     height: 9.7vw;
     max-width: 153px;
@@ -289,6 +301,30 @@ b {
     border-radius: 20px;
     margin: 20px;
     padding-top: 0.6vw;
+    border: none;
+    text-shadow: 1px 1px 6px #000000;
+    -o-text-shadow: 1px 1px 6px #000000;
+    -moz-text-shadow: 1px 1px 6px #000000;
+    -webkit-text-shadow: 1px 1px 6px #000000;
+}
+
+#close-button {
+    border: none;
+}
+
+#rules-button:active,
+#close-button:active {
+    border: none;
+    box-shadow: none;
+    transform: scale(0.96);
+    -o-transform: scale(0.96);
+    -moz-transform: scale(0.96);
+    -webkit-transform: scale(0.96);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
 }
 
 .fa-question-circle {
@@ -305,12 +341,13 @@ b {
     background-size: cover;
     color: #fff;
     font-family: 'Orbitron', sans-serif;
-    text-shadow: 1px 1px 6px #000000;
-    -webkit-text-shadow: 1px 1px 6px #000000;
-    -moz-text-shadow: 1px 1px 6px #000000;
     top: 3vh;
     width: 90%;
     margin: auto;
+    text-shadow: 1px 1px 6px #000000;
+    -o-text-shadow: 1px 1px 6px #000000;
+    -moz-text-shadow: 1px 1px 6px #000000;
+    -webkit-text-shadow: 1px 1px 6px #000000;
 }
 
 .modal-title {

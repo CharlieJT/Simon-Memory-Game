@@ -42,7 +42,7 @@ $(document).ready(function() {
         }
     });
     $(".on-off-slider").on("click", function() {
-        $(this).toggleClass("power-on")
+        $(this).toggleClass("power-on-strict")
     });
 });
 
