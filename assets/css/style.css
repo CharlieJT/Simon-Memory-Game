@@ -351,8 +351,8 @@ b {
     max-width: 153px;
     max-height: 61px;
     border-radius: 20px;
+    padding-top: 0;
     margin: 20px;
-    padding-top: 5px;
     border: none;
     text-shadow: 1px 1px 6px #000000;
     -o-text-shadow: 1px 1px 6px #000000;
@@ -462,8 +462,7 @@ b {
         height: 5.8vw;
     }
     #rules-button {
-        font-size: 2.8vw;
-        padding: 0.6vw;
+        font-size: 2.5vw;
     }
 }
 
