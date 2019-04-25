@@ -331,8 +331,12 @@ input[type="checkbox"] {
     -o-appearance: none;
     appearance: none;
     background: #c6c6c6;
+    border: none;
     outline: none;
     border-radius: 25vw;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
