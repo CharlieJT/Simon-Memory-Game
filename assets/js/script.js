@@ -18,3 +18,11 @@ const bluePad = document.getElementById("3");
 const startButton = document.getElementById("start");
 const strictButton = document.getElementById("strict")
 
+// Event Listener checks to see if strict slider is true or false
+strictButton.addEventListener('click', (event) => {
+    if (strictButton.checked == true) {
+        strict = true;
+    } else {
+        strict = false;
+    }
+});
