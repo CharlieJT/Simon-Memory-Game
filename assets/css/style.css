@@ -290,18 +290,22 @@ b {
     width: 70px;
     height: 35px;
     float: right;
-    background-color: #000;
+    background-color: #eae7e7;
+    border: solid 3px #9e9e9e;
     border-radius: 3.25rem;
     margin: 30px auto;
 }
 
 .on-off-slider {
-    width: 35px;
-    height: 35px;
+    width: 29px;
+    height: 29px;
     border-radius: 2.25rem;
-    background-color: #da0000;
-    border: solid 2.5px #791919;
+    background-color: #ffffff;
     cursor: pointer;
+    -webkit-box-shadow: 2px 2px 15px #000000;
+    -moz-box-shadow: 2px 2px 15px #000000;
+    -o-box-shadow: 2px 2px 15px #000000;
+    box-shadow: 2px 2px 15px #000000;
 }
 
 .on-off-label {
@@ -377,7 +381,8 @@ b {
 }
 
 #rules-button:active,
-#close-button:active {
+#close-button:active,
+#high-scores-button:active {
     border: none;
     box-shadow: none;
     transform: scale(0.96);
@@ -443,6 +448,7 @@ b {
 
 .modal-body-rules {
     font-family: 'Lato', sans-serif;
+    height: 55vh;
 }
 
 .fa-angle-down {
@@ -484,10 +490,11 @@ b {
         width: 11.6vw;
         height: 5.8vw;
         margin-top: 5.4vw;
+        border: solid 0.5vw #9e9e9e;
     }
     .on-off-slider {
-        width: 5.8vw;
-        height: 5.8vw;
+        width: 4.8vw;
+        height: 4.8vw;
     }
     #rules-button {
         font-size: 2.7vw;
