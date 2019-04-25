@@ -53,6 +53,10 @@ body {
     box-shadow: none;
 }
 
+.fa {
+    display: block;
+}
+
 b {
     font-size: 1.3em;
 }
@@ -63,6 +67,11 @@ b {
     background-color: rgba(112, 112, 112, 0.3);
     color: white;
     text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .board-container {
@@ -382,8 +391,20 @@ b {
     transition: transform .2s, -webkit-transform .2s;
 }
 
-.fa-question-circle {
-    display: block;
+#high-scores-button {
+    width: 28.1vw;
+    height: 9.7vw;
+    max-width: 179px;
+    max-height: 61px;
+    border-radius: 20px;
+    padding-top: 0;
+    margin: 20px;
+    border: none;
+    font-weight: 600;
+    text-shadow: 1px 1px 6px #000000;
+    -o-text-shadow: 1px 1px 6px #000000;
+    -moz-text-shadow: 1px 1px 6px #000000;
+    -webkit-text-shadow: 1px 1px 6px #000000;
 }
 
 /* Modal Body */
@@ -411,12 +432,16 @@ b {
     font-size: 2em;
 }
 
+.fa-music {
+    display: inline;
+}
+
 .close,
 .close:hover {
     color: #fff;
 }
 
-.modal-body {
+.modal-body-rules {
     font-family: 'Lato', sans-serif;
 }
 
@@ -465,6 +490,9 @@ b {
         height: 5.8vw;
     }
     #rules-button {
+        font-size: 2.7vw;
+    }
+    #high-scores-button {
         font-size: 2.7vw;
     }
     .green {
