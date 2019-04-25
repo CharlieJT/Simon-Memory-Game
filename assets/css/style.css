@@ -290,8 +290,8 @@ b {
     width: 70px;
     height: 35px;
     float: right;
-    background-color: #eae7e7;
-    border: solid 3px #9e9e9e;
+    background-color: #f4f4f9;
+    border: solid 3px #bbbbbb;
     border-radius: 3.25rem;
     margin: 30px auto;
 }
@@ -322,7 +322,7 @@ b {
     float: left;
     margin-right: 90px;
     margin-top: 137px;
-    padding: 9px 9px;
+    padding: 9px;
     cursor: pointer;
     line-height: 3em;
     font-weight: bold;
@@ -331,21 +331,22 @@ b {
     width: 68px;
     border-radius: 50%;
     border: solid 2.5px #256319;
-    text-shadow: none;
-    -o-text-shadow: none;
-    -moz-text-shadow: none;
     -webkit-text-shadow: none;
-    box-shadow: 2px 2px 15px #000000;
-    -o-box-shadow: 2px 2px 15px #000000;
-    -moz-box-shadow: 2px 2px 15px #000000;
+    -moz-text-shadow: none;
+    -o-text-shadow: none;
+    text-shadow: none;
     -webkit-box-shadow: 2px 2px 15px #000000;
+    -moz-box-shadow: 2px 2px 15px #000000;
+    -o-box-shadow: 2px 2px 15px #000000;
+    box-shadow: 2px 2px 15px #000000;
 }
 
 
 .power-on-strict {
-    background-color: #58e23e;
-    float: right;
-    border-color: #3b942a;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #4bc534;
+    border-color: #27bf0a;
 }
 
 /*---------------------------------- FOOTER */
@@ -370,10 +371,10 @@ b {
     margin: 20px;
     border: none;
     font-weight: 600;
-    text-shadow: 1px 1px 6px #000000;
-    -o-text-shadow: 1px 1px 6px #000000;
-    -moz-text-shadow: 1px 1px 6px #000000;
     -webkit-text-shadow: 1px 1px 6px #000000;
+    -moz-text-shadow: 1px 1px 6px #000000;
+    -o-text-shadow: 1px 1px 6px #000000;
+    text-shadow: 1px 1px 6px #000000;
 }
 
 #close-button {
@@ -406,10 +407,10 @@ b {
     margin: 20px;
     border: none;
     font-weight: 600;
-    text-shadow: 1px 1px 6px #000000;
-    -o-text-shadow: 1px 1px 6px #000000;
-    -moz-text-shadow: 1px 1px 6px #000000;
     -webkit-text-shadow: 1px 1px 6px #000000;
+    -moz-text-shadow: 1px 1px 6px #000000;
+    -o-text-shadow: 1px 1px 6px #000000;
+    text-shadow: 1px 1px 6px #000000;
 }
 
 /* Modal Body */
@@ -425,10 +426,10 @@ b {
     top: 3vh;
     width: 90%;
     margin: auto;
-    text-shadow: 1px 1px 6px #000000;
-    -o-text-shadow: 1px 1px 6px #000000;
-    -moz-text-shadow: 1px 1px 6px #000000;
     -webkit-text-shadow: 1px 1px 6px #000000;
+    -moz-text-shadow: 1px 1px 6px #000000;
+    -o-text-shadow: 1px 1px 6px #000000;
+    text-shadow: 1px 1px 6px #000000;
 }
 
 .modal-title {
@@ -563,6 +564,8 @@ b {
         position: static;
     }
 }
+
+/*---------------------------------- KEYFRAMES */
 
 @keyframes scrollDown {
     from {

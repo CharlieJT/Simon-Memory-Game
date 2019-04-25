@@ -41,21 +41,23 @@
 			<div class="row">
 				<div class="simon-board col-xs-12 col-sm-12">
 					<!-- Pad Colours -->
-					<div id="0" class="pad green disabled"></div>
-					<div id="1" class="pad red disabled"></div>
-					<div id="2" class="pad yellow disabled"></div>
-					<div id="3" class="pad blue disabled"></div>
+					<div class="pads">
+						<div id="0" class="pad green disabled"></div>
+						<div id="1" class="pad red disabled"></div>
+						<div id="2" class="pad yellow disabled"></div>
+						<div id="3" class="pad blue disabled"></div>
+					</div>
 					<!-- pad.colors -->
 					<!-- Controls -->
 					<div class="controls">
 						<div class="control-label simon-label">Simon</div>
 						<div class="control-label num-display">-</div>
-						<div class="control-label start-btn">Start</div>
+						<div id="start" class="control-label start-btn">Start</div>
 						<div class="container strict-container">
 							<div class="control-label strict-label">
 								<p>STRICT</p>
 								<div class="on-off-switch">
-									<div class="on-off-slider text-right"></div>
+									<div id="strict" class="on-off-slider"></div>
 								</div>
 							</div>
 						</div>
@@ -89,8 +91,8 @@
 							<i class="fa fa-angle-down"></i>
 							<h3 class="text-center"><b>Buttons:</b></h3>
 							<p><b>1. Start - </b>To begin the game, press 'START' & your first sequence will commence. Also, click 'START' to begin a new game when it's game over!</p>
-							<p><b>2. Strict - </b>When 'STRICT' mode is activated (green), if you at any point get your sequence wrong, it will be game over. If 'STRICT' mode is not activated (red), then you can keep trying the current sequence over & over until you get it correct
-								& move to the next sequence.</p>
+							<p><b>2. Strict - </b>When 'STRICT' mode is activated (green), if you at any point get your sequence wrong, it will be game over. If 'STRICT' mode is not activated (white), then you can keep trying the current sequence over & over until you get it
+								correct & move to the next sequence.</p>
 							<p><b>3. Green Pad - </b><i class="fa fa-music"></i> (D#).</p>
 							<p><b>4. Red Pad - </b><i class="fa fa-music"></i> (G).</p>
 							<p><b>5. Yellow Pad - </b><i class="fa fa-music"></i> (A#).</p>
@@ -109,39 +111,40 @@
 		</div>
 	</div>
 	<!-- rules.modal -->
-	
+
 	<!-- Scores Modal -->
-		<div class="modal fade" id="scoresModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-scrollable" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalScrollableTitle">High Scores</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	<div class="modal fade" id="scoresModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalScrollableTitle">High Scores</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           				<span aria-hidden="true">&times;</span>
         			</button>
+				</div>
+				<div class="modal-body">
+					<div class="buttons-box m-2 px-2 py-2 text-center">
+						<h6>High Scores will only be saved if 'STRICT' mode is active.</h6><br>
+						<ol class="scores-list ">
+							<li> -</li>
+							<li> -</li>
+							<li> -</li>
+							<li> -</li>
+							<li> -</li>
+							<li> -</li>
+							<li> -</li>
+							<li> -</li>
+							<li> -</li>
+							<li> -</li>
+						</ol>
 					</div>
-					<div class="modal-body">
-						<div class="buttons-box m-2 px-2 py-2">
-							<ol class="scores-list text-center">
-								<li> -</li>
-								<li> -</li>
-								<li> -</li>
-								<li> -</li>
-								<li> -</li>
-								<li> -</li>
-								<li> -</li>
-								<li> -</li>
-								<li> -</li>
-								<li> -</li>
-							</ol>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button id="close-button" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
+				</div>
+				<div class="modal-footer">
+					<button id="close-button" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 	<!-- rules.modal -->
 
