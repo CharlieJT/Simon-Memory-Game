@@ -18,6 +18,3 @@ const bluePad = document.getElementById("3");
 const startButton = document.getElementById("start");
 const strictButton = document.getElementById("strict")
 
-strictButton.addEventListener('click', (event) => {
-        console.log("changed");
-});
