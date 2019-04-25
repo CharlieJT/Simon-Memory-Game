@@ -56,9 +56,12 @@ function gameTurn() {
     on = false;
     if (light == turn) {
         clearInterval(intervalId);
+        compTurn = false;
+        clearColor();
         on = true;
     }
     if (compTurn) {
+        clearColor();
         setTimeout( function() {
             if (sequence[light] == 1) green();
             if (sequence[light] == 2) red();
@@ -69,9 +72,40 @@ function gameTurn() {
     }
 }
 
+// Sounds & Lights being generated
+
 function green() {
     if(sound) {
         let audio = document.getElementById("0");
         audio.play();
     } 
+    sound = true;
+    $("greenPad").addClass("green-light");
+}
+
+function red() {
+    if(sound) {
+        let audio = document.getElementById("1");
+        audio.play();
+    } 
+    sound = true;
+    $("greenPad").addClass("red-light");
+}
+
+function yellow() {
+    if(sound) {
+        let audio = document.getElementById("2");
+        audio.play();
+    } 
+    sound = true;
+    $("greenPad").addClass("yellow-light");
+}
+
+function blue() {
+    if(sound) {
+        let audio = document.getElementById("3");
+        audio.play();
+    } 
+    sound = true;
+    $("greenPad").addClass("blue-light");
 }
