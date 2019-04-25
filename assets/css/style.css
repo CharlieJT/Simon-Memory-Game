@@ -356,6 +356,7 @@ b {
     padding-top: 0;
     margin: 20px;
     border: none;
+    font-weight: 600;
     text-shadow: 1px 1px 6px #000000;
     -o-text-shadow: 1px 1px 6px #000000;
     -moz-text-shadow: 1px 1px 6px #000000;
@@ -428,24 +429,6 @@ b {
 
 /*---------------------------------- MEDIA QUERIES */
 
-@media (min-width:601) {
-    .green {
-        border-top-left-radius: 80px;
-    }
-
-    .red {
-        border-top-right-radius: 91%;
-    }
-
-    .yellow {
-        border-bottom-left-radius: 91%;
-    }
-
-    .blue {
-        border-bottom-right-radius: 91%;
-    }
-}
-
 @media (max-width:600px) {
     .simon-label {
         font-size: 4.2vw;
@@ -482,7 +465,22 @@ b {
         height: 5.8vw;
     }
     #rules-button {
-        font-size: 2.5vw;
+        font-size: 2.7vw;
+    }
+    .green {
+        border-top-left-radius: 47vw;
+    }
+
+    .red {
+        border-top-right-radius: 47vw;
+    }
+
+    .yellow {
+        border-bottom-left-radius: 47vw;
+    }
+
+    .blue {
+        border-bottom-right-radius: 47vw;
     }
 }
 
@@ -504,6 +502,24 @@ b {
     }
     .on-off-switch {
         margin-top: 6.8vw;
+    }
+    #rules-button {
+        font-size: 2.5vw;
+    }
+    .green {
+        border-top-left-radius: 45vw;
+    }
+
+    .red {
+        border-top-right-radius: 45vw;
+    }
+
+    .yellow {
+        border-bottom-left-radius: 45vw;
+    }
+
+    .blue {
+        border-bottom-right-radius: 45vw;
     }
 }
 
