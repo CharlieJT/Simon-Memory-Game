@@ -63,7 +63,7 @@ function gameTurn() {
     }
     if (compTurn) {
         clearColor();
-        setTimeout(() => {
+        setTimeout(function() {
             if (sequence[light] == 1) green();
             if (sequence[light] == 2) red();
             if (sequence[light] == 3) yellow();
@@ -111,9 +111,43 @@ function blue() {
     $(bluePad).addClass("blue-light");
 }
 
+// This returns all of the colours back to their original state from being flashed
 function clearColor() {
     $(greenPad).removeClass("green-light");
     $(redPad).removeClass("red-light");
     $(yellowPad).removeClass("yellow-light");
     $(bluePad).removeClass("blue-light");
 }
+
+// Events taking place when each of the pads are clicked
+greenPad.addEventListener('click', (event) => {
+    playerSequence.push(1);
+    green();
+    setTimeout(function() {
+        clearColor();
+    }, 300);
+});
+
+redPad.addEventListener('click', (event) => {
+    playerSequence.push(2);
+    red();
+    setTimeout(function() {
+        clearColor();
+    }, 300);
+});
+
+yellowPad.addEventListener('click', (event) => {
+    playerSequence.push(3);
+    yellow();
+    setTimeout(function() {
+        clearColor();
+    }, 300);
+});
+
+bluePad.addEventListener('click', (event) => {
+    playerSequence.push(4);
+    blue();
+    setTimeout(function() {
+        clearColor();
+    }, 300);
+});

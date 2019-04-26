@@ -1,5 +1,3 @@
-/*---------------------------------- FONTS */
-
 @import url('https://fonts.googleapis.com/css?family=Orbitron:100,200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700');
 
@@ -211,10 +209,6 @@ b {
     1px 0 #000;
 }
 
-.disabled {
-    pointer-events: none;
-}
-
 /*---------------------------------- SIMON BOARD LAYOUT */
 
 .heading-container h1 {
@@ -331,6 +325,7 @@ input[type="checkbox"] {
     -o-appearance: none;
     appearance: none;
     background: #c6c6c6;
+    cursor: pointer;
     border: none;
     outline: none;
     border-radius: 25vw;
@@ -396,12 +391,15 @@ input:checked[type="checkbox"]:before {
     text-shadow: 1px 1px 6px #000000;
 }
 
-#close-button {
+#close-button,
+#close-button-2:active
+#close-button-2:hover{
     border: none;
 }
 
 #rules-button:active,
 #close-button:active,
+#close-button-2:active,
 #high-scores-button:active {
     border: none;
     box-shadow: none;

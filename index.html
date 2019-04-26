@@ -42,10 +42,10 @@
 				<div class="simon-board col-xs-12 col-sm-12">
 					<!-- Pad Colours -->
 					<div class="pads">
-						<div id="0" class="pad green disabled"></div>
-						<div id="1" class="pad red disabled"></div>
-						<div id="2" class="pad yellow disabled"></div>
-						<div id="3" class="pad blue disabled"></div>
+						<div id="0" class="pad green"></div>
+						<div id="1" class="pad red"></div>
+						<div id="2" class="pad yellow"></div>
+						<div id="3" class="pad blue"></div>
 					</div>
 					<!-- pad.colors -->
 					<!-- Controls -->
@@ -57,7 +57,7 @@
 							<div class="control-label strict-label">
 								<p>STRICT</p>
 								<div class="strict-switch">
-									<input type="checkbox" id="strict" class="toggle"/>
+									<input type="checkbox" id="strict" class="toggle" />
 								</div>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
 							<i class="fa fa-angle-down"></i>
 							<h3 class="text-center"><b>Buttons:</b></h3>
 							<p><b>1. Start - </b>To begin the game, press 'START' & your first sequence will commence. Also, click 'START' to begin a new game when it's game over!</p>
-							<p><b>2. Strict - </b>When 'STRICT' mode is activated (green), if you at any point get your sequence wrong, it will be game over. If 'STRICT' mode is not activated (white), then you can keep trying the current sequence over & over until you get it
+							<p><b>2. Strict - </b>When 'STRICT' mode is activated (green), if you at any point get your sequence wrong, it will be game over. If 'STRICT' mode is not activated (grey), then you can keep trying the current sequence over & over until you get it
 								correct & move to the next sequence.</p>
 							<p><b>3. Green Pad - </b><i class="fa fa-music"></i> (D#).</p>
 							<p><b>4. Red Pad - </b><i class="fa fa-music"></i> (G).</p>
@@ -117,7 +117,7 @@
 		<div class="modal-dialog modal-dialog-scrollable" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalScrollableTitle">High Scores</h5>
+					<h5 class="modal-title" id="exampleModalScrollableTitle-2">High Scores</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           				<span aria-hidden="true">&times;</span>
         			</button>
@@ -140,30 +140,19 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button id="close-button" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button id="close-button-2" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	</div>
 	<!-- rules.modal -->
 
 	<!-- Sound Clips -->
-	<audio id="sound-green">
-		<source src="assets/sounds/sound-1.mp3" type="audio/mpeg"/>
-	</audio>
-	<audio id="sound-red">
-		<source src="assets/sounds/sound-2.mp3" type="audio/mpeg"/>
-	</audio>
-	<audio id="sound-yellow">
-		<source src="assets/sounds/sound-3.mp3" type="audio/mpeg"/>
-	</audio>
-	<audio id="sound-blue">
-		<source src="assets/sounds/sound-4.mp3" type="audio/mpeg"/>
-	</audio>
-	<audio id="sound-lost">
-		<source src="assets/sounds/lost-game.mp3" type="audio/mpeg"/>
-	</audio>
+	<audio id="sound-green" src="assets/sounds/sound-1.mp3"></audio>
+	<audio id="sound-red" src="assets/sounds/sound-2.mp3"></audio>
+	<audio id="sound-yellow" src="assets/sounds/sound-3.mp3"></audio>
+	<audio id="sound-blue" src="assets/sounds/sound-4.mp3"></audio>
+	<audio id="sound-lost" src="assets/sounds/lost-game.mp3"></audio>
 	<!-- sound.clips -->
 
 	<!-- JavaScript Links, Scripts located at the bottom of the body to ensure page is fully loaded before execution -->
