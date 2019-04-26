@@ -24,9 +24,10 @@ const strictButton = document.getElementById("strict");
 // Event Listener checks to see if strict slider is true or false when clicked
 strictButton.addEventListener('click', (event) => {
     if (strictButton.checked == true) {
-        strict = true;
-    } else {
-        strict = false;
+        strictMode = true;
+    }
+    else {
+        strictMode = false;
     }
 });
 
@@ -44,8 +45,8 @@ function play() {
     turn = 1;
     numDisplay.innerHTML = "1";
     correct = true;
-    for (var i = 0; i < turn; i++) {
-        sequence.push(Math.floor(Math.random()* 4) +1);
+    for (var i = 0; i < 20; i++) {
+        sequence.push(Math.floor(Math.random() * 4) + 1);
     }
     compTurn = true;
     intervalId = setInterval(gameTurn, 800);
@@ -62,7 +63,7 @@ function gameTurn() {
     }
     if (compTurn) {
         clearColor();
-        setTimeout( function() {
+        setTimeout(() => {
             if (sequence[light] == 1) green();
             if (sequence[light] == 2) red();
             if (sequence[light] == 3) yellow();
@@ -72,40 +73,47 @@ function gameTurn() {
     }
 }
 
-// Sounds & Lights being generated
+// Sounds & Lights being generated for each color
 
 function green() {
-    if(sound) {
-        let audio = document.getElementById("0");
+    if (sound) {
+        let audio = document.getElementById("sound-green");
         audio.play();
-    } 
+    }
     sound = true;
-    $("greenPad").addClass("green-light");
+    $(greenPad).addClass("green-light");
 }
 
 function red() {
-    if(sound) {
-        let audio = document.getElementById("1");
+    if (sound) {
+        let audio = document.getElementById("sound-red");
         audio.play();
-    } 
+    }
     sound = true;
-    $("greenPad").addClass("red-light");
+    $(redPad).addClass("red-light");
 }
 
 function yellow() {
-    if(sound) {
-        let audio = document.getElementById("2");
+    if (sound) {
+        let audio = document.getElementById("sound-yellow");
         audio.play();
-    } 
+    }
     sound = true;
-    $("greenPad").addClass("yellow-light");
+    $(yellowPad).addClass("yellow-light");
 }
 
 function blue() {
-    if(sound) {
-        let audio = document.getElementById("3");
+    if (sound) {
+        let audio = document.getElementById("sound-blue");
         audio.play();
-    } 
+    }
     sound = true;
-    $("greenPad").addClass("blue-light");
+    $(bluePad).addClass("blue-light");
+}
+
+function clearColor() {
+    $(greenPad).removeClass("green-light");
+    $(redPad).removeClass("red-light");
+    $(yellowPad).removeClass("yellow-light");
+    $(bluePad).removeClass("blue-light");
 }
