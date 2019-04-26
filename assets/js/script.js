@@ -122,6 +122,7 @@ function clearColor() {
 // Events taking place when each of the pads are clicked
 greenPad.addEventListener('click', (event) => {
     playerSequence.push(1);
+    check();
     green();
     setTimeout(function() {
         clearColor();
@@ -130,6 +131,7 @@ greenPad.addEventListener('click', (event) => {
 
 redPad.addEventListener('click', (event) => {
     playerSequence.push(2);
+    check();
     red();
     setTimeout(function() {
         clearColor();
@@ -138,6 +140,7 @@ redPad.addEventListener('click', (event) => {
 
 yellowPad.addEventListener('click', (event) => {
     playerSequence.push(3);
+    check();
     yellow();
     setTimeout(function() {
         clearColor();
@@ -146,8 +149,34 @@ yellowPad.addEventListener('click', (event) => {
 
 bluePad.addEventListener('click', (event) => {
     playerSequence.push(4);
+    check();
     blue();
     setTimeout(function() {
         clearColor();
     }, 300);
 });
+
+function check() {
+    if (playerSequence[playerSequence.length -1] !== sequence[playerSequence.length -1]) {
+        correct = false;
+    }
+    if (correct == false) {
+        numDisplay.innerHTML = "Lose!";
+        setTimeout(function() {
+            numDisplay.innerHTML = turn;
+            clearColor();
+            if (strictMode) {
+                play();
+            } else {
+                compTurn = true;
+                light = 0;
+                playerSequence = [];
+                correct = "true";
+                intervalId = setInterval(gameTurn, 800);
+            }
+        }, 800);
+        sound = false;
+        let audio = document.getElementById("sound-lost");
+        audio.play();
+    }
+}
