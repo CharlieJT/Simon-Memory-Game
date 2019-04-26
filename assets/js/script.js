@@ -33,6 +33,7 @@ strictButton.addEventListener('click', (event) => {
 
 // Event Listener initialisation when start button is clicked
 startButton.addEventListener('click', (event) => {
+    clearInterval(intervalId);
     play();
 });
 
@@ -43,9 +44,9 @@ function play() {
     light = 0;
     intervalId = 0;
     turn = 1;
-    numDisplay.innerHTML = "1";
+    numDisplay.innerHTML = "0";
     correct = true;
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < 100; i++) {
         sequence.push(Math.floor(Math.random() * 4) + 1);
     }
     compTurn = true;
@@ -68,9 +69,13 @@ function gameTurn() {
             if (sequence[light] == 2) red();
             if (sequence[light] == 3) yellow();
             if (sequence[light] == 4) blue();
-        }, 200);
-        light++;
+            light++;
+            $(".pad").addClass('disabled');
+        }, 300);
     }
+    setTimeout(function() {
+        $(".pad").removeClass('disabled');   
+    }, 299);
 }
 
 // Sounds & Lights being generated for each color
@@ -119,6 +124,13 @@ function clearColor() {
     $(bluePad).removeClass("blue-light");
 }
 
+function lightAllColors() {
+    $(greenPad).addClass("green-light");
+    $(redPad).addClass("red-light");
+    $(yellowPad).addClass("yellow-light");
+    $(bluePad).addClass("blue-light");
+}
+
 // Events taking place when each of the pads are clicked
 greenPad.addEventListener('click', (event) => {
     playerSequence.push(1);
@@ -156,27 +168,39 @@ bluePad.addEventListener('click', (event) => {
     }, 300);
 });
 
+// Checking to see if sequences are correct or wrong
 function check() {
-    if (playerSequence[playerSequence.length -1] !== sequence[playerSequence.length -1]) {
+    if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
         correct = false;
-    }
     if (correct == false) {
+        lightAllColors();
         numDisplay.innerHTML = "Lose!";
         setTimeout(function() {
             numDisplay.innerHTML = turn;
             clearColor();
             if (strictMode) {
-                play();
-            } else {
+                $(".pad").addClass('disabled');
+            }
+            else {
                 compTurn = true;
                 light = 0;
                 playerSequence = [];
-                correct = "true";
+                correct = true;
                 intervalId = setInterval(gameTurn, 800);
             }
         }, 800);
         sound = false;
         let audio = document.getElementById("sound-lost");
         audio.play();
+        $(".pad").addClass('disabled');
+    }
+    if (turn == playerSequence.length && correct) {
+        turn++;
+        playerSequence = [];
+        compTurn = true;
+        light = 0;
+        numDisplay.innerHTML = (turn) -1;
+        $(".pad").addClass('disabled');
+        intervalId = setInterval(gameTurn, 800);
     }
 }

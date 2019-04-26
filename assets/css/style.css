@@ -209,6 +209,10 @@ b {
     1px 0 #000;
 }
 
+.disabled {
+    pointer-events: none;
+}
+
 /*---------------------------------- SIMON BOARD LAYOUT */
 
 .heading-container h1 {
