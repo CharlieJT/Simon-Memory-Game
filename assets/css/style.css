@@ -51,10 +51,6 @@ body {
     box-shadow: none;
 }
 
-.fa {
-    display: block;
-}
-
 b {
     font-size: 1.3em;
 }
@@ -94,6 +90,7 @@ b {
     background-color: rgba(112, 112, 112, 0.3);
     color: white;
     bottom: 0;
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -215,10 +212,6 @@ b {
     margin: 0;
 }
 
-.simon-board {
-    padding: 0;
-}
-
 /*---------------------------------- SIMON BOARD CONTROLS */
 
 .controls {
@@ -311,7 +304,6 @@ b {
 }
 
 .strict-switch {
-    float: left;
     margin-top: 17px;
 }
 
@@ -355,13 +347,6 @@ input:checked[type="checkbox"]:before {
     left: 35px;
 }
 
-/*---------------------------------- FOOTER */
-
-.footer {
-    width: 100%;
-    padding: 13px 0;
-    margin: 0;
-}
 
 /*---------------------------------- MODALS */
 
