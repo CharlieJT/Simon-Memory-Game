@@ -46,7 +46,7 @@ function play() {
     turn = 1;
     numDisplay.innerHTML = "0";
     correct = true;
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 99; i++) {
         sequence.push(Math.floor(Math.random() * 4) + 1);
     }
     compTurn = true;
@@ -124,6 +124,7 @@ function clearColor() {
     $(bluePad).removeClass("blue-light");
 }
 
+//  This will flash all of the colours at the same time
 function lightAllColors() {
     $(greenPad).addClass("green-light");
     $(redPad).addClass("red-light");
@@ -176,7 +177,7 @@ function check() {
         lightAllColors();
         numDisplay.innerHTML = "Lose!";
         setTimeout(function() {
-            numDisplay.innerHTML = turn;
+            numDisplay.innerHTML = (turn) -1;
             clearColor();
             if (strictMode) {
                 $(".pad").addClass('disabled');
