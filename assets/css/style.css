@@ -51,10 +51,6 @@ body {
     box-shadow: none;
 }
 
-b {
-    font-size: 1.3em;
-}
-
 /*---------------------------------- CONTAINERS */
 
 .heading-container {
@@ -90,7 +86,6 @@ b {
     background-color: rgba(112, 112, 112, 0.3);
     color: white;
     bottom: 0;
-    padding-top: 10px;
     text-align: center;
 }
 
@@ -204,14 +199,6 @@ b {
     pointer-events: none;
 }
 
-/*---------------------------------- SIMON BOARD LAYOUT */
-
-.heading-container h1 {
-    width: 100%;
-    padding: 15px 0;
-    margin: 0;
-}
-
 /*---------------------------------- SIMON BOARD CONTROLS */
 
 .controls {
@@ -255,11 +242,6 @@ b {
     border: solid 2px #da2d2d;
     border-radius: 15px;
     font-size: 1.5em;
-}
-
-.strict-label p {
-    margin: 0;
-    padding: 0;
 }
 
 .start-btn {
@@ -377,9 +359,7 @@ input:checked[type="checkbox"]:before {
 }
 
 #rules-button:active,
-#close-button:active,
-#close-button-2:active,
-#high-scores-button:active {
+#close-button:active {
     border: none;
     box-shadow: none;
     transform: scale(0.96);
@@ -391,22 +371,6 @@ input:checked[type="checkbox"]:before {
     -o-transition: transform .2s;
     transition: transform .2s;
     transition: transform .2s, -webkit-transform .2s;
-}
-
-#high-scores-button {
-    width: 28.1vw;
-    height: 9.7vw;
-    max-width: 179px;
-    max-height: 61px;
-    border-radius: 20px;
-    padding-top: 0;
-    margin: 20px;
-    border: none;
-    font-weight: 600;
-    -webkit-text-shadow: 1px 1px 6px #000000;
-    -moz-text-shadow: 1px 1px 6px #000000;
-    -o-text-shadow: 1px 1px 6px #000000;
-    text-shadow: 1px 1px 6px #000000;
 }
 
 /* Modal Body */
@@ -432,10 +396,6 @@ input:checked[type="checkbox"]:before {
     text-align: center;
     width: 100%;
     font-size: 2em;
-}
-
-.fa-music {
-    display: inline;
 }
 
 .close,
@@ -508,10 +468,6 @@ input:checked[type="checkbox"]:before {
         left: 6.1vw;
     }
     #rules-button {
-        font-size: 2.7vw;
-        border-radius: 3vw;
-    }
-    #high-scores-button {
         font-size: 2.7vw;
         border-radius: 3vw;
     }
