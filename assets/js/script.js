@@ -41,16 +41,19 @@ startButton.addEventListener('click', (event) => {
 function play() {
     sequence = [];
     playerSequence = [];
+    getRandomNumber();
     light = 0;
     intervalId = 0;
     turn = 1;
     numDisplay.innerHTML = "0";
     correct = true;
-    for (var i = 0; i < 99; i++) {
-        sequence.push(Math.floor(Math.random() * 4) + 1);
-    }
     compTurn = true;
     intervalId = setInterval(gameTurn, 800);
+}
+
+// Gets a random number & pushes into the sequence
+function getRandomNumber() {
+    sequence.push(Math.floor(Math.random() * 4) + 1);
 }
 
 // An action taking place whether it's the player's turn or the computer's turn
@@ -61,6 +64,7 @@ function gameTurn() {
         compTurn = false;
         clearColor();
         on = true;
+        console.log(sequence);
     }
     if (compTurn) {
         clearColor();
@@ -74,7 +78,7 @@ function gameTurn() {
         }, 300);
     }
     setTimeout(function() {
-        $(".pad").removeClass('disabled');   
+        $(".pad").removeClass('disabled');
     }, 299);
 }
 
@@ -177,7 +181,7 @@ function check() {
         lightAllColors();
         numDisplay.innerHTML = "Lose!";
         setTimeout(function() {
-            numDisplay.innerHTML = (turn) -1;
+            numDisplay.innerHTML = (turn) - 1;
             clearColor();
             if (strictMode) {
                 $(".pad").addClass('disabled');
@@ -198,9 +202,10 @@ function check() {
     if (turn == playerSequence.length && correct) {
         turn++;
         playerSequence = [];
+        getRandomNumber();
         compTurn = true;
         light = 0;
-        numDisplay.innerHTML = (turn) -1;
+        numDisplay.innerHTML = (turn) - 1;
         $(".pad").addClass('disabled');
         intervalId = setInterval(gameTurn, 800);
     }
