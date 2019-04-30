@@ -418,7 +418,7 @@ input:checked[type="checkbox"]:before {
 
 /*---------------------------------- MEDIA QUERIES */
 
-@media (max-width:600px) {
+@media screen and (max-width:600px) {
     .simon-label {
         font-size: 4.2vw;
         line-height: 9.5vw;
@@ -489,7 +489,7 @@ input:checked[type="checkbox"]:before {
     }
 }
 
-@media (max-width:350px) {
+@media screen and (max-width:350px) {
     .heading-container h1 {
         font-size: 1.8em;
     }
@@ -510,7 +510,7 @@ input:checked[type="checkbox"]:before {
     }
 }
 
-@media(max-height:830px) {
+@media screen and (max-height:830px) {
     .footer-container {
         position: static;
     }

@@ -7,7 +7,7 @@ let turn;
 let correct;
 let compTurn;
 let intervalId;
-let strictMode = false;
+let strictMode = true;
 let sound = true;
 
 // buttons, number displays & pads targetted as variables using jQuery
@@ -78,7 +78,7 @@ function gameTurn() {
         clearColor();
         console.log(sequence);
     }
-    if (compTurn) {
+    else if (compTurn) {
         clearColor();
         setTimeout(function() {
             if (sequence[light] == 1) green();
@@ -200,11 +200,17 @@ $(bluePad).on("click", function() {
 // Checking to see if sequences are correct or wrong.
 
 function check() {
-    if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
+    if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;
+    }
     if (correct == false) {
         lightAllColors();
         $(numDisplay).text("Lose!");
+        sound = false;
+        let audio = document.getElementById("sound-lost");
+        audio.play();
+        $(".pad").addClass('disabled');
+
         setTimeout(function() {
             $(numDisplay).text((turn) - 1);
             clearColor();
@@ -220,12 +226,8 @@ function check() {
                 intervalId = setInterval(gameTurn, 800);
             }
         }, 800);
-        sound = false;
-        let audio = document.getElementById("sound-lost");
-        audio.play();
-        $(".pad").addClass('disabled');
     }
-    if (turn == playerSequence.length && correct) {
+    else if (turn == playerSequence.length && correct) {
         turn++;
         playerSequence = [];
         getRandomNumber();
