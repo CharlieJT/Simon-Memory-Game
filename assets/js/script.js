@@ -9,9 +9,8 @@ let compTurn;
 let intervalId;
 let strictMode = false;
 let sound = true;
-let on = false;
 
-// buttons, number display & pads targetted as variables using jQuery
+// buttons, number displays & pads targetted as variables using jQuery
 
 const numDisplay = document.getElementById("number-counter");
 const greenPad = document.getElementById("0");
@@ -23,8 +22,7 @@ const strictButton = document.getElementById("strict");
 const startModal = document.getElementById("start-modal-button");
 const scoreModalDisplay = document.getElementById("score-modal-display");
 
-
-// Using a jQuery function to check to see if strict slider is true or false when the slider is clicked
+// Using a jQuery function to check to see if strict slider is true or false when the slider is clicked.
 
 $(strictButton).on("click", function() {
     if (strictButton.checked == true) {
@@ -33,23 +31,24 @@ $(strictButton).on("click", function() {
     else {
         strictMode = false;
     }
-})
+});
 
-// jQuery function to initialise game when start button is clicked
+// jQuery function to initialise game when start button is clicked.
 
 $(startButton).on("click", function() {
     clearInterval(intervalId);
     play();
 });
 
-// jQuery function to initialise game when start button in score modal is clicked
+// jQuery function to initialise game when start button in score modal is clicked.
 
 $(startModal).on("click", function() {
     clearInterval(intervalId);
     play();
 });
 
-// Default play setting
+// Default play setting.
+
 function play() {
     sequence = [];
     playerSequence = [];
@@ -63,19 +62,20 @@ function play() {
     intervalId = setInterval(gameTurn, 800);
 }
 
-// Gets a random number & pushes into the sequence
+// Gets a random number & pushes into the sequence.
+
 function getRandomNumber() {
     sequence.push(Math.floor(Math.random() * 4) + 1);
 }
 
-// An action taking place whether it's the player's turn or the computer's turn
+// An action taking place whether it's the player's turn or the computer's turn.
+
 function gameTurn() {
     on = false;
     if (light == turn) {
         clearInterval(intervalId);
         compTurn = false;
         clearColor();
-        on = true;
         console.log(sequence);
     }
     if (compTurn) {
@@ -94,7 +94,7 @@ function gameTurn() {
     }, 299);
 }
 
-// Sounds & Lights being generated for each color
+// Sounds & Lights being generated for each color.
 
 function green() {
     if (sound) {
@@ -132,7 +132,8 @@ function blue() {
     $(bluePad).addClass("blue-light");
 }
 
-// This returns all of the colours back to their original state from being flashed
+// This returns all of the colours back to their original state from being flashed.
+
 function clearColor() {
     $(greenPad).removeClass("green-light");
     $(redPad).removeClass("red-light");
@@ -140,7 +141,8 @@ function clearColor() {
     $(bluePad).removeClass("blue-light");
 }
 
-//  This will flash all of the colours at the same time
+//  This will flash all of the colours at the same time.
+
 function lightAllColors() {
     $(greenPad).addClass("green-light");
     $(redPad).addClass("red-light");
@@ -148,14 +150,15 @@ function lightAllColors() {
     $(bluePad).addClass("blue-light");
 }
 
-// After game over in strict mode, a modal will appear with your score displayed
+// Function to order game over modal to appear with final score.
+
 function displayModal() {
     $('#scoresModal').modal('show');
     $(scoreModalDisplay).text((turn) - 1);
 }
 
 
-// Events taking place when each of the pads are clicked
+// Events taking place when each of the pads are clicked.
 
 $(greenPad).on("click", function() {
     playerSequence.push(1);
@@ -194,7 +197,8 @@ $(bluePad).on("click", function() {
 });
 
 
-// Checking to see if sequences are correct or wrong
+// Checking to see if sequences are correct or wrong.
+
 function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
         correct = false;
