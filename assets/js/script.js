@@ -21,26 +21,30 @@ const bluePad = document.getElementById("3");
 const startButton = document.getElementById("start");
 const strictButton = document.getElementById("strict");
 const startModal = document.getElementById("start-modal-button");
-const scoreModal = document.getElementById("score-modal-display");
+const scoreModalDisplay = document.getElementById("score-modal-display");
 
 
-// Event Listener checks to see if strict slider is true or false when clicked
-strictButton.addEventListener('click', (event) => {
+// Using a jQuery function to check to see if strict slider is true or false when the slider is clicked
+
+$(strictButton).on("click", function() {
     if (strictButton.checked == true) {
         strictMode = true;
     }
     else {
         strictMode = false;
     }
-});
+})
 
-// Event Listener initialisation when start button is clicked
-startButton.addEventListener('click', (event) => {
+// jQuery function to initialise game when start button is clicked
+
+$(startButton).on("click", function() {
     clearInterval(intervalId);
     play();
 });
 
-startModal.addEventListener('click', (event) => {
+// jQuery function to initialise game when start button in score modal is clicked
+
+$(startModal).on("click", function() {
     clearInterval(intervalId);
     play();
 });
@@ -144,8 +148,16 @@ function lightAllColors() {
     $(bluePad).addClass("blue-light");
 }
 
+// After game over in strict mode, a modal will appear with your score displayed
+function displayModal() {
+    $('#scoresModal').modal('show');
+    $(scoreModalDisplay).text((turn) - 1);
+}
+
+
 // Events taking place when each of the pads are clicked
-greenPad.addEventListener('click', (event) => {
+
+$(greenPad).on("click", function() {
     playerSequence.push(1);
     check();
     green();
@@ -154,7 +166,7 @@ greenPad.addEventListener('click', (event) => {
     }, 300);
 });
 
-redPad.addEventListener('click', (event) => {
+$(redPad).on("click", function() {
     playerSequence.push(2);
     check();
     red();
@@ -163,7 +175,7 @@ redPad.addEventListener('click', (event) => {
     }, 300);
 });
 
-yellowPad.addEventListener('click', (event) => {
+$(yellowPad).on("click", function() {
     playerSequence.push(3);
     check();
     yellow();
@@ -172,7 +184,7 @@ yellowPad.addEventListener('click', (event) => {
     }, 300);
 });
 
-bluePad.addEventListener('click', (event) => {
+$(bluePad).on("click", function() {
     playerSequence.push(4);
     check();
     blue();
@@ -181,20 +193,20 @@ bluePad.addEventListener('click', (event) => {
     }, 300);
 });
 
+
 // Checking to see if sequences are correct or wrong
 function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
         correct = false;
     if (correct == false) {
         lightAllColors();
-        numDisplay.innerHTML = "Lose!";
+        $(numDisplay).text("Lose!");
         setTimeout(function() {
-            numDisplay.innerHTML = (turn) - 1;
+            $(numDisplay).text((turn) - 1);
             clearColor();
             if (strictMode) {
                 $(".pad").addClass('disabled');
                 displayModal();
-                scoreModal.innerHTML = (turn) - 1;
             }
             else {
                 compTurn = true;
@@ -215,12 +227,8 @@ function check() {
         getRandomNumber();
         compTurn = true;
         light = 0;
-        numDisplay.innerHTML = (turn) - 1;
+        $(numDisplay).text((turn) - 1);
         $(".pad").addClass('disabled');
         intervalId = setInterval(gameTurn, 800);
     }
-}
-
-function displayModal() {
-    $('#scoresModal').modal('show');
 }
