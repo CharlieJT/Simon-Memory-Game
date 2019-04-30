@@ -40,6 +40,11 @@ startButton.addEventListener('click', (event) => {
     play();
 });
 
+startModal.addEventListener('click', (event) => {
+    clearInterval(intervalId);
+    play();
+});
+
 // Default play setting
 function play() {
     sequence = [];
