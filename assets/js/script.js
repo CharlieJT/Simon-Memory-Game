@@ -20,6 +20,9 @@ const yellowPad = document.getElementById("2");
 const bluePad = document.getElementById("3");
 const startButton = document.getElementById("start");
 const strictButton = document.getElementById("strict");
+const startModal = document.getElementById("start-modal-button");
+const scoreModal = document.getElementById("score-modal-display");
+
 
 // Event Listener checks to see if strict slider is true or false when clicked
 strictButton.addEventListener('click', (event) => {
@@ -185,6 +188,8 @@ function check() {
             clearColor();
             if (strictMode) {
                 $(".pad").addClass('disabled');
+                displayModal();
+                scoreModal.innerHTML = (turn) - 1;
             }
             else {
                 compTurn = true;
@@ -209,4 +214,8 @@ function check() {
         $(".pad").addClass('disabled');
         intervalId = setInterval(gameTurn, 800);
     }
+}
+
+function displayModal() {
+    $('#scoresModal').modal('show');
 }
