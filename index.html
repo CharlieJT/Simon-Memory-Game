@@ -77,23 +77,23 @@
 		</div>
 		<!-- footer -->
 
-		<!-- Modal -->
+		<!-- Rules Modal -->
 		<div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-scrollable" role="document">
 				<div class="modal-content">
-					<div class="modal-header">
+					<div class="modal-header px-0 pl-4">
 						<h5 class="modal-title" id="exampleModalScrollableTitle">Game Information</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          				<span aria-hidden="true">&times;</span>
-        			</button>
+						<button type="button" class="close pl-0 mr-2" data-dismiss="modal" aria-label="Close">
+          					<span aria-hidden="true">&times;</span>
+        				</button>
 					</div>
 					<div class="modal-body modal-body-rules">
 						<div class="buttons-box m-2 px-2 py-2">
 							<i class="fa fa-angle-down"></i>
 							<h3 class="text-center"><b>Buttons:</b></h3>
 							<p><strong class="h5 font-weight-bold">1. Start - </strong>To begin the game, press 'START' & your first sequence will commence. Also, click 'START' to begin a new game when it's game over or to start a new game!</p>
-							<p><b class="h5 font-weight-bold">2. Strict - </b>When 'STRICT' mode is activated (green), if you at any point get your sequence wrong, it will be game over. If 'STRICT' mode is not activated (grey), then you can keep trying the current sequence over & over until you get it
-								correct & move to the next sequence.</p>
+							<p><b class="h5 font-weight-bold">2. Strict - </b>When 'STRICT' mode is activated (green), if you at any point get your sequence wrong, it will be game over. If 'STRICT' mode is not activated (grey), then you can keep trying the current sequence over
+								& over until you get it correct & move to the next sequence.</p>
 							<p><b class="h5 font-weight-bold">3. Green Pad - </b><i class="fa fa-music"> </i> (D#).</p>
 							<p><b class="h5 font-weight-bold">4. Red Pad - </b><i class="fa fa-music"> </i> (G).</p>
 							<p><b class="h5 font-weight-bold">5. Yellow Pad - </b><i class="fa fa-music"> </i> (A#).</p>
@@ -110,34 +110,35 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- rules.modal -->
+		<!-- rules.modal -->
 
-	<!-- Scores Modal -->
-	<div class="modal fade" id="scoresModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-scrollable" role="document">
-			<div class="modal-content">
-				<div class="modal-header pl-5">
-					<h5 class="modal-title text-uppercase" id="exampleModalScrollableTitle-2">Game Over!</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          				<span aria-hidden="true">&times;</span>
-        			</button>
-				</div>
-				<div class="modal-body">
-					<div class="buttons-box m-2 px-2 py-2 text-center">
-						<h4>You Scored:</h4><br>
-						<h2 id="score-modal-display" class="text-center">--</h2>
-						<p class="m-0 mt-5 text-center">Click 'Start' to begin new game</p>
+		<!-- Scores Modal -->
+		<div class="modal fade" id="scoresModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable" role="document">
+				<div class="modal-content">
+					<div class="modal-header px-0 pl-4">
+						<h5 class="modal-title text-uppercase" id="exampleModalScrollableTitle-2">Game Over!</h5>
+						<button type="button" class="close pl-0 mr-2" data-dismiss="modal" aria-label="Close">
+          					<span aria-hidden="true">&times;</span>
+        				</button>
 					</div>
-				</div>
-				<div class="modal-footer justify-content-between">
-					<button id="start-modal-button" type="button" class="btn btn-success" data-dismiss="modal">Start</button>
-					<button id="close-button-2" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<div class="modal-body">
+						<div class="buttons-box m-2 px-2 py-2 text-center">
+							<h4>You Scored:</h4><br>
+							<h2 id="score-modal-display" class="text-center">--</h2>
+							<p class="m-0 mt-5 text-center">Click 'Start' to begin new game</p>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-between">
+						<button id="start-modal-button" type="button" class="btn btn-success" data-dismiss="modal">Start</button>
+						<button id="close-button-2" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
 				</div>
 			</div>
 		</div>
+		<!-- scores.modal -->
 	</div>
-	<!-- scores.modal -->
+
 
 	<!-- Sound Clips -->
 	<audio id="sound-green" src="assets/sounds/sound-1.mp3"></audio>
