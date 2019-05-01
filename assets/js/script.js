@@ -102,7 +102,7 @@ function gameTurn() {
 /* 
 Sounds & Lights being generated for each color.
 This is done by selecting the sound through jQuery & running a play function.
-Also we add a class through jQuery to give it the light effect.
+Also, a class is added through jQuery to give it the light effect.
 */
 
 function green() {
@@ -213,8 +213,22 @@ $(bluePad).on("click", function() {
 });
 
 
-// Checking to see if sequences are correct or wrong.
+/* Checking to see if sequences are correct or wrong.
+If player sequence is not the same as computer sequence, correct will return as false.
+If correct is false, this will mean you've lost & you will get back "Lose!" in the number display.
+A lose sound with a flashing of all of the lights will be produced. 
+Pads are also disabled using jQuery.
+*/
 
+/*
+A timeout has been set up on lose for after 800 milliseconds. which will clear all colours & display the turn number as your score in the number display.
+Being in strict mode as default, it will disable all of the pads & produce a modal with your final score.
+If strict mode has been turned off, then it will repeat the previous sequence again.
+*/
+
+/*
+If player sequence matches turn count & is correct then, turn count will increase by 1, an extra number is added to sequence array & will begin the computer sequence again.
+*/
 function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;

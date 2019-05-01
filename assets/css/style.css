@@ -376,6 +376,11 @@ input:checked[type="checkbox"]:before {
     transition: transform .2s, -webkit-transform .2s;
 }
 
+.close,
+.close:hover {
+    color: #fff;
+}
+
 /* Modal Body */
 
 .modal-content {
@@ -399,11 +404,6 @@ input:checked[type="checkbox"]:before {
     text-align: center;
     width: 100%;
     font-size: 2em;
-}
-
-.close,
-.close:hover {
-    color: #fff;
 }
 
 .modal-body-rules {

@@ -9,6 +9,8 @@
 	<meta name="description" content="Simon Memory Game">
 	<meta name="keywords" content="Simon Memory, Memory Game, Brain Training, Memory, Game, Puzzle, Fun, Challenge">
 	<meta name="author" content="Charlie Tipton">
+	
+	<!-- Title -->
 	<title>Simon Game</title>
 
 	<!-- Favicon -->
@@ -22,21 +24,20 @@
 </head>
 
 <body>
+	<!-- Wrapper -->
 	<div id="wrapper" class="clearfix">
-		<!-- Main Title -->
+		<!-- Main Heading -->
 		<div class="container-fluid heading-container">
 			<div class="row justify-content-center">
 				<h1 class="m-0 py-3">SIMON GAME</h1>
 			</div>
 		</div>
-		<!-- main.title -->
 		<!-- Rules Button -->
 		<div class="button-container">
 			<div class="row justify-content-center">
 				<button id="rules-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#rulesModal"><i class="fa fa-question-circle d-block"></i> Game Info</button>
 			</div>
 		</div>
-		<!-- rules.button -->
 		<!-- Simon Board -->
 		<div class="container-fluid board-container">
 			<div class="row no-gutters">
@@ -48,7 +49,6 @@
 						<div id="2" class="pad yellow disabled"></div>
 						<div id="3" class="pad blue disabled"></div>
 					</div>
-					<!-- pad.colors -->
 					<!-- Controls -->
 					<div class="controls">
 						<div class="simon-label">Simon</div>
@@ -63,11 +63,9 @@
 							</div>
 						</div>
 					</div>
-					<!-- controls -->
 				</div>
 			</div>
 		</div>
-		<!-- simon.board -->
 
 		<!-- Footer -->
 		<div class="container-fluid footer-container">
@@ -75,7 +73,6 @@
 				<p class="footer m-0 py-3">Website by Charlie Tipton &copy; Copyright!</p>
 			</div>
 		</div>
-		<!-- footer -->
 
 		<!-- Rules Modal -->
 		<div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
@@ -87,6 +84,7 @@
           					<span aria-hidden="true">&times;</span>
         				</button>
 					</div>
+					<!-- Rules Modal Body -->
 					<div class="modal-body modal-body-rules">
 						<div class="buttons-box m-2 px-2 py-2">
 							<i class="fa fa-angle-down"></i>
@@ -110,7 +108,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- rules.modal -->
 
 		<!-- Scores Modal -->
 		<div class="modal fade" id="scoresModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
@@ -122,6 +119,7 @@
           					<span aria-hidden="true">&times;</span>
         				</button>
 					</div>
+					<!-- Scores Modal Body -->
 					<div class="modal-body">
 						<div class="buttons-box m-2 px-2 py-2 text-center">
 							<h4>You Scored:</h4><br>
@@ -136,23 +134,20 @@
 				</div>
 			</div>
 		</div>
-		<!-- scores.modal -->
+
+		<!-- Sound Clips -->
+		<audio id="sound-green" src="assets/sounds/sound-1.mp3"></audio>
+		<audio id="sound-red" src="assets/sounds/sound-2.mp3"></audio>
+		<audio id="sound-yellow" src="assets/sounds/sound-3.mp3"></audio>
+		<audio id="sound-blue" src="assets/sounds/sound-4.mp3"></audio>
+		<audio id="sound-lost" src="assets/sounds/lost-game.mp3"></audio>
+
+		<!-- Scripts located at the bottom of the body to ensure page is fully loaded before execution -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="assets/js/script.js"></script>
 	</div>
-
-
-	<!-- Sound Clips -->
-	<audio id="sound-green" src="assets/sounds/sound-1.mp3"></audio>
-	<audio id="sound-red" src="assets/sounds/sound-2.mp3"></audio>
-	<audio id="sound-yellow" src="assets/sounds/sound-3.mp3"></audio>
-	<audio id="sound-blue" src="assets/sounds/sound-4.mp3"></audio>
-	<audio id="sound-lost" src="assets/sounds/lost-game.mp3"></audio>
-	<!-- sound.clips -->
-
-	<!-- JavaScript Links, Scripts located at the bottom of the body to ensure page is fully loaded before execution -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="assets/js/script.js"></script>
 
 </body>
 
