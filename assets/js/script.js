@@ -47,7 +47,7 @@ $(startModal).on("click", function() {
     play();
 });
 
-// Default play setting.
+// Default play setting. This targets the game play so that is ready to begin a new sequence.
 
 function play() {
     sequence = [];
@@ -68,10 +68,15 @@ function getRandomNumber() {
     sequence.push(Math.floor(Math.random() * 4) + 1);
 }
 
-// An action taking place whether it's the player's turn or the computer's turn.
+/* 
+An action taking place whether it's the player's turn or the computer's turn.
+When the amount of flashes then matches the turn number. The computer sequence stops, ensures all colours are cleared & sequence is logged to the console.
+Whilst the computer is producing a sequence, it checks sequence light id & applies the light & sound function to each one accordingly.
+A disable class is added to the timeout using jQuery to stop any clicking action on the pads whilst computer is generating a sequence.
+The disable class is then removed after a set time which then allows player to then click.
+*/
 
 function gameTurn() {
-    on = false;
     if (light == turn) {
         clearInterval(intervalId);
         compTurn = false;
@@ -94,7 +99,11 @@ function gameTurn() {
     }, 299);
 }
 
-// Sounds & Lights being generated for each color.
+/* 
+Sounds & Lights being generated for each color.
+This is done by selecting the sound through jQuery & running a play function.
+Also we add a class through jQuery to give it the light effect.
+*/
 
 function green() {
     if (sound) {
@@ -132,7 +141,7 @@ function blue() {
     $(bluePad).addClass("blue-light");
 }
 
-// This returns all of the colours back to their original state from being flashed.
+// This returns all of the colours back to their original state from being flashed by removing class name through jQuery. 
 
 function clearColor() {
     $(greenPad).removeClass("green-light");
@@ -141,7 +150,7 @@ function clearColor() {
     $(bluePad).removeClass("blue-light");
 }
 
-//  This will flash all of the colours at the same time.
+//  This will flash all of the colours at the same time using jQuery.
 
 function lightAllColors() {
     $(greenPad).addClass("green-light");
@@ -150,15 +159,22 @@ function lightAllColors() {
     $(bluePad).addClass("blue-light");
 }
 
-// Function to order game over modal to appear with final score.
-
+/* 
+Function to order game over modal to appear with final score.
+This will show the modal & show the final score using jQuery.
+*/
 function displayModal() {
     $('#scoresModal').modal('show');
     $(scoreModalDisplay).text((turn) - 1);
 }
 
 
-// Events taking place when each of the pads are clicked.
+/* 
+Events taking place when each of the pads are clicked using jQuery.
+On click on each of the pads, it will push a number into the player sequence array depending on which has been clicked.
+It then runs a light & sound function depending on colour.
+Then it will clear colour after a set time.
+*/
 
 $(greenPad).on("click", function() {
     playerSequence.push(1);
