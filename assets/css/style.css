@@ -352,15 +352,17 @@ input:checked[type="checkbox"]:before {
 }
 
 #close-button,
-#close-button-2:active,
-#close-button-2:hover {
+#close-button-2,
+#start-modal-button {
     border: none;
     width: 4.8em;
     height: 2.4em;
 }
 
 #rules-button:active,
-#close-button:active {
+#close-button:active,
+#close-button-2:active,
+#start-modal-button:active {
     border: none;
     box-shadow: none;
     transform: scale(0.96);
@@ -486,6 +488,12 @@ input:checked[type="checkbox"]:before {
 
     .blue {
         border-bottom-right-radius: 47vw;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .modal-header h5 {
+        font-size: 7.7vw;
     }
 }
 
