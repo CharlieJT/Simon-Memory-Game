@@ -108,6 +108,7 @@ Also, a class is added through jQuery to give it the light effect.
 function green() {
     if (sound) {
         let audio = document.getElementById("sound-green");
+        audio.currentTime = 0;
         audio.play();
     }
     sound = true;
@@ -117,6 +118,7 @@ function green() {
 function red() {
     if (sound) {
         let audio = document.getElementById("sound-red");
+        audio.currentTime = 0;
         audio.play();
     }
     sound = true;
@@ -126,6 +128,7 @@ function red() {
 function yellow() {
     if (sound) {
         let audio = document.getElementById("sound-yellow");
+        audio.currentTime = 0;
         audio.play();
     }
     sound = true;
@@ -135,6 +138,7 @@ function yellow() {
 function blue() {
     if (sound) {
         let audio = document.getElementById("sound-blue");
+        audio.currentTime = 0;
         audio.play();
     }
     sound = true;
