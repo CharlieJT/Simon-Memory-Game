@@ -10,7 +10,7 @@ let intervalId;
 let strictMode = true;
 let sound = true;
 
-// buttons, number displays & pads targetted as variables using jQuery
+// buttons, number displays & pads targetted as variables using jQuery.
 
 const numDisplay = document.getElementById("number-counter");
 const greenPad = document.getElementById("0");
