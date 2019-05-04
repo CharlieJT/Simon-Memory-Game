@@ -27,7 +27,6 @@ describe('play function', function() {
         expect(compTurn).toBe(true);
     });
 
-
     describe('classes of pads', function() {
 
         beforeEach(() => {
@@ -38,25 +37,51 @@ describe('play function', function() {
 			<div id="3" class="pad blue-pad disabled"></div>
         `)
         });
+        
         describe('disabled pads', function() {
-            it('should return green-pad as disabled', function() {
+
+            it('should return green-pad as having class disabled', function() {
                 play();
                 expect('.green-pad').toHaveClass('disabled');
             });
-            it('should return red-pad as disabled', function() {
+
+            it('should return red-pad as having class disabled', function() {
                 play();
                 expect('.red-pad').toHaveClass('disabled');
             });
-            it('should return yellow-pad as disabled', function() {
+
+            it('should return yellow-pad as having class disabled', function() {
                 play();
                 expect('.yellow-pad').toHaveClass('disabled');
             });
-            it('should return blue-pad as disabled', function() {
+
+            it('should return blue-pad as having class disabled', function() {
                 play();
                 expect('.blue-pad').toHaveClass('disabled');
             });
-        })
+        });
+        
+        describe('green pads', function() {
 
+            it('should return green-pad as not having class green-light', function() {
+                play();
+                expect('.green-pad').not.toHaveClass('green-light');
+            });
 
+            it('should return red-pad as not having class red-light', function() {
+                play();
+                expect('.red-pad').not.toHaveClass('red-light');
+            });
+
+            it('should return yellow-pad as not having class yellow-light', function() {
+                play();
+                expect('.yellow-pad').not.toHaveClass('yellow-light');
+            });
+
+            it('should return blue-pad as not having class blue-light', function() {
+                play();
+                expect('.blue-pad').not.toHaveClass('blue-light');
+            });
+        });
     });
 });
