@@ -56,7 +56,7 @@ function play() {
     light = 0;
     intervalId = 0;
     turn = 1;
-    $(numDisplay).text(turn - 1);
+    $(numDisplay).text("0");
     correct = true;
     compTurn = true;
     intervalId = setInterval(gameTurn, 800);
