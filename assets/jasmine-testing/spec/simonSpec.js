@@ -26,6 +26,37 @@ describe('play function', function() {
         let result = play();
         expect(compTurn).toBe(true);
     });
+
+
+    describe('classes of pads', function() {
+
+        beforeEach(() => {
+            setFixtures(`
+            <div id="0" class="pad green-pad disabled"></div>
+			<div id="1" class="pad red-pad disabled"></div>
+			<div id="2" class="pad yellow-pad disabled"></div>
+			<div id="3" class="pad blue-pad disabled"></div>
+        `)
+        });
+        describe('disabled pads', function() {
+            it('should return green-pad as disabled', function() {
+                play();
+                expect('.green-pad').toHaveClass('disabled');
+            });
+            it('should return red-pad as disabled', function() {
+                play();
+                expect('.red-pad').toHaveClass('disabled');
+            });
+            it('should return yellow-pad as disabled', function() {
+                play();
+                expect('.yellow-pad').toHaveClass('disabled');
+            });
+            it('should return blue-pad as disabled', function() {
+                play();
+                expect('.blue-pad').toHaveClass('disabled');
+            });
+        })
+
+
+    });
 });
-
-
