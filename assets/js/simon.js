@@ -47,6 +47,16 @@ $(startModal).on("click", function() {
     play();
 });
 
+// jQuery function to allow modal scroll icon to scroll down upon click.
+
+$('.modal-scroll').on('click', function(e) {
+    var linkHref = $(this).attr('href');
+    e.preventDefault();
+    $('.modal-body').animate({
+        scrollTop : $(linkHref).offset().top
+    }, 800);
+});
+
 // Default play setting. This targets the game play so that is ready to begin a new sequence.
 
 function play() {
@@ -272,3 +282,5 @@ function check() {
         intervalId = setInterval(gameTurn, 800);
     }
 }
+
+

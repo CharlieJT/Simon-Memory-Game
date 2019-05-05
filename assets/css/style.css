@@ -413,10 +413,10 @@ input:checked[type="checkbox"]:before {
 
 .fa-angle-down {
     float: right;
+    color: white;
     font-size: 2.7em;
     animation: scrollDown 0.4s alternate-reverse infinite ease-in-out;
 }
-
 
 /*---------------------------------- MEDIA QUERIES */
 
