@@ -247,5 +247,28 @@ describe('check function', function() {
                 expect('.pad').not.toHaveClass('disabled');
             });
         });
+        
+        describe('light on pads', function() {
+
+            it('should return green-pad as not having class green-light', function() {
+                let result = play();
+                expect('.green-pad').not.toHaveClass('green-light');
+            });
+
+            it('should return red-pad as not having class red-light', function() {
+                let result = play();
+                expect('.red-pad').not.toHaveClass('red-light');
+            });
+
+            it('should return yellow-pad as not having class yellow-light', function() {
+                let result = play();
+                expect('.yellow-pad').not.toHaveClass('yellow-light');
+            });
+
+            it('should return blue-pad as not having class blue-light', function() {
+                let result = play();
+                expect('.blue-pad').not.toHaveClass('blue-light');
+            });
+        });
     });
 });
