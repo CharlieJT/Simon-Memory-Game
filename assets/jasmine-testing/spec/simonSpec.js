@@ -94,7 +94,7 @@ describe('gameTurn function', function() {
     });
 
     describe('value of compTurn variable', function() {
-        it('should return compTurn as false', function() {
+        it('should return compTurn = false', function() {
             let result = gameTurn();
             expect(compTurn).toBe(false);
         });
@@ -144,8 +144,8 @@ describe('clearColor function', function() {
 			<div id="1" class="pad red-pad disabled"></div>
 			<div id="2" class="pad yellow-pad disabled"></div>
 			<div id="3" class="pad blue-pad disabled"></div>
-        `)
-    })
+        `);
+    });
 
     describe('lights on pads', function() {
 
@@ -204,5 +204,32 @@ describe('lightAllColors function', function() {
             let result = clearColor();
             expect('.blue-pad').toHaveClass('blue-light');
         });
+    });
+});
+
+describe('check function', function() {
+    beforeEach(() => {
+        compTurn = true;
+        sound = true;
+        light = 0;
+    });
+    
+    describe('value of each variable in check function', function() {
+        
+        it('should return compTurn = false', function() {
+            let result = check();
+            expect(compTurn).toBe(true);
+        });
+        
+        it('should return sound = false', function() {
+            let result = check();
+            expect(sound).toBe(true);
+        });
+        
+        it('should return light = 0', function() {
+            let result = check();
+            expect(light).toBe(0);
+        });
+        
     });
 });
