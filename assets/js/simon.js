@@ -79,7 +79,7 @@ function play() {
     turn = 1;
     $(numDisplay).text("0");
     correct = true;
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 20; i++) {
         sequence.push(Math.floor(Math.random() * 4) + 1);
     }
     compTurn = true;
@@ -266,7 +266,7 @@ function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;
     }
-    if (playerSequence.length == 1 && correct) {
+    if (playerSequence.length == 20 && correct) {
         $(".pad").addClass('disabled');
         winGame();
     }
@@ -310,14 +310,16 @@ function check() {
 function winGame() {
     clearInterval(intervalId);
     lightAllColors();
-    $(numDisplay).text("WIN!");
     turn++;
+    $(numDisplay).text(turn - 1);
     setTimeout(function() {
-        $('#winModal').modal('show');
-        $(winModalDisplay).text(turn - 1);
-        let audio = document.getElementById("sound-win");
-        audio.currentTime = 0;
-        audio.play();
+        $(numDisplay).text("WIN!");
+        setTimeout(function() {
+            $(winModalDisplay).text(turn - 1);
+            $('#winModal').modal('show');
+            let audio = document.getElementById("sound-win");
+            audio.currentTime = 0;
+            audio.play();
+        }, 600);
     }, 600);
-
 }
