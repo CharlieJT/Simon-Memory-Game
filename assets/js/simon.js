@@ -21,7 +21,10 @@ const bluePad = document.getElementById("3");
 const startButton = document.getElementById("start");
 const strictButton = document.getElementById("strict");
 const startModal = document.getElementById("start-modal-button");
+const startWinModal = document.getElementById("start-modal-win-button");
 const scoreModalDisplay = document.getElementById("score-modal-display");
+const winModalDisplay = document.getElementById("win-modal-display");
+
 
 // Using a jQuery function to check to see if strict slider is true or false when the slider is clicked.
 
@@ -44,6 +47,13 @@ $(startButton).on("click", function() {
 // jQuery function to initialise game when start button in score modal is clicked.
 
 $(startModal).on("click", function() {
+    clearInterval(intervalId);
+    play();
+});
+
+// jQuery function to initialise game when start button in win modal is clicked.
+
+$(startWinModal).on("click", function() {
     clearInterval(intervalId);
     play();
 });
@@ -71,6 +81,7 @@ function play() {
     correct = true;
     for (var i = 0; i < 3; i++) {
         sequence.push(Math.floor(Math.random() * 4) + 1);
+        console.log(sequence);
     }
     compTurn = true;
     intervalId = setInterval(gameTurn, 800);
@@ -89,7 +100,6 @@ function gameTurn() {
         clearInterval(intervalId);
         compTurn = false;
         clearColor();
-        console.log(sequence);
     }
     else if (compTurn) {
         clearColor();
@@ -257,9 +267,9 @@ function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;
     }
-    if (playerSequence.length == 3 && correct) {
-        winGame();
+    if (playerSequence.length == 1 && correct) {
         $(".pad").addClass('disabled');
+        winGame();
     }
     if (correct == false) {
         lightAllColors();
@@ -302,7 +312,9 @@ function winGame() {
     clearInterval(intervalId);
     lightAllColors();
     turn++;
-    $(numDisplay).text("Win!");
+    $(numDisplay).text("WIN!");
+    $('#winModal').modal('show');
+    $(winModalDisplay).text("20");
     let audio = document.getElementById("sound-win");
     audio.currentTime = 0;
     audio.play();

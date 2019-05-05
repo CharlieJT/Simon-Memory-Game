@@ -353,7 +353,9 @@ input:checked[type="checkbox"]:before {
 
 #close-button,
 #close-button-2,
-#start-modal-button {
+#close-button-3,
+#start-modal-button,
+#start-modal-win-button{
     border: none;
     width: 4.8em;
     height: 2.4em;
@@ -362,7 +364,9 @@ input:checked[type="checkbox"]:before {
 #rules-button:active,
 #close-button:active,
 #close-button-2:active,
-#start-modal-button:active {
+#close-button-3:active,
+#start-modal-button:active,
+#start-modal-win-button:active{
     border: none;
     box-shadow: none;
     transform: scale(0.96);
@@ -385,6 +389,23 @@ input:checked[type="checkbox"]:before {
 
 .modal-content {
     background: url(../images/simon-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    top: 3vh;
+    width: 90%;
+    margin: auto;
+    -webkit-text-shadow: 1px 1px 6px #000000;
+    -moz-text-shadow: 1px 1px 6px #000000;
+    -o-text-shadow: 1px 1px 6px #000000;
+    text-shadow: 1px 1px 6px #000000;
+}
+
+.win-modal-content {
+    background: url(../images/winner-background.png) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -474,19 +495,19 @@ input:checked[type="checkbox"]:before {
         font-size: 2.7vw;
         border-radius: 3vw;
     }
-    .green {
+    .green-pad {
         border-top-left-radius: 47vw;
     }
 
-    .red {
+    .red-pad {
         border-top-right-radius: 47vw;
     }
 
-    .yellow {
+    .yellow-pad {
         border-bottom-left-radius: 47vw;
     }
 
-    .blue {
+    .blue-pad {
         border-bottom-right-radius: 47vw;
     }
 }
@@ -504,16 +525,16 @@ input:checked[type="checkbox"]:before {
     #rules-button {
         font-size: 2.5vw;
     }
-    .green {
+    .green-pad {
         border-top-left-radius: 45vw;
     }
-    .red {
+    .red-pad {
         border-top-right-radius: 45vw;
     }
-    .yellow {
+    .yellow-pad {
         border-bottom-left-radius: 45vw;
     }
-    .blue {
+    .blue-pad {
         border-bottom-right-radius: 45vw;
     }
 }

@@ -134,6 +134,32 @@
 				</div>
 			</div>
 		</div>
+		
+		<!-- Win Modal -->
+		<div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable" role="document">
+				<div class="win-modal-content">
+					<div class="modal-header px-0 pl-4">
+						<h5 class="modal-title text-uppercase" id="exampleModalScrollableTitle-3">Winner!</h5>
+						<button type="button" class="close pl-0 mr-2" data-dismiss="modal" aria-label="Close">
+          					<span aria-hidden="true">&times;</span>
+        				</button>
+					</div>
+					<!-- Scores Modal Body -->
+					<div class="modal-body">
+						<div class="buttons-box m-2 px-2 py-2 text-center">
+							<h4 class="text-uppercase">You scored the maximum score of:</h4><br>
+							<h2 id="win-modal-display" class="text-center">--</h2>
+							<p class="m-0 mt-5 text-center text-uppercase">Well Done!</p>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-between">
+						<button id="start-modal-win-button" type="button" class="btn btn-success" data-dismiss="modal">Start</button>
+						<button id="close-button-3" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Sound Clips -->
 		<audio id="sound-green" src="assets/sounds/sound-1.mp3"></audio>
