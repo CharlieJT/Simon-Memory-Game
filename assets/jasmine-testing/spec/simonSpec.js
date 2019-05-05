@@ -80,3 +80,29 @@ describe('play function', function() {
         });
     });
 });
+
+describe('gameTurn function', function() {
+    
+    beforeEach(() => {
+        compTurn = false;
+        jasmine.clock().install();
+    });
+    afterEach(() => {
+        jasmine.clock().uninstall();
+    })
+    
+    describe('value for compTurn', function() {
+        it('should return compTurn as false', function() {
+            let result = gameTurn();
+            expect(compTurn).toBe(false);
+        });
+    });
+    
+    describe('classes of pads', function() {
+        it('should return pad as not having class disabled', function() {
+            let result = gameTurn();
+            jasmine.clock().tick(600);
+            expect('.pad').not.toHaveClass('disabled');
+        })
+    })
+});
