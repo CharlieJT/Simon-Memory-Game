@@ -81,7 +81,6 @@ function play() {
     correct = true;
     for (var i = 0; i < 3; i++) {
         sequence.push(Math.floor(Math.random() * 4) + 1);
-        console.log(sequence);
     }
     compTurn = true;
     intervalId = setInterval(gameTurn, 800);
@@ -311,11 +310,14 @@ function check() {
 function winGame() {
     clearInterval(intervalId);
     lightAllColors();
-    turn++;
     $(numDisplay).text("WIN!");
-    $('#winModal').modal('show');
-    $(winModalDisplay).text("20");
-    let audio = document.getElementById("sound-win");
-    audio.currentTime = 0;
-    audio.play();
+    turn++;
+    setTimeout(function() {
+        $('#winModal').modal('show');
+        $(winModalDisplay).text(turn - 1);
+        let audio = document.getElementById("sound-win");
+        audio.currentTime = 0;
+        audio.play();
+    }, 600);
+
 }
