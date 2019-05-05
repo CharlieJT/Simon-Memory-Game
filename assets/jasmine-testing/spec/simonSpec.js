@@ -8,24 +8,24 @@ describe('play function', function() {
     });
 
     describe('value of each variable in play function', function() {
-        
+
         it('should return light = 0', function() {
-            let result = play();
+            play();
             expect(light).toBe(0);
         });
 
         it('should return turn = 1', function() {
-            let result = play();
+            play();
             expect(turn).toBe(1);
         });
 
         it('should return correct = true', function() {
-            let result = play();
+            play();
             expect(correct).toBe(true);
         });
 
         it('should return compTurn = true', function() {
-            let result = play();
+            play();
             expect(compTurn).toBe(true);
         });
     });
@@ -109,7 +109,7 @@ describe('gameTurn function', function() {
     });
 
     describe('lights on pads', function() {
-        
+
         it('should return green-pad as having class of green-light', function() {
             let result = gameTurn();
             jasmine.clock().tick(600);
@@ -173,7 +173,7 @@ describe('clearColor function', function() {
 
 
 describe('lightAllColors function', function() {
-    
+
     beforeEach(() => {
         setFixtures(`
             <div id="0" class="pad green-pad disabled green-light"></div>
@@ -182,9 +182,9 @@ describe('lightAllColors function', function() {
 			<div id="3" class="pad blue-pad disabled blue-light"></div>
         `);
     });
-    
+
     describe('lights on pads', function() {
-        
+
         it('should return green-pad as having class of green-light', function() {
             let result = clearColor();
             expect('.green-pad').toHaveClass('green-light');
@@ -209,27 +209,43 @@ describe('lightAllColors function', function() {
 
 describe('check function', function() {
     beforeEach(() => {
+        setFixtures(`
+            
+        `);
         compTurn = true;
         sound = true;
+        correct = true;
         light = 0;
     });
-    
+
     describe('value of each variable in check function', function() {
-        
+
         it('should return compTurn = false', function() {
-            let result = check();
+            check();
             expect(compTurn).toBe(true);
         });
-        
+
         it('should return sound = false', function() {
-            let result = check();
+            check();
             expect(sound).toBe(true);
         });
-        
+
+        it('should return correct = true', function() {
+            check();
+            expect(correct).toBe(true);
+        });
+
         it('should return light = 0', function() {
-            let result = check();
+            check();
             expect(light).toBe(0);
         });
-        
+
+        describe('disabled pads', function() {
+
+            it('should return pad as having class disabled', function() {
+                let result = play();
+                expect('.pad').not.toHaveClass('disabled');
+            });
+        });
     });
 });
