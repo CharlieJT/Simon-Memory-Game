@@ -9,6 +9,7 @@ let compTurn;
 let intervalId;
 let strictMode = true;
 let sound = true;
+let win;
 
 // buttons, number displays & pads targetted as variables using jQuery.
 
@@ -53,29 +54,26 @@ $('.modal-scroll').on('click', function(e) {
     var linkHref = $(this).attr('href');
     e.preventDefault();
     $('.modal-body').animate({
-        scrollTop : $(linkHref).offset().top
+        scrollTop: $(linkHref).offset().top
     }, 800);
 });
 
 // Default play setting. This targets the game play so that is ready to begin a new sequence.
 
 function play() {
+    win = false;
     sequence = [];
     playerSequence = [];
-    getRandomNumber();
     light = 0;
     intervalId = 0;
     turn = 1;
     $(numDisplay).text("0");
     correct = true;
+    for (var i = 0; i < 3; i++) {
+        sequence.push(Math.floor(Math.random() * 4) + 1);
+    }
     compTurn = true;
     intervalId = setInterval(gameTurn, 800);
-}
-
-// Gets a random number & pushes into the sequence.
-
-function getRandomNumber() {
-    sequence.push(Math.floor(Math.random() * 4) + 1);
 }
 
 /* 
@@ -194,36 +192,44 @@ $(greenPad).on("click", function() {
     playerSequence.push(1);
     check();
     green();
-    setTimeout(function() {
-        clearColor();
-    }, 300);
+    if (!win) {
+        setTimeout(function() {
+            clearColor();
+        }, 300);
+    }
 });
 
 $(redPad).on("click", function() {
     playerSequence.push(2);
     check();
     red();
-    setTimeout(function() {
-        clearColor();
-    }, 300);
+    if (!win) {
+        setTimeout(function() {
+            clearColor();
+        }, 300);
+    }
 });
 
 $(yellowPad).on("click", function() {
     playerSequence.push(3);
     check();
     yellow();
-    setTimeout(function() {
-        clearColor();
-    }, 300);
+    if (!win) {
+        setTimeout(function() {
+            clearColor();
+        }, 300);
+    }
 });
 
 $(bluePad).on("click", function() {
     playerSequence.push(4);
     check();
     blue();
-    setTimeout(function() {
-        clearColor();
-    }, 300);
+    if (!win) {
+        setTimeout(function() {
+            clearColor();
+        }, 300);
+    }
 });
 
 
@@ -232,6 +238,10 @@ If player sequence is not the same as computer sequence, correct will return as 
 If correct is false, this will mean you've lost & you will get back "Lose!" in the number display.
 A lose sound with a flashing of all of the lights will be produced. 
 Pads are also disabled using jQuery.
+*/
+
+/*
+if player reaches level 20, you will win the game, the win function will run & each pad will be disabled
 */
 
 /*
@@ -246,6 +256,10 @@ If player sequence matches turn count & is correct then, turn count will increas
 function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;
+    }
+    if (playerSequence.length == 3 && correct) {
+        winGame();
+        $(".pad").addClass('disabled');
     }
     if (correct == false) {
         lightAllColors();
@@ -271,10 +285,9 @@ function check() {
             }
         }, 800);
     }
-    else if (turn == playerSequence.length && correct) {
+    else if (turn == playerSequence.length && correct && !win) {
         turn++;
         playerSequence = [];
-        getRandomNumber();
         compTurn = true;
         light = 0;
         $(numDisplay).text((turn) - 1);
@@ -283,4 +296,14 @@ function check() {
     }
 }
 
+// This is called when the player wins the game. This will display a win modal.
 
+function winGame() {
+    clearInterval(intervalId);
+    lightAllColors();
+    turn++;
+    $(numDisplay).text("Win!");
+    let audio = document.getElementById("sound-win");
+    audio.currentTime = 0;
+    audio.play();
+}
