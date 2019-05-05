@@ -87,9 +87,10 @@ describe('gameTurn function', function() {
         compTurn = false;
         jasmine.clock().install();
     });
+    
     afterEach(() => {
         jasmine.clock().uninstall();
-    })
+    });
     
     describe('value for compTurn', function() {
         it('should return compTurn as false', function() {
@@ -103,6 +104,32 @@ describe('gameTurn function', function() {
             let result = gameTurn();
             jasmine.clock().tick(600);
             expect('.pad').not.toHaveClass('disabled');
-        })
-    })
+        });
+    });
+    
+    describe('lights on pads', function() {
+        it('should return green-pad as having class of green-light', function() {
+            let result = gameTurn();
+            jasmine.clock().tick(600);
+            expect('.green-pad').not.toHaveClass('green-light');
+        });
+        
+        it('should return red-pad as having class of red-light', function() {
+            let result = gameTurn();
+            jasmine.clock().tick(600);
+            expect('.red-pad').not.toHaveClass('red-light');
+        });
+        
+        it('should return yellow-pad as having class of yellow-light', function() {
+            let result = gameTurn();
+            jasmine.clock().tick(600);
+            expect('.yellow-pad').not.toHaveClass('yellow-light');
+        });
+        
+        it('should return blue-pad as having class of blue-light', function() {
+            let result = gameTurn();
+            jasmine.clock().tick(600);
+            expect('.blue-pad').not.toHaveClass('blue-light');
+        });
+    });
 });
