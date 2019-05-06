@@ -11,7 +11,7 @@ let strictMode = true;
 let sound = true;
 let win;
 
-// buttons, number displays & pads targetted as variables using jQuery.
+// Buttons, number displays & pads targetted as variables using jQuery.
 
 const numDisplay = document.getElementById("number-counter");
 const greenPad = document.getElementById("0");
@@ -22,14 +22,14 @@ const startButton = document.getElementById("start");
 const strictButton = document.getElementById("strict");
 const startModal = document.getElementById("start-modal-button");
 const startWinModal = document.getElementById("start-modal-win-button");
-const scoreModalDisplay = document.getElementById("score-modal-display");
+const loseModalDisplay = document.getElementById("lose-modal-display");
 const winModalDisplay = document.getElementById("win-modal-display");
 
-// Whatever code is written inside the ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
+// Whatever code is written inside the jQuery ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
 
 $(document).ready(function() {
 
-    // Using a jQuery function to check to see if strict slider is true or false when the slider is clicked.
+    // jQuery function to check to see if strict slider is true or false when the slider is clicked.
 
     $(strictButton).on("click", function() {
         if (strictButton.checked == true) {
@@ -232,7 +232,7 @@ function clearColor() {
     $(bluePad).removeClass("blue-light");
 }
 
-//  This will flash all of the colours at the same time using jQuery.
+// This will flash all of the colours at the same time using jQuery.
 
 function lightAllColors() {
     $(greenPad).addClass("green-light");
@@ -247,11 +247,12 @@ This will show the modal & show the final score using jQuery.
 */
 
 function displayModal() {
-    $('#scoresModal').modal('show');
-    $(scoreModalDisplay).text((turn) - 1);
+    $('#loseModal').modal('show');
+    $(loseModalDisplay).text((turn) - 1);
 }
 
-/* Checking to see if sequences are correct or wrong.
+/* 
+Checking to see if sequences are correct or wrong.
 If player sequence is not the same as computer sequence, correct will return as false.
 If correct is false, this will mean you've lost & you will get back "Lose!" in the number display.
 A lose sound with a flashing of all of the lights will be produced. 

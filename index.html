@@ -78,6 +78,7 @@
 		<div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-scrollable" role="document">
 				<div class="modal-content">
+					<!-- Rules Modal Header -->
 					<div class="modal-header px-0 pl-4">
 						<h5 class="modal-title" id="exampleModalScrollableTitle">Game Information</h5>
 						<button type="button" class="close pl-0 mr-2" data-dismiss="modal" aria-label="Close">
@@ -109,6 +110,7 @@
 							<p><b class="h5 font-weight-bold">6. Blue Pad - </b><i class="fa fa-music"> </i> (D#).</p>
 						</div>
 					</div>
+					<!-- Rules Modal Footer -->
 					<div class="modal-footer">
 						<button id="close-button" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 					</div>
@@ -116,24 +118,26 @@
 			</div>
 		</div>
 
-		<!-- Scores Modal -->
-		<div class="modal fade" id="scoresModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+		<!-- Lose Modal -->
+		<div class="modal fade" id="loseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-scrollable" role="document">
 				<div class="modal-content">
+					<!-- Lose Modal Header -->
 					<div class="modal-header px-0 pl-4">
 						<h5 class="modal-title text-uppercase" id="exampleModalScrollableTitle-2">Game Over!</h5>
 						<button type="button" class="close pl-0 mr-2" data-dismiss="modal" aria-label="Close">
           					<span aria-hidden="true">&times;</span>
         				</button>
 					</div>
-					<!-- Scores Modal Body -->
+					<!-- Lose Modal Body -->
 					<div class="modal-body">
 						<div class="buttons-box m-2 px-2 py-2 text-center">
 							<h4>You Scored:</h4><br>
-							<h2 id="score-modal-display" class="text-center">--</h2>
+							<h2 id="lose-modal-display" class="text-center">--</h2>
 							<p class="m-0 mt-5 text-center">Click 'Start' to begin new game.</p>
 						</div>
 					</div>
+					<!-- Lose Modal Footer -->
 					<div class="modal-footer justify-content-between">
 						<button id="start-modal-button" type="button" class="btn btn-success" data-dismiss="modal">Start</button>
 						<button id="close-button-2" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -146,6 +150,7 @@
 		<div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-scrollable" role="document">
 				<div class="modal-content win-modal-content">
+					<!-- Win Modal Header -->
 					<div class="modal-header px-0 pl-4">
 						<h5 class="modal-title text-uppercase" id="exampleModalScrollableTitle-3">Winner!</h5>
 						<button type="button" class="close pl-0 mr-2" data-dismiss="modal" aria-label="Close">
@@ -161,6 +166,7 @@
 							<p class="m-0 mt-3 text-center">Click 'Start' to begin new game.</p>
 						</div>
 					</div>
+					<!-- Win Modal Footer -->
 					<div class="modal-footer justify-content-between">
 						<button id="start-modal-win-button" type="button" class="btn btn-success" data-dismiss="modal">Start</button>
 						<button id="close-button-3" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
