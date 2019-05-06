@@ -18,6 +18,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: #080e32;
     font-family: 'Orbitron', sans-serif;
     -webkit-text-shadow: 1px 1px 6px #000000;
     -moz-text-shadow: 1px 1px 6px #000000;
@@ -355,7 +356,7 @@ input:checked[type="checkbox"]:before {
 #close-button-2,
 #close-button-3,
 #start-modal-button,
-#start-modal-win-button{
+#start-modal-win-button {
     border: none;
     width: 4.8em;
     height: 2.4em;
@@ -366,7 +367,7 @@ input:checked[type="checkbox"]:before {
 #close-button-2:active,
 #close-button-3:active,
 #start-modal-button:active,
-#start-modal-win-button:active{
+#start-modal-win-button:active {
     border: none;
     box-shadow: none;
     -webkit-transform: scale(0.96);
@@ -393,6 +394,7 @@ input:checked[type="checkbox"]:before {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: #080e32;
     color: #fff;
     font-family: 'Orbitron', sans-serif;
     top: 3vh;
@@ -410,6 +412,7 @@ input:checked[type="checkbox"]:before {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: #0c1d5a;
     color: #fff;
     font-family: 'Orbitron', sans-serif;
     top: 3vh;
