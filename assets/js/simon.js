@@ -31,6 +31,8 @@ const winModalDisplay = document.getElementById("win-modal-display");
 $(strictButton).on("click", function() {
     if (strictButton.checked == true) {
         strictMode = true;
+        clearInterval(intervalId);
+        play();
     }
     else {
         strictMode = false;
@@ -250,7 +252,7 @@ Pads are also disabled using jQuery.
 */
 
 /*
-if player reaches level 20, you will win the game, the win function will run & each pad will be disabled
+if player is in strict mode reaches level 20, you will win the game, the win function will run & each pad will be disabled
 */
 
 /*
@@ -266,7 +268,7 @@ function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;
     }
-    if (playerSequence.length == 20 && correct) {
+    if (playerSequence.length == 3 && correct && strictButton.checked == true) {
         $(".pad").addClass('disabled');
         winGame();
     }
