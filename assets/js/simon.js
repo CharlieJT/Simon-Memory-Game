@@ -245,14 +245,11 @@ function lightAllColors() {
 Function to order game over modal to appear with final score.
 This will show the modal & show the final score using jQuery.
 */
+
 function displayModal() {
     $('#scoresModal').modal('show');
     $(scoreModalDisplay).text((turn) - 1);
 }
-
-
-
-
 
 /* Checking to see if sequences are correct or wrong.
 If player sequence is not the same as computer sequence, correct will return as false.
@@ -262,7 +259,7 @@ Pads are also disabled using jQuery.
 */
 
 /*
-if player is in strict mode reaches level 20, you will win the game, the win function will run & each pad will be disabled
+If player is in strict mode reaches level 20, you will win the game, the win function will run & each pad will be disabled.
 */
 
 /*
