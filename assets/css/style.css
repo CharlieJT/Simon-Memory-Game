@@ -200,7 +200,6 @@ body {
     1px 0 #000;
 }
 
-
 /*---------------------------------- SIMON BOARD CONTROLS */
 
 .controls {
@@ -229,7 +228,6 @@ body {
     font-weight: bold;
     margin-top: 10px;
 }
-
 
 #number-counter {
     position: absolute;

@@ -272,6 +272,7 @@ If strict mode has been turned off, then it will repeat the previous sequence ag
 /*
 If player sequence matches turn count & is correct then, turn count will increase by 1, an extra number is added to sequence array & will begin the computer sequence again.
 */
+
 function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;
