@@ -11,7 +11,7 @@ let strictMode = true;
 let sound = true;
 let win;
 
-// Buttons, number displays & pads targetted as variables using jQuery.
+// Buttons, number displays, pads & modals targetted as variables using jQuery.
 
 const numDisplay = document.getElementById("number-counter");
 const greenPad = document.getElementById("0");
