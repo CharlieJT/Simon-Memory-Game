@@ -25,50 +25,106 @@ const startWinModal = document.getElementById("start-modal-win-button");
 const scoreModalDisplay = document.getElementById("score-modal-display");
 const winModalDisplay = document.getElementById("win-modal-display");
 
+// Whatever code is written inside the ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
 
-// Using a jQuery function to check to see if strict slider is true or false when the slider is clicked.
+$(document).ready(function() {
 
-$(strictButton).on("click", function() {
-    if (strictButton.checked == true) {
-        strictMode = true;
+    // Using a jQuery function to check to see if strict slider is true or false when the slider is clicked.
+
+    $(strictButton).on("click", function() {
+        if (strictButton.checked == true) {
+            strictMode = true;
+            clearInterval(intervalId);
+            play();
+        }
+        else {
+            strictMode = false;
+        }
+    });
+
+    // jQuery function to initialise game when start button is clicked.
+
+    $(startButton).on("click", function() {
         clearInterval(intervalId);
         play();
-    }
-    else {
-        strictMode = false;
-    }
+    });
+
+    // jQuery function to initialise game when start button in score modal is clicked.
+
+    $(startModal).on("click", function() {
+        clearInterval(intervalId);
+        play();
+    });
+
+    // jQuery function to initialise game when start button in win modal is clicked.
+
+    $(startWinModal).on("click", function() {
+        clearInterval(intervalId);
+        play();
+    });
+
+    // jQuery function to allow modal scroll icon to scroll down upon click.
+
+    $('.modal-scroll').on('click', function(e) {
+        var linkHref = $(this).attr('href');
+        e.preventDefault();
+        $('.modal-body').animate({
+            scrollTop: $(linkHref).offset().top
+        }, 1000);
+    });
+
+    /* 
+    Events taking place when each of the pads are clicked using jQuery.
+    On click on each of the pads, it will push a number into the player sequence array depending on which has been clicked.
+    It then runs a light & sound function depending on colour.
+    Then it will clear colour after a set time.
+    */
+
+    $(greenPad).on("click", function() {
+        playerSequence.push(1);
+        check();
+        green();
+        if (!win) {
+            setTimeout(function() {
+                clearColor();
+            }, 300);
+        }
+    });
+
+    $(redPad).on("click", function() {
+        playerSequence.push(2);
+        check();
+        red();
+        if (!win) {
+            setTimeout(function() {
+                clearColor();
+            }, 300);
+        }
+    });
+
+    $(yellowPad).on("click", function() {
+        playerSequence.push(3);
+        check();
+        yellow();
+        if (!win) {
+            setTimeout(function() {
+                clearColor();
+            }, 300);
+        }
+    });
+
+    $(bluePad).on("click", function() {
+        playerSequence.push(4);
+        check();
+        blue();
+        if (!win) {
+            setTimeout(function() {
+                clearColor();
+            }, 300);
+        }
+    });
 });
 
-// jQuery function to initialise game when start button is clicked.
-
-$(startButton).on("click", function() {
-    clearInterval(intervalId);
-    play();
-});
-
-// jQuery function to initialise game when start button in score modal is clicked.
-
-$(startModal).on("click", function() {
-    clearInterval(intervalId);
-    play();
-});
-
-// jQuery function to initialise game when start button in win modal is clicked.
-
-$(startWinModal).on("click", function() {
-    clearInterval(intervalId);
-    play();
-});
-
-// jQuery function to allow modal scroll icon to scroll down upon click.
-
-$('.modal-scroll').on('click', function(e) {
-    var linkHref = $(this).attr('href');
-    e.preventDefault();
-    $('.modal-body').animate({
-        scrollTop: $(linkHref).offset().top
-    }, 1000);
-});
 
 // Default play setting. This targets the game play so that is ready to begin a new sequence.
 
@@ -195,56 +251,7 @@ function displayModal() {
 }
 
 
-/* 
-Events taking place when each of the pads are clicked using jQuery.
-On click on each of the pads, it will push a number into the player sequence array depending on which has been clicked.
-It then runs a light & sound function depending on colour.
-Then it will clear colour after a set time.
-*/
 
-$(greenPad).on("click", function() {
-    playerSequence.push(1);
-    check();
-    green();
-    if (!win) {
-        setTimeout(function() {
-            clearColor();
-        }, 300);
-    }
-});
-
-$(redPad).on("click", function() {
-    playerSequence.push(2);
-    check();
-    red();
-    if (!win) {
-        setTimeout(function() {
-            clearColor();
-        }, 300);
-    }
-});
-
-$(yellowPad).on("click", function() {
-    playerSequence.push(3);
-    check();
-    yellow();
-    if (!win) {
-        setTimeout(function() {
-            clearColor();
-        }, 300);
-    }
-});
-
-$(bluePad).on("click", function() {
-    playerSequence.push(4);
-    check();
-    blue();
-    if (!win) {
-        setTimeout(function() {
-            clearColor();
-        }, 300);
-    }
-});
 
 
 /* Checking to see if sequences are correct or wrong.
@@ -282,7 +289,6 @@ function check() {
         let audio = document.getElementById("sound-lost");
         audio.play();
         $(".pad").addClass('disabled');
-
         setTimeout(function() {
             $(numDisplay).text((turn) - 1);
             clearColor();
