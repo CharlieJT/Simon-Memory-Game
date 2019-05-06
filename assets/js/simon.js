@@ -67,7 +67,7 @@ $('.modal-scroll').on('click', function(e) {
     e.preventDefault();
     $('.modal-body').animate({
         scrollTop: $(linkHref).offset().top
-    }, 800);
+    }, 1000);
 });
 
 // Default play setting. This targets the game play so that is ready to begin a new sequence.
@@ -76,16 +76,19 @@ function play() {
     win = false;
     sequence = [];
     playerSequence = [];
+    getRandomNumber();
     light = 0;
     intervalId = 0;
     turn = 1;
     $(numDisplay).text("0");
     correct = true;
-    for (var i = 0; i < 20; i++) {
-        sequence.push(Math.floor(Math.random() * 4) + 1);
-    }
     compTurn = true;
     intervalId = setInterval(gameTurn, 800);
+}
+
+function getRandomNumber() {
+    sequence.push(Math.floor(Math.random() * 4) + 1);
+    console.log(sequence);
 }
 
 /* 
@@ -299,6 +302,7 @@ function check() {
     else if (turn == playerSequence.length && correct && !win) {
         turn++;
         playerSequence = [];
+        getRandomNumber();
         compTurn = true;
         light = 0;
         $(numDisplay).text((turn) - 1);
@@ -307,7 +311,7 @@ function check() {
     }
 }
 
-// This is called when the player wins the game. This will display a win modal.
+// This is called when the player wins the game. This will display "WIN!" in the number display a win modal with the maximum score.
 
 function winGame() {
     clearInterval(intervalId);
