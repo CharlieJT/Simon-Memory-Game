@@ -34,9 +34,8 @@ $(document).ready(function() {
     $(strictButton).on("click", function() {
         if (strictButton.checked == true) {
             strictMode = true;
-            $(".pad").addClass('disabled');
             clearInterval(intervalId);
-            play();
+            $(numDisplay).text("0");
         }
         else {
             strictMode = false;
