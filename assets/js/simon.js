@@ -37,9 +37,14 @@ $(document).ready(function() {
     $(strictButton).on("click", function() {
         if (strictButton.checked == true) {
             strictMode = true;
+            turn = 1;
             $(".pad").addClass('disabled');
-            $(numDisplay).text("0");
             clearInterval(intervalId);
+            if ($(numDisplay).text() == "-") {
+                $(numDisplay).text("-");
+            } else {
+                $(numDisplay).text("0");
+            }
             setTimeout(function() {
                 clearColor();
             }, 600);
@@ -131,7 +136,6 @@ $(document).ready(function() {
         }
     });
 });
-
 
 // Default play setting. This targets the game play so that is ready to begin a new sequence.
 
@@ -284,7 +288,7 @@ function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;
     }
-    if (playerSequence.length == 20 && correct && strictButton.checked == true) {
+    if (playerSequence.length == 2 && correct && strictButton.checked == true) {
         $(".pad").addClass('disabled');
         winGame();
     }
