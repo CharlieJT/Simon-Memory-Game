@@ -28,14 +28,21 @@ const winModalDisplay = document.getElementById("win-modal-display");
 // Whatever code is written inside the jQuery ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
 
 $(document).ready(function() {
-
-    // jQuery function to check to see if strict slider is true or false when the slider is clicked.
+    
+    /*
+    jQuery function to check to see if strict slider is true or false when the slider is clicked.
+    If strict mode is true, it will return everything back to default setting ready to begin a new game.
+    */
 
     $(strictButton).on("click", function() {
         if (strictButton.checked == true) {
             strictMode = true;
-            clearInterval(intervalId);
+            $(".pad").addClass('disabled');
             $(numDisplay).text("0");
+            clearInterval(intervalId);
+            setTimeout(function() {
+                clearColor();
+            }, 600);
         }
         else {
             strictMode = false;
