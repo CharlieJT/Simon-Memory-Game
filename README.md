@@ -3,6 +3,7 @@
 <h1 align="center">
 <img src="readme-images/design-images/main-simon-board.png" width=420 alt="Simon Board">
 </h1>
+
 [View Simon Game page!](https://charliejt.github.io/Simon-Memory-Game/)
 
 [View Website Development in Cloud 9!](https://ide.c9.io/charliejt/interactive_frontend_project)
