@@ -1,7 +1,7 @@
 # Interactive Frontend - Milestone Project 2 -Simon Game - Charlie Tipton
 
 <h1 align="center">
-<img src="readme-images/design-images/main-simon-board.png" width=220 alt="Simon Board">
+<img src="readme-images/design-images/main-simon-board.png" width=420 alt="Simon Board">
 </h1>
 [View Simon Game page!](https://charliejt.github.io/Simon-Memory-Game/)
 
