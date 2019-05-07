@@ -1,4 +1,6 @@
-# Interactive Frontend - Milestone Project 2 -Simon Game - Charlie Tipton
+<h1 align="center">
+Interactive Frontend - Milestone Project 2 -Simon Game - Charlie Tipton
+</h1>
 
 <h1 align="center">
 <img src="readme-images/design-images/main-simon-board.png" width=420 alt="Simon Board">
