@@ -288,7 +288,7 @@ function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;
     }
-    if (playerSequence.length == 2 && correct && strictButton.checked == true) {
+    if (playerSequence.length == 20 && correct && strictButton.checked == true) {
         $(".pad").addClass('disabled');
         winGame();
     }
