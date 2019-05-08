@@ -220,7 +220,7 @@ function at any given time.
     
     <br>
     <div align="center">  
-    <img src="readme-images/design-images/start-button.png" width=60 alt="Win modal window">
+    <img src="readme-images/design-images/start-button.png" width=80 alt="Start Button">
     </div><br><br>
     
 6. #### Strict Slider
@@ -235,7 +235,7 @@ function at any given time.
     
     <br>
     <div align="center">  
-    <img src="readme-images/design-images/strict-button.png" width=60 alt="Win modal window">
+    <img src="readme-images/design-images/strict-button.png" width=80 alt="Strict Button">
     </div><br><br>
 
 ### Features Left to Implement
