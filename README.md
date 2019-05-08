@@ -64,7 +64,7 @@ The design of the game is intended to replicate the orginal 1978 Simon Game with
     - **Simon Board Border -** A black border was chosen as a nice seperation between each colour on the board. It is also,
     the colour that was chosen for the original Simon Game.
     
-    - **Pads -** The pads were styled with the 4 original colours of the game 'green', 'red', 'yellow' and 'blue'
+    - **Coloured Pads -** The pads were styled with the 4 original colours of the game 'green', 'red', 'yellow' and 'blue'
     just like the original Simon Game.
     
     - **Controls Pad -** A white background with black text was chosen as the controls display colours
@@ -82,4 +82,21 @@ The design of the game is intended to replicate the orginal 1978 Simon Game with
     
     - **Close Buttons -** The default colour of grey was kept for the close buttons in modals as grey signifies that you don't get much use out of it other than
     it closes the modal.
+
+- #### Styling
+
+    Styles have been incorperated to give the game as much of a real life experience as possible. Box shadows
+    have been included to provide a professional and innovative look as well as keeping to the original design of
+    of game.
     
+    ##### Special styles include:
+    
+    - **Flashing Pads -** Flashing pads have been designed to replicate a real flashing of a light, with the use of
+    inset & non-inset box shadows, the effect has been achieved.
+    
+    - **Start Button** The start button has beeen carefully designed to act as a real button. With the use of an inset
+    box shadow upon clicking, the effect of a button being pressed has been achieved.
+    
+    - **Strict Slider** The strict slider's original state was a checkbox, the use of a checkbox however didn't look very
+    appealing. After the help of a video seen you YouTube, I was able to achieve the effect of a Strict slider.
+    [How I achieved the effect!](https://www.youtube.com/watch?v=BQSNBa3gZJU)
