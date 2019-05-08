@@ -163,7 +163,7 @@ function at any given time.
     
     - Each of the coloured pads will not be active at first and if you click them, they will not do anything.
     
-    - The number display will show a dash symbol "-"  until the first game is initialized. It has been programmed
+    - The number display will show a dash symbol '-'  until the first game is initialized. It has been programmed
     to show the dash symbol until the first game has begun.
     
     - Strict mode will have a default setting of being 'active' to recreate the setting the original Simon Game upon load.
@@ -232,6 +232,9 @@ function at any given time.
     active will not be limited and the player can play for however long he likes. However, the player will not have 
     the option to win unless strict mode is active.
     
+    - If strict mode is not active and the player clicks it to become active. Any games that were being played
+    will be lost and the game will begin at '0' again.
+    
     - Strict mode has been implemented into the game for those with different levels of capabilities.
     
     <br>
@@ -241,13 +244,15 @@ function at any given time.
     
 7. #### Number Display
 
+    - When the page is loaded, the number display will display '-', it will appear like this until the player clicks 'Start'.
+
     - When the 'Start' button is clicked, the number '0' will appear in the number display. With each sequence followed correctly
     the number display will increment by 1. The number display will show the amount of sequences guessed correctly, not which level
     you are currently on.
     
     <br>
     <div align="center">  
-    <img src="readme-images/design-images/number-display.png" width=80 alt="Strict Button">
+    <img src="readme-images/design-images/number-display.png" width=80 alt="Number Display">
     </div><br><br>
 
 ### Features Left to Implement
