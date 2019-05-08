@@ -185,8 +185,17 @@ function at any given time.
         - **Buttons** - The 'Buttons' section is added to give a full understanding of how each button works & uses for the buttons.
     
     <div align="center">  
-    <img src="readme-images/design-images/info-modal-window.png" width=420 alt="Info modal window">
-    </div>
+    <img src="readme-images/design-images/info-modal-window.png" width=320 alt="Info modal window">
+    </div><br><br>
+
+2. #### Lose Modal
+
+    - When a sequence is wrong in strict mode, a 'Lose' modal will appear with your score showing that it's 'Game Over!',
+    You also have the option to start a new game or to close the modal. These buttons have been provided so that the user
+    can click to start a new game right away and click close to change settings or if they don't feel like playing another game.
     
+    <div align="center">  
+    <img src="readme-images/design-images/lose-modal-window.png" width=320 alt="Lose modal window">
+    </div><br><br>
 
 ### Features Left to Implement
