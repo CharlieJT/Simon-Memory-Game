@@ -106,7 +106,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     
 - #### Backgrounds
 
-    All background images have been requested by the developer with permission to use them for educational purposes.
+    All background images have been requested by the developer and been granted permission to use them for educational purposes.
  
     - The main background of the Simon board game is an image of a flat surface with a navy blue laminate effect to 
     insinuate either a floor or a table top. This gives a nice surface top for the Simon Board to be positioned on. The
