@@ -113,3 +113,25 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     'Game-Info' modal & the 'Lose' modal also has the same background.
     
     - A Celebratory background has been applied to the 'Win' modal to give a nice sense of achievement and reward.
+    
+### Wireframes
+
+Wireframes were made using [Balsamiq](https://balsamiq.com/) for a clean looking design layout.
+
+- #### Desktop Wireframes
+
+    - [Main Desktop Display](readme-images/wireframes/desktop-wireframes/main-desktop-wireframe.png)
+    - [Game-Info Modal Desktop Display](readme-images/wireframes/desktop-wireframes/info-desktop-wireframe.png)
+    - [Lose Modal Desktop Display](readme-images/wireframes/desktop-wireframes/lose-desktop-wireframe.png)
+    
+- #### Tablet Wireframes
+
+    - [Main Tablet Display](readme-images/wireframes/tablet-wireframes/main-tablet-wireframe.png)
+    - [Game-Info Modal Tablet Display](readme-images/wireframes/desktop-wireframes/info-tablet-wireframe.png)
+    - [Lose Modal Desktop Display](readme-images/wireframes/tablet-wireframes/lose-tablet-wireframe.png)
+
+- #### Mobile Wireframes
+
+    - [Main Tablet Display](readme-images/wireframes/mobile-wireframes/main-mobile-wireframe.png)
+    - [Game-Info Modal  Display](readme-images/wireframes/mobile-wireframes/info-mobile-wireframe.png)
+    - [Lose Modal Desktop Display](readme-images/wireframes/mobile-wireframes/lose-mobile-wireframe.png)
