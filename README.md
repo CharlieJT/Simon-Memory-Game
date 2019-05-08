@@ -216,7 +216,8 @@ function at any given time.
 5. #### Start Button
 
     - When 'Start' is clicked, the game begins & the computer will begin its first sequence for the player to follow.
-    every time that the button is pressed, it will begin a brand new sequence.
+    every time that the button is pressed, it will begin a brand new sequence. Start buttons are also included in
+    the Lose Modal & in the Win Modal so the player begin there next sequence right away.
     
     <br>
     <div align="center">  
@@ -236,6 +237,17 @@ function at any given time.
     <br>
     <div align="center">  
     <img src="readme-images/design-images/strict-button.png" width=80 alt="Strict Button">
+    </div><br><br>
+    
+7. #### Number Display
+
+    - When the 'Start' button is clicked, the number '0' will appear in the number display. With each sequence followed correctly
+    the number display will increment by 1. The number display will show the amount of sequences guessed correctly, not which level
+    you are currently on.
+    
+    <br>
+    <div align="center">  
+    <img src="readme-images/design-images/number-display.png" width=80 alt="Strict Button">
     </div><br><br>
 
 ### Features Left to Implement
