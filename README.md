@@ -163,14 +163,30 @@ function at any given time.
     
     - Each of the coloured pads will not be active at first and if you click them, they will not do anything.
     
-    - The number display will show a dash symbol ("-")  until the first game is initialized. It has been programmed
+    - The number display will show a dash symbol "-"  until the first game is initialized. It has been programmed
     to show the dash symbol until the first game has begun.
     
     - Strict mode will have a default setting of being 'active' to recreate the setting the original Simon Game upon load.
     
     <img src="readme-images/design-images/default-setup-desktop.png" width=640 alt="Default setup desktop page">
-    <img src="readme-images/design-images/default-setup-mobile.png" width=202 alt="Default setup mobile page">
+    <img src="readme-images/design-images/default-setup-mobile.png" width=201 alt="Default setup mobile page">
+    <br><br>
     
-2. #### 
+2. #### 'Game-Info' Modal
+
+    - When you click on the 'Game-Info' button, you're presented with a modal with information about how the game is played.
+    There is also a clickable down-arrow icon to enable the user to scroll down when it's clicked. The Game-Info modal has been implemented
+    to ensure that the user is not at all confused with how to play the game.
+    
+        **The sections:**
+        
+        - **Objectives** - To give a description of how the game is played and to inform the user of the goal.
+        - **Rules for Winning** - To inform the user of how they can win the game. This has been provided in case the user is confused about how they can achieve a win.
+        - **Buttons** - The 'Buttons' section is added to give a full understanding of how each button works & uses for the buttons.
+    
+    <div align="center">  
+    <img src="readme-images/design-images/info-modal-window.png" width=420 alt="Info modal window">
+    </div>
+    
 
 ### Features Left to Implement
