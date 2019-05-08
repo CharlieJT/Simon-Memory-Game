@@ -87,7 +87,8 @@ The design of the game is intended to replicate the orginal 1978 Simon Game with
 
     Styles have been incorperated to give the game as much of a real life experience as possible. Box shadows
     have been included to provide a professional and innovative look as well as keeping to the original design of
-    of game.
+    of game. Cursors have been added to each active clickable item for better indication of where & when you can click.
+    Also pad have been styled to have an a very slight 3D effect to them.
     
     ##### Special styles include:
     
@@ -99,4 +100,9 @@ The design of the game is intended to replicate the orginal 1978 Simon Game with
     
     - **Strict Slider** The strict slider's original state was a checkbox, the use of a checkbox however didn't look very
     appealing. After the help of a video seen you YouTube, I was able to achieve the effect of a Strict slider.
-    [How I achieved the effect!](https://www.youtube.com/watch?v=BQSNBa3gZJU)
+    [How the effect was achieved!](https://www.youtube.com/watch?v=BQSNBa3gZJU)
+    
+    - **Buttons -** All buttons are styled to slightly reduce in size when each of them is clicked. Giving them
+    the effect of a real button being clicked.
+    
+    
