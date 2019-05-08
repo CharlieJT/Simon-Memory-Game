@@ -42,3 +42,7 @@ Players immediately experience a clean, easy & intuitive feel for the game right
 allow the player to have an easy understanding of how to play the game. Should the player be confused at any point, a 'Game-Info' box
 has been provided to give an informative description of what features the game has to offer.
 
+Inviting sounds & bright colours have been added to each pad to give the player a clean distinction between each pad.
+
+The player has no need for a back button or to reload the page. Easy & informaive buttons have been provided at all times to ensure the
+player has an easy way around the game.
