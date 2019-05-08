@@ -168,6 +168,7 @@ function at any given time.
     
     - Strict mode will have a default setting of being 'active' to recreate the setting the original Simon Game upon load.
     
+    <br>
     <img src="readme-images/design-images/default-setup-desktop.png" width=640 alt="Default setup desktop page">
     <img src="readme-images/design-images/default-setup-mobile.png" width=201 alt="Default setup mobile page">
     <br><br>
@@ -184,6 +185,7 @@ function at any given time.
         - **Rules for Winning** - To inform the user of how they can win the game. This has been provided in case the user is confused about how they can achieve a win.
         - **Buttons** - The 'Buttons' section is added to give a full understanding of how each button works & uses for the buttons.
     
+    <br>
     <div align="center">  
     <img src="readme-images/design-images/info-modal-window.png" width=320 alt="Info modal window">
     </div><br><br>
@@ -194,6 +196,7 @@ function at any given time.
     You also have the option to start a new game or to close the modal. These buttons have been provided so that the user
     can click to start a new game right away and click close to change settings or if they don't feel like playing another game.
     
+    <br>
     <div align="center">  
     <img src="readme-images/design-images/lose-modal-window.png" width=320 alt="Lose modal window">
     </div><br><br>
