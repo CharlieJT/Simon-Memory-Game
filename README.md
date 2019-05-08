@@ -168,8 +168,8 @@ function at any given time.
     
     - Strict mode will have a default setting of being 'active' to recreate the setting the original Simon Game upon load.
     
-    <img src="readme-images/design-images/default-setup-desktop.png" width=500 alt="Default setup desktop page">
-    <img src="readme-images/design-images/default-setup-mobile.png" width=150 alt="Default setup mobile page">
+    <img src="readme-images/design-images/default-setup-desktop.png" width=620 alt="Default setup desktop page">
+    <img src="readme-images/design-images/default-setup-mobile.png" width=220 alt="Default setup mobile page">
     
 2. #### 
 
