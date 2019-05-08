@@ -27,7 +27,7 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
     - [**Player Experience**](#player-experience)
     - [**Design Ideas**](#design-ideas)
     - [**Wireframes**](#wireframes)
-    - [**Developer and Business Purpose**](#developer-and-Business-purpose)
+    - [**Developer and Business Purpose**](#developer-and-business-purpose)
 
 
 ## UX
@@ -120,7 +120,7 @@ Wireframes were made using [Balsamiq](https://balsamiq.com/) for a clean looking
 
 - #### Desktop Wireframes
 
-    - [Main Desktop - Display](readme-images/wireframes/desktop-wireframes/main-desktop-wireframe.png) 
+    - [Main - Desktop Display](readme-images/wireframes/desktop-wireframes/main-desktop-wireframe.png) 
     - [Game-Info Modal - Desktop Display](readme-images/wireframes/desktop-wireframes/info-desktop-wireframe.png)
     - [Lose Modal - Desktop Display](readme-images/wireframes/desktop-wireframes/lose-desktop-wireframe.png)
     
@@ -135,3 +135,14 @@ Wireframes were made using [Balsamiq](https://balsamiq.com/) for a clean looking
     - [Main - Mobile Display](readme-images/wireframes/mobile-wireframes/main-mobile-wireframe.png)
     - [Game-Info Modal - Mobile Display](readme-images/wireframes/mobile-wireframes/info-mobile-wireframe.png)
     - [Lose Modal - Mobile Display](readme-images/wireframes/mobile-wireframes/lose-mobile-wireframe.png)
+    
+### Developer and Business Purpose
+
+- Should be prepared for any double click, fast clicking or clicking different parts of the board
+when each feature is running or not running at unexpected times. Everyt feature must run with its intended
+function at any given time.
+
+- Must show clear & professional examples of JavaScript, jQuery & Jasmine.
+
+- A great example project to put as part of a portfolio.
+
