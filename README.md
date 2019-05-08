@@ -190,7 +190,7 @@ function at any given time.
     <img src="readme-images/design-images/info-modal-window.png" width=320 alt="Info modal window">
     </div><br><br>
 
-2. #### Lose Modal
+3. #### Lose Modal
 
     - When a sequence is wrong in strict mode, a 'Lose' modal will appear with your score showing that it's 'Game Over!',
     You also have the option to start a new game or to close the modal. These buttons have been provided so that the user
@@ -199,6 +199,18 @@ function at any given time.
     <br>
     <div align="center">  
     <img src="readme-images/design-images/lose-modal-window.png" width=320 alt="Lose modal window">
+    </div><br><br>
+    
+4. #### Win Modal
+
+    - When you get 20 sequences correct in strict mode without making a single mistake, there will be a win modal which will appear with a
+    celebratory sound & image. It will inform you that you have reached the maximum score of '20' and will give you the option to either begin
+    a new game or to close the modal. These buttons have been provided so that the user can click to start a new game right away and click
+    close to change settings or if they don't feel like playing another game.
+    
+    <br>
+    <div align="center">  
+    <img src="readme-images/design-images/win-modal-window.png" width=320 alt="Win modal window">
     </div><br><br>
 
 ### Features Left to Implement
