@@ -142,7 +142,7 @@ Wireframes were made using [Balsamiq](https://balsamiq.com/) for a clean looking
 ### Developer and Business Purpose
 
 - Should be prepared for any double click, fast clicking or clicking different parts of the board
-when each feature is running or not running at unexpected times. Everyt feature must run with its intended
+when each feature is running or not running at unexpected times. Every feature must run with its intended
 function at any given time.
 
 - Must show clear & professional examples of JavaScript, jQuery & Jasmine.
@@ -155,12 +155,12 @@ function at any given time.
 
 1. #### Dashboard 
 
-    - When you arrive at the page for the very First time, you will be presented with A header, footer, a 'Game-Info'
+    - When you arrive at the page for the very First time, you will be presented with a header, footer, a 'Game-Info'
     button & the Simon Board. 
     
     - Each of the coloured pads will not be active at first and if you click them, they will not do anything.
     
-    - The number display will show a dash symbol ("-")  until the first game is initilized. It has been programmed
+    - The number display will show a dash symbol ("-")  until the first game is initialized. It has been programmed
     to show the dash symbol until the first game has begun.
     
     - Strict mode will have a default setting of being 'active' to recreate the setting the original Simon Game upon load.
