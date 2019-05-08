@@ -120,18 +120,18 @@ Wireframes were made using [Balsamiq](https://balsamiq.com/) for a clean looking
 
 - #### Desktop Wireframes
 
-    - [Main Desktop Display](readme-images/wireframes/desktop-wireframes/main-desktop-wireframe.png)
-    - [Game-Info Modal Desktop Display](readme-images/wireframes/desktop-wireframes/info-desktop-wireframe.png)
-    - [Lose Modal Desktop Display](readme-images/wireframes/desktop-wireframes/lose-desktop-wireframe.png)
+    - [Main Desktop - Display](<h1 align="center"><img src="readme-images/design-images/main-simon-board.png" width=420 alt="Simon Board"></h1>)
+    - [Game-Info Modal - Desktop Display](readme-images/wireframes/desktop-wireframes/info-desktop-wireframe.png)
+    - [Lose Modal - Desktop Display](readme-images/wireframes/desktop-wireframes/lose-desktop-wireframe.png)
     
 - #### Tablet Wireframes
 
-    - [Main Tablet Display](readme-images/wireframes/tablet-wireframes/main-tablet-wireframe.png)
-    - [Game-Info Modal Tablet Display](readme-images/wireframes/desktop-wireframes/info-tablet-wireframe.png)
-    - [Lose Modal Desktop Display](readme-images/wireframes/tablet-wireframes/lose-tablet-wireframe.png)
+    - [Main - Tablet Display](readme-images/wireframes/tablet-wireframes/main-tablet-wireframe.png)
+    - [Game-Info Modal - Tablet Display](readme-images/wireframes/tablet-wireframes/info-tablet-wireframe.png)
+    - [Lose Modal - Tablet Display](readme-images/wireframes/tablet-wireframes/lose-tablet-wireframe.png)
 
 - #### Mobile Wireframes
 
-    - [Main Tablet Display](readme-images/wireframes/mobile-wireframes/main-mobile-wireframe.png)
-    - [Game-Info Modal  Display](readme-images/wireframes/mobile-wireframes/info-mobile-wireframe.png)
-    - [Lose Modal Desktop Display](readme-images/wireframes/mobile-wireframes/lose-mobile-wireframe.png)
+    - [Main - Mobile Display](readme-images/wireframes/mobile-wireframes/main-mobile-wireframe.png)
+    - [Game-Info Modal - Mobile Display](readme-images/wireframes/mobile-wireframes/info-mobile-wireframe.png)
+    - [Lose Modal - Mobile Display](readme-images/wireframes/mobile-wireframes/lose-mobile-wireframe.png)
