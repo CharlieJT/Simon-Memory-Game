@@ -28,6 +28,9 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
     - [**Design Ideas**](#design-ideas)
     - [**Wireframes**](#wireframes)
     - [**Developer and Business Purpose**](#developer-and-business-purpose)
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features Left to Implement**](#features-left-to-implement)
 
 
 ## UX
@@ -146,3 +149,24 @@ function at any given time.
 
 - A great example project to put as part of a portfolio.
 
+## Features
+
+### Existing Features
+
+1. #### Dashboard 
+
+    - When you arrive at the page for the very First time, you will be presented with A header, footer, a 'Game-Info'
+    button & the Simon Board. 
+    
+    - Each of the coloured pads will not be active at first and if you click them, they will not do anything.
+    
+    - The number display will show a dash symbol ("-")  until the first game is initilized. It has been programmed
+    to show the dash symbol until the first game has begun.
+    
+    - Strict mode will have a default setting of being 'active' to recreate the setting the original Simon Game upon load.
+    
+    <div align="center">
+    <img src="readme-images/design-images/default-setup.png" width=600 alt="Default setup page">
+    </div>
+
+### Features Left to Implement
