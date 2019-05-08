@@ -126,18 +126,21 @@ Wireframes were made using [Balsamiq](https://balsamiq.com/) for a clean looking
     - [Main - Desktop Display](readme-images/wireframes/desktop-wireframes/main-desktop-wireframe.png) 
     - [Game-Info Modal - Desktop Display](readme-images/wireframes/desktop-wireframes/info-desktop-wireframe.png)
     - [Lose Modal - Desktop Display](readme-images/wireframes/desktop-wireframes/lose-desktop-wireframe.png)
+    - [Win Modal - Desktop Display](readme-images/wireframes/desktop-wireframes/win-desktop-wireframe.png)
     
 - #### Tablet Wireframes
 
     - [Main - Tablet Display](readme-images/wireframes/tablet-wireframes/main-tablet-wireframe.png)
     - [Game-Info Modal - Tablet Display](readme-images/wireframes/tablet-wireframes/info-tablet-wireframe.png)
     - [Lose Modal - Tablet Display](readme-images/wireframes/tablet-wireframes/lose-tablet-wireframe.png)
+    - [Win Modal - Tablet Display](readme-images/wireframes/tablet-wireframes/win-tablet-wireframe.png)
 
 - #### Mobile Wireframes
 
     - [Main - Mobile Display](readme-images/wireframes/mobile-wireframes/main-mobile-wireframe.png)
     - [Game-Info Modal - Mobile Display](readme-images/wireframes/mobile-wireframes/info-mobile-wireframe.png)
     - [Lose Modal - Mobile Display](readme-images/wireframes/mobile-wireframes/lose-mobile-wireframe.png)
+    - [Win Modal - Mobile Display](readme-images/wireframes/mobile-wireframes/win-mobile-wireframe.png)
     
 ### Developer and Business Purpose
 
