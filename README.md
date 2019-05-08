@@ -247,7 +247,7 @@ function at any given time.
     - When the page is loaded, the number display will display '-', it will appear like this until the player clicks 'Start'.
 
     - When the 'Start' button is clicked, the number '0' will appear in the number display. With each sequence followed correctly
-    the number display will increment by 1. The number display will show the amount of sequences guessed correctly, not which level
+    the number display will increment by 1. The number display will show the number of sequences guessed correctly, not which level
     you are currently on.
     
     <br>
