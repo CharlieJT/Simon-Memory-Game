@@ -212,5 +212,30 @@ function at any given time.
     <div align="center">  
     <img src="readme-images/design-images/win-modal-window.png" width=320 alt="Win modal window">
     </div><br><br>
+    
+5. #### Start Button
+
+    - When 'Start' is clicked, the game begins & the computer will begin its first sequence for the player to follow.
+    every time that the button is pressed, it will begin a brand new sequence.
+    
+    <br>
+    <div align="center">  
+    <img src="readme-images/design-images/start-button.png" width=60 alt="Win modal window">
+    </div><br><br>
+    
+6. #### Strict Slider
+
+    - The 'Strict' slider has been included to add different options of playing. When strict mode is active (green), 
+    if at anytime the player get a sequence wrong, it will be game over. If strict mode is not active (grey), the 
+    player will be able to repeat a sequence over & over until they manage to get it right, strict mode not being 
+    active will not be limited and the player can play for however long he likes. However, the player will not have 
+    the option to win unless strict mode is active.
+    
+    - Strict mode has been implemented into the game for those with different levels of capabilities.
+    
+    <br>
+    <div align="center">  
+    <img src="readme-images/design-images/strict-button.png" width=60 alt="Win modal window">
+    </div><br><br>
 
 ### Features Left to Implement
