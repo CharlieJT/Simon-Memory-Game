@@ -27,4 +27,15 @@ to give the player a goal to achieve. All compact with friendly colours, sounds 
     - [**Player Experience**](#player-experience)
     - [**Design ideas**](#design-choices)
     - [**Wireframes**](#wireframes)
-    - [**Developer and Business Purpose**](#developer-and-Business-Goals)
+    - [**Developer and Business Purpose**](#developer-and-Business-purpose)
+
+
+## UX
+
+### Project Purpose
+
+The main purpose of the Simon game is to provide a fun, challenging yet rewarding experience to users of all ages.
+
+
+
+
