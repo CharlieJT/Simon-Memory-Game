@@ -93,7 +93,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     `cursor`'s have been added to each active clickable item for a better indication of where & when you can click.
     Also, pads have been styled to have a very slight 3D effect to them.
     
-    ##### Special styles include:
+    **Special styles include:**
     
     - **Flashing Pads -** Flashing pads have been designed to replicate a real flashing of a light, with the use of
     inset & non-inset `box-shadow`'s, the effect has been achieved.
@@ -158,7 +158,7 @@ function at any given time.
 
 1. #### Dashboard 
 
-    - When you arrive at the page for the very First time, you will be presented with a header, footer, a 'Game-Info'
+    - When you arrive at the page for the very first time, you will be presented with a header, footer, a 'Game-Info'
     button & the Simon Board. 
     
     - Each of the coloured pads will not be active at first and if you click them, they will not do anything.
@@ -168,8 +168,9 @@ function at any given time.
     
     - Strict mode will have a default setting of being 'active' to recreate the setting the original Simon Game upon load.
     
-    <div align="center">
-    <img src="readme-images/design-images/default-setup.png" width=600 alt="Default setup page">
-    </div>
+    <img src="readme-images/design-images/default-setup-desktop.png" width=500 alt="Default setup desktop page">
+    <img src="readme-images/design-images/default-setup-mobile.png" width=150 alt="Default setup mobile page">
+    
+2. #### 
 
 ### Features Left to Implement
