@@ -120,7 +120,7 @@ Wireframes were made using [Balsamiq](https://balsamiq.com/) for a clean looking
 
 - #### Desktop Wireframes
 
-    - [Main Desktop - Display](<h1 align="center"><img src="readme-images/design-images/main-simon-board.png" width=420 alt="Simon Board"></h1>)
+    - [Main Desktop - Display](readme-images/wireframes/desktop-wireframes/main-desktop-wireframe.png width="400")
     - [Game-Info Modal - Desktop Display](readme-images/wireframes/desktop-wireframes/info-desktop-wireframe.png)
     - [Lose Modal - Desktop Display](readme-images/wireframes/desktop-wireframes/lose-desktop-wireframe.png)
     
