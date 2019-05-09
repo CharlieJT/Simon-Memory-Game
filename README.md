@@ -387,6 +387,6 @@ The process of cloning will now be completed. For further information on cloning
     - Ideas on how to get the effect for the Strict slider for the Simon Board: [Css Custom Animated Checkbox](https://www.youtube.com/watch?v=BQSNBa3gZJU)
     - Ideas on how to get the modal to scroll down when you click the 'arrow-down' icon in 'Game-Info' modal: [Smooth Scroll Tutorial Using jQuery](https://www.youtube.com/watch?v=6Bd37vCHQ_U)
     
-    The code learned from the videos were not copied, they were used as help and guidance to be interpreted in a different and unique way.
+    The code learned from the videos were not copied into the project, they were used as help and guidance to be interpreted in a different and unique way.
 
 ### Acknowledgements
