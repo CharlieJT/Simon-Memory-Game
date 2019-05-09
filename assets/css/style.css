@@ -14,9 +14,6 @@ body {
 
 body {
     background: url(../images/simon-background.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-color: #080e32;
     font-family: 'Orbitron', sans-serif;
@@ -49,6 +46,7 @@ body {
 .btn:focus,
 .btn:visited {
     border: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -65,6 +63,8 @@ body {
 }
 
 .board-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
     margin: 0 auto;
@@ -106,7 +106,6 @@ body {
     max-height: 300px;
     cursor: pointer;
     -webkit-box-shadow: 2px 2px 15px #000000;
-    -moz-box-shadow: 2px 2px 15px #000000;
     -o-box-shadow: 2px 2px 15px #000000;
     box-shadow: 2px 2px 15px #000000;
 
@@ -115,6 +114,12 @@ body {
 .green-pad {
     background-color: #3da22a;
     border-top-left-radius: 96%;
+    -webkit-box-shadow: inset 0 0 50px #31822c,
+    inset 20px 0 80px #2a4c14,
+    inset -20px 0 80px #37bd2b,
+    inset 20px 0 300px #a5ce8d,
+    inset -20px 0 300px #254e00,
+    1px 0 #000;
     box-shadow: inset 0 0 50px #31822c,
     inset 20px 0 80px #2a4c14,
     inset -20px 0 80px #37bd2b,
@@ -126,6 +131,12 @@ body {
 .red-pad {
     background-color: #a90202;
     border-top-right-radius: 96%;
+    -webkit-box-shadow: inset 0 0 50px #e00b0b,
+    inset 20px 0 80px #542727,
+    inset -20px 0 80px #bd2b2b,
+    inset 0px 0 300px #ef8787,
+    inset -20px 0 300px #961717,
+    1px 0 #000;
     box-shadow: inset 0 0 50px #e00b0b,
     inset 20px 0 80px #542727,
     inset -20px 0 80px #bd2b2b,
@@ -137,6 +148,12 @@ body {
 .yellow-pad {
     background-color: #b5b301;
     border-bottom-left-radius: 96%;
+    -webkit-box-shadow: inset 0 0 50px #efdb2f,
+    inset 20px 0 80px #50490d,
+    inset -20px 0 80px #f5df1f,
+    inset 20px 0 300px #c1b97a,
+    inset -20px 0 300px #ab9d23,
+    1px 0 #000;
     box-shadow: inset 0 0 50px #efdb2f,
     inset 20px 0 80px #50490d,
     inset -20px 0 80px #f5df1f,
@@ -148,6 +165,12 @@ body {
 .blue-pad {
     background-color: #0100a5;
     border-bottom-right-radius: 96%;
+    -webkit-box-shadow: inset 0 0 50px #2f3eef,
+    inset 20px 0 80px #101842,
+    inset -20px 0 80px #13029c,
+    inset 20px 0 300px #aebaf1,
+    inset -20px 0 300px #3836b9,
+    1px 0 #000;
     box-shadow: inset 0 0 50px #2f3eef,
     inset 20px 0 80px #101842,
     inset -20px 0 80px #13029c,
@@ -158,6 +181,13 @@ body {
 
 .green-light {
     background-color: rgba(79, 206, 55, 0.4);
+    -webkit-box-shadow: inset 0 0 50px #31822c,
+    inset 20px 0 80px #5fb928,
+    inset -20px 0 80px #37bd2b,
+    inset 20px 0 300px #deffca,
+    inset -20px 0 300px #254e00,
+    0 0 50px #1b7915,
+    1px 0 #000;
     box-shadow: inset 0 0 50px #31822c,
     inset 20px 0 80px #5fb928,
     inset -20px 0 80px #37bd2b,
@@ -169,6 +199,13 @@ body {
 
 .red-light {
     background-color: rgba(220, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 0 50px #e00b0b,
+    inset 20px 0 80px #d61f1f,
+    inset -20px 0 80px #bd2b2b,
+    inset 0px 0 300px #ffc6c6,
+    inset -20px 0 300px #961717,
+    0 0 50px #730d0d,
+    1px 0 #000;
     box-shadow: inset 0 0 50px #e00b0b,
     inset 20px 0 80px #d61f1f,
     inset -20px 0 80px #bd2b2b,
@@ -180,6 +217,13 @@ body {
 
 .yellow-light {
     background-color: rgba(219, 217, 55, 0.4);
+    -webkit-box-shadow: inset 0 0 50px #efdb2f,
+    inset 20px 0 80px #c3b21e,
+    inset -20px 0 80px #f5df1f,
+    inset 20px 0 300px #fffad2,
+    inset -20px 0 300px #ab9d23,
+    0 0 50px #736915,
+    1px 0 #000;
     box-shadow: inset 0 0 50px #efdb2f,
     inset 20px 0 80px #c3b21e,
     inset -20px 0 80px #f5df1f,
@@ -191,6 +235,13 @@ body {
 
 .blue-light {
     background-color: rgba(1, 0, 255, 0.4);
+    -webkit-box-shadow: inset 0 0 50px #2f3eef,
+    inset 20px 0 80px #425fff,
+    inset -20px 0 80px #13029c,
+    inset 20px 0 300px #cad2f7,
+    inset -20px 0 300px #3836b9,
+    0 0 50px #0100a5,
+    1px 0 #000;
     box-shadow: inset 0 0 50px #2f3eef,
     inset 20px 0 80px #425fff,
     inset -20px 0 80px #13029c,
@@ -204,7 +255,11 @@ body {
 /*---------------------------------- SIMON BOARD CONTROLS */
 
 .controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: absolute;
     background-color: #fff;
@@ -218,7 +273,6 @@ body {
     border-radius: 50%;
     line-height: 55px;
     -webkit-box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.3);
     -o-box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.7);
 }
@@ -263,18 +317,15 @@ body {
     -o-text-shadow: none;
     text-shadow: none;
     -webkit-box-shadow: 2px 2px 15px #000000;
-    -moz-box-shadow: 2px 2px 15px #000000;
     -o-box-shadow: 2px 2px 15px #000000;
     box-shadow: 2px 2px 15px #000000;
     -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
     -o-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 .start-btn:active {
     -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
-    -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
     -o-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
     font-size: 0.96em;
@@ -304,7 +355,6 @@ input[type="checkbox"] {
     outline: none;
     border-radius: 25vw;
     -webkit-box-shadow: inset 0 0 12px rgb(103, 103, 103);
-    -moz-box-shadow: inset 0 0 12px rgb(103, 103, 103);
     -o-box-shadow: inset 0 0 12px rgb(103, 103, 103);
     box-shadow: inset 0 0 12px rgb(103, 103, 103);
 }
@@ -321,7 +371,6 @@ input[type="checkbox"]:before {
     border-radius: 50%;
     background-color: #fff;
     -webkit-box-shadow: 2px 2px 15px #444;
-    -moz-box-shadow: 2px 2px 15px #444;
     -o-box-shadow: 2px 2px 15px #444;
     box-shadow: 2px 2px 15px #444;
 }
@@ -368,10 +417,10 @@ input:checked[type="checkbox"]:before {
 #start-modal-button:active,
 #start-modal-win-button:active {
     border: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
     -webkit-transform: scale(0.96);
-    -moz-transform: scale(0.96);
-    -o-transform: scale(0.96);
+    -ms-transform: scale(0.96);
     transform: scale(0.96);
     -webkit-transition: -webkit-transform .2s;
     transition: -webkit-transform .2s;
@@ -389,9 +438,6 @@ input:checked[type="checkbox"]:before {
 
 .modal-content {
     background: url(../images/simon-background.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-color: #080e32;
     color: #fff;
@@ -407,9 +453,6 @@ input:checked[type="checkbox"]:before {
 
 .win-modal-content {
     background: url(../images/winner-background.png) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-color: #0c1d5a;
     color: #fff;
@@ -481,7 +524,6 @@ input:checked[type="checkbox"]:before {
         width: 11.3vw;
         border-radius: 25vw;
         -webkit-box-shadow: inset 0 0 2vw rgb(103, 103, 103);
-        -moz-box-shadow: inset 0 0 2vw rgb(103, 103, 103);
         -o-box-shadow: inset 0 0 2vw rgb(103, 103, 103);
         box-shadow: inset 0 0 2vw rgb(103, 103, 103);
     }
@@ -548,6 +590,15 @@ input:checked[type="checkbox"]:before {
 }
 
 /*---------------------------------- KEYFRAMES */
+
+@-webkit-keyframes scrollDown {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: 8px;
+    }
+}
 
 @keyframes scrollDown {
     from {

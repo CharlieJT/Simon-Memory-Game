@@ -331,6 +331,8 @@ function at any given time.
     - **Github** is used as a remote backup of code used in the project
     - Is used as a remote server for another user to see the code used in the project
     - For users to view the deployed version of the website. The deployed version can be viewed [here!](https://charliejt.github.io/Simon-Memory-Game/)
+- #### [AutoPrefixer](https://autoprefixer.github.io/)
+    - **AutoPrefixer** is used to ensure all css prefixes are running with the most up to date versions.
 
 
 ## Testing
@@ -401,5 +403,4 @@ guide if I'm ever stuck with anything.
 make improvements.
 
 - Simen Dæhlin (Eventyret_mentor) and Anna Greaves (Anna_lead) - With help sorting a merging issue that was occurring with my README.
-
 
