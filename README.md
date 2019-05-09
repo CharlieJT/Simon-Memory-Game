@@ -390,3 +390,15 @@ The process of cloning will now be completed. For further information on cloning
     The code learned from the videos were not copied into the project, they were used as help and guidance to be interpreted in a different and unique way.
 
 ### Acknowledgements
+
+A huge thank you to:
+
+- Spenser Barriball (spence_mentor) - For discussing ideas, providing help wherever necessary and also there as a
+guide if I'm ever stuck with anything.
+
+- Tim Nelson (2BN-Tim_lead) - For taking the time to review the project and offering me constructive criticism to help
+make improvements.
+
+- Simen Dæhlin (Eventyret_mentor) and Anna Greaves (Anna_lead) - With help sorting a merging issue that was occuring with my README.
+
+
