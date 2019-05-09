@@ -247,7 +247,7 @@ function at any given time.
 
     - When 'Start' is clicked, the game begins & the computer will begin its first sequence for the player to follow.
     every time that the button is pressed, it will begin a brand new sequence. Start buttons are also included in
-    the Lose Modal & in the Win Modal so the player begin there next sequence right away.
+    the Lose Modal & in the Win Modal so the player can begin their next sequence right away.
     
     <br>
     <div align="center">  
@@ -335,6 +335,7 @@ function at any given time.
 
 ## Testing
 
+A full testing process can be found in a separate [tests.md](tests.md) file.
 
 
 ## Deployment
@@ -344,14 +345,14 @@ the project & push it up to [GitHub](https://github.com/).
 
 - To view the deployed version of [Simon Game!](https://charliejt.github.io/Simon-Memory-Game/) I needed to take the following steps:
     - Log in to [GitHub](https://github.com/).
-    - Select **CharlieJT/Simon-Memory-Game** from the list of repositories
+    - Select **CharlieJT/Simon-Memory-Game** from the list of repositories.
     - Select **Settings** from the navbar near the top of the page.
     - Scroll down to where it says **Github Pages**, there is a subtitle labelled **Source**, click that and change the source to be **master branch**.
     - The page is automatically refreshed and ready for deployment, it can take up to 5-10 minutes for it to be viewable.
 
 - To add this repository to your local workspace.
     - Click on the [Simon Game repository on GitHub!](https://github.com/CharlieJT/Simon-Memory-Game) link.
-    - Select the green button on the right hand side call **Clone or download** and copy the clone URL.
+    - Select the green button on the right-hand side named **Clone or download** and copy the clone URL.
     - Go into your local workspace and open up a new terminal (git bash).
     - You will need to be inside of the directory that you want to add the cloning to.
     - Type `git clone ` and paste the URL you copied from GitHub and press enter. It should look like this: 
@@ -399,6 +400,6 @@ guide if I'm ever stuck with anything.
 - Tim Nelson (2BN-Tim_lead) - For taking the time to review the project and offering me constructive criticism to help
 make improvements.
 
-- Simen Dæhlin (Eventyret_mentor) and Anna Greaves (Anna_lead) - With help sorting a merging issue that was occuring with my README.
+- Simen Dæhlin (Eventyret_mentor) and Anna Greaves (Anna_lead) - With help sorting a merging issue that was occurring with my README.
 
 
