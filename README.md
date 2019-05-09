@@ -25,6 +25,7 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
 1. [**UX**](#ux)
     - [**Project Purpose**](#project-purpose)
     - [**Player Experience**](#player-experience)
+    - [**User Stories**](#user-stories)
     - [**Design Ideas**](#design-ideas)
     - [**Wireframes**](#wireframes)
     - [**Developer and Business Purpose**](#developer-and-business-purpose)
@@ -61,6 +62,17 @@ Winning & losing features have also been included with modal pop-ups & sounds to
 
 - The player has no need for a back button or to reload the page. Easy and informative buttons have been provided at all times to ensure the
 the player has an easy way around the game.
+
+### User Stories
+
+- #### As a player, I'd like to see:
+    - A professional and strong looking game to draw the player into playing.
+    - Simple and easy to use controls to ensure that the game is easy to control.
+    - Different coloured pads which have a different sound for each pad as a clear distinction between each pad.
+    - An information window showing all information about how the game is played to avoid confusion.
+    - A sense of achievement a goal to strive for whilst playing the game.
+    - Professional sounds which give a nice feel to their specific purpose.
+    - Different settings of play so the player can play to a level they are comfortable with.
 
 ### Design Ideas
 
