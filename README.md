@@ -34,6 +34,10 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
 3. [**Technologies Used**](#technologies-used)
 4. [**Testing**](#testing)
 5. [**Deployment**](#deployment)
+6. [**Credits**](#credits)
+    - [**Contents**](#contents)
+    - [**Media**](#media)
+    - [**Acknowledgements**](#acknowledgements)
 
 ## UX
 
@@ -347,3 +351,21 @@ git clone https://github.com/*username*/*repository*
 The process of cloning will now be completed. For further information on cloning,
  visit [How to clone from GitHub](https://help.github.com/en/articles/cloning-a-repository).
 
+## Credits
+
+### Contents
+
+- All Content has been thought of and written by the Developer. 
+
+### Media
+
+- #### Images
+    - The Main background image for the webpage, 'Game-Info' modal & 'Lose' was taken from [**Wallpaper Gallery**](https://wallpaper-gallery.net/).
+    - The background for the win modal was taken from [**Freepik**](https://www.freepik.com/)
+    - The Simon favicon was created in [**Ionos**](https://www.ionos.co.uk/tools/favicon-generator)
+
+- #### Sounds
+    
+    - Sounds include 4 pad sounds, a losing sound and a winning sound. The sounds were all created in [**GarageBand**](https://www.apple.com/uk/mac/garageband/)
+
+### Acknowledgements
