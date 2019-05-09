@@ -32,6 +32,8 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
     - [**Existing Features**](#existing-features)
     - [**Features Left to Implement**](#features-left-to-implement)
 3. [**Technologies Used**](#technologies-used)
+4. [**Testing**](#testing)
+5. [**Deployment**](#deployment)
 
 ## UX
 
@@ -299,7 +301,7 @@ function at any given time.
 
 - This project uses HTML, CSS, JavaScript and various different technologies to work as helpers to the languages.
 - #### [Cloud9](https://c9.io)
-    - **Cloud9** is an IDE used to create the website.
+    - **Cloud9** is an IDE used to develop the website.
 - #### [Bootstrap](https://www.bootstrapcdn.com/)
     - **Bootstrap** is used to create easier & cleaner responsiveness in addition with helping maintain padding and margins.
     - It's also used to include modal features to the website to give it a professional look.
@@ -318,4 +320,20 @@ function at any given time.
     - Is used as a remote server for another user to see the code used in the project
     - For users to view the deployed version of the website. The deployed version can be viewed [here!](https://charliejt.github.io/Simon-Memory-Game/)
 
-    
+## Testing
+
+
+## Deployment
+
+The project was built using [Cloud9](https://c9.io), through a built-in function called 'Git', I could commit
+the project & push it up to [GitHub](https://github.com/).
+
+- To view the deployed version of [Simon Game!](https://charliejt.github.io/Simon-Memory-Game/) I needed to take the following steps:
+    - Log in to [GitHub](https://github.com/).
+    - Select **CharlieJT/Simon-Memory-Game** from the list of repositories
+    - Select **Settings** from the navbar near the top of the page.
+    - Scroll down to where it says **Github Pages**, there is a subtitle labelled **Source**, click that and change the source to be **master branch**.
+    - The page is automatically refreshed and ready for deployment, it can take up to 5-10 minutes for it to be viewable.
+
+- To add this repository to your local workspace
+    - 
