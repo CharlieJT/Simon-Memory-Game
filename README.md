@@ -28,16 +28,22 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
     - [**Design Ideas**](#design-ideas)
     - [**Wireframes**](#wireframes)
     - [**Developer and Business Purpose**](#developer-and-business-purpose)
+
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
     - [**Features Left to Implement**](#features-left-to-implement)
+
 3. [**Technologies Used**](#technologies-used)
+
 4. [**Testing**](#testing)
+
 5. [**Deployment**](#deployment)
+
 6. [**Credits**](#credits)
     - [**Contents**](#contents)
     - [**Media**](#media)
     - [**Acknowledgements**](#acknowledgements)
+
 
 ## UX
 
@@ -157,6 +163,7 @@ function at any given time.
 - Must show clear & professional examples of JavaScript, jQuery & Jasmine.
 
 - A great example project to put as part of a portfolio.
+
 
 ## Features
 
@@ -300,7 +307,8 @@ function at any given time.
     - The difficulty will be the speed in which the sequence is generated, Beginner will be slow,
     Intermediate will be medium speed and Expert will be fast. This would then spread out the capability levels 
     of players and give them extra challenges to overcome.
-    
+
+  
 ## Technologies Used
 
 - This project uses HTML, CSS, JavaScript and various different technologies to work as helpers to the languages.
@@ -324,7 +332,9 @@ function at any given time.
     - Is used as a remote server for another user to see the code used in the project
     - For users to view the deployed version of the website. The deployed version can be viewed [here!](https://charliejt.github.io/Simon-Memory-Game/)
 
+
 ## Testing
+
 
 
 ## Deployment
@@ -350,6 +360,7 @@ git clone https://github.com/*username*/*repository*
 ```
 The process of cloning will now be completed. For further information on cloning,
  visit [How to clone from GitHub](https://help.github.com/en/articles/cloning-a-repository).
+
 
 ## Credits
 
