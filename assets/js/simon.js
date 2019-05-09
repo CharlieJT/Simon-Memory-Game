@@ -11,7 +11,7 @@ let strictMode = true;
 let sound = true;
 let win;
 
-// Buttons, number displays, pads & modals targetted as variables using jQuery.
+// Buttons, number displays, pads & modals targetted as variables using JQuery.
 
 const numDisplay = document.getElementById("number-counter");
 const greenPad = document.getElementById("0");
@@ -25,12 +25,12 @@ const startWinModal = document.getElementById("start-modal-win-button");
 const loseModalDisplay = document.getElementById("lose-modal-display");
 const winModalDisplay = document.getElementById("win-modal-display");
 
-// Whatever code is written inside the jQuery ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
+// Whatever code is written inside the JQuery ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
 
 $(document).ready(function() {
     
     /*
-    jQuery function to check to see if strict slider is true or false when the slider is clicked.
+    JQuery function to check to see if strict slider is true or false when the slider is clicked.
     If strict mode is true, it will return everything back to default setting ready to begin a new game.
     */
 
@@ -54,28 +54,28 @@ $(document).ready(function() {
         }
     });
 
-    // jQuery function to initialise game when start button is clicked.
+    // JQuery function to initialise game when start button is clicked.
 
     $(startButton).on("click", function() {
         clearInterval(intervalId);
         play();
     });
 
-    // jQuery function to initialise game when start button in score modal is clicked.
+    // JQuery function to initialise game when start button in score modal is clicked.
 
     $(startModal).on("click", function() {
         clearInterval(intervalId);
         play();
     });
 
-    // jQuery function to initialise game when start button in win modal is clicked.
+    // JQuery function to initialise game when start button in win modal is clicked.
 
     $(startWinModal).on("click", function() {
         clearInterval(intervalId);
         play();
     });
 
-    // jQuery function to allow modal scroll icon to scroll down upon click.
+    // JQuery function to allow modal scroll icon to scroll down upon click.
 
     $('.modal-scroll').on('click', function(e) {
         var linkHref = $(this).attr('href');
@@ -86,7 +86,7 @@ $(document).ready(function() {
     });
 
     /* 
-    Events taking place when each of the pads are clicked using jQuery.
+    Events taking place when each of the pads are clicked using JQuery.
     On click on each of the pads, it will push a number into the player sequence array depending on which has been clicked.
     It then runs a light & sound function depending on colour.
     Then it will clear colour after a set time.
@@ -162,7 +162,7 @@ function getRandomNumber() {
 An action taking place whether it's the player's turn or the computer's turn.
 When the amount of flashes then matches the turn number. The computer sequence stops, ensures all colours are cleared & sequence is logged to the console.
 Whilst the computer is producing a sequence, it checks sequence light id & applies the light & sound function to each one accordingly.
-A disable class is added to the timeout using jQuery to stop any clicking action on the pads whilst computer is generating a sequence.
+A disable class is added to the timeout using JQuery to stop any clicking action on the pads whilst computer is generating a sequence.
 The disable class is then removed after a set time which then allows player to then click.
 */
 
@@ -190,8 +190,8 @@ function gameTurn() {
 
 /* 
 Sounds & Lights being generated for each color.
-This is done by selecting the sound through jQuery & running a play function.
-Also, a class is added through jQuery to give it the light effect.
+This is done by selecting the sound through JQuery & running a play function.
+Also, a class is added through JQuery to give it the light effect.
 */
 
 function green() {
@@ -234,7 +234,7 @@ function blue() {
     $(bluePad).addClass("blue-light");
 }
 
-// This returns all of the colours back to their original state from being flashed by removing class name through jQuery. 
+// This returns all of the colours back to their original state from being flashed by removing class name through JQuery. 
 
 function clearColor() {
     $(greenPad).removeClass("green-light");
@@ -243,7 +243,7 @@ function clearColor() {
     $(bluePad).removeClass("blue-light");
 }
 
-// This will flash all of the colours at the same time using jQuery.
+// This will flash all of the colours at the same time using JQuery.
 
 function lightAllColors() {
     $(greenPad).addClass("green-light");
@@ -254,7 +254,7 @@ function lightAllColors() {
 
 /* 
 Function to order game over modal to appear with final score.
-This will show the modal & show the final score using jQuery.
+This will show the modal & show the final score using JQuery.
 */
 
 function displayModal() {
@@ -267,7 +267,7 @@ Checking to see if sequences are correct or wrong.
 If player sequence is not the same as computer sequence, correct will return as false.
 If correct is false, this will mean you've lost & you will get back "Lose!" in the number display.
 A lose sound with a flashing of all of the lights will be produced. 
-Pads are also disabled using jQuery.
+Pads are also disabled using JQuery.
 */
 
 /*

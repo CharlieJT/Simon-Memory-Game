@@ -31,7 +31,7 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
     - [**Features Left to Implement**](#features-left-to-implement)
-
+3. [**Technologies Used**](#technologies-used)
 
 ## UX
 
@@ -294,3 +294,26 @@ function at any given time.
     - The difficulty will be the speed in which the sequence is generated, Beginner will be slow,
     Intermediate will be medium speed and Expert will be fast. This would then spread out the capability levels 
     of players and give them extra challenges to overcome.
+    
+## Technologies Used
+
+- This project uses HTML, CSS, JavaScript and various different technologies to work as helpers to the languages.
+- #### [Cloud9](https://c9.io)
+    - **Cloud9** is an IDE used to create the website.
+- #### [Bootstrap](https://www.bootstrapcdn.com/)
+    - **Bootstrap** is used to create easier & cleaner responsiveness in addition with helping maintain padding and margins.
+    - It's also used to include modal features to the website to give it a professional look.
+- #### [Google Fonts](https://fonts.google.com/)
+    - **Google Fonts** has been used to provide clean and eye catching fonts to the website.
+- #### [JQuery](https://jquery.com)
+    - **JQuery** has been used to simplify DOM manipulation.
+- #### [Font Awesome](https://www.bootstrapcdn.com/fontawesome/)
+    - **Font Awesome** has been used to add icons to the website.
+- #### [Jasmine](https://jasmine.github.io/)
+    - **Jasmine** is used as a TDD (Test-driven development) tool to automatically test JavaScript and JQuery code.
+- #### [Jasmine-JQuery](https://github.com/velesin/jasmine-jquery)
+    - **Jasmine-JQuery** is used to ensure JQuery code can be run through Jasmine testing.
+- #### [GitHub](https://github.com/)
+    - **Github** is used as a remote backup of code used in the project
+    - Is used as a remote server for another user to see code used in the project
+    - For users to view the deployed version of the website. The deployed version can be viewed [here!](https://charliejt.github.io/Simon-Memory-Game/)
