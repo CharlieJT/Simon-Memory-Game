@@ -70,7 +70,7 @@ the player has an easy way around the game.
     - Simple and easy to use controls to ensure that the game is not difficult to control.
     - Different coloured pads which have a different sound for each pad as a clear distinction between each pad.
     - An information window showing clear information about how the game is played to avoid confusion.
-    - A sense of achievement a goal to strive for whilst playing the game.
+    - A sense of achievement and a goal to strive for whilst playing the game.
     - Professional sounds which give a nice feel to their specific purpose.
     - Different settings of play so the player can play to a level they are comfortable with.
 
