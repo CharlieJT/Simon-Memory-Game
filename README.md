@@ -13,11 +13,11 @@ Interactive Frontend - Milestone Project 2 -Simon Game - Charlie Tipton
 to test memory and skill. This particular game features a strict option to make the game more challenging yet rewarding and a winning feature is also included
 to give the player a goal to achieve. In addition to friendly colours & sounds. You will have many hours of fun playing!
 <br><br>
-</div>
-
-[View Simon Game page!](https://charliejt.github.io/Simon-Memory-Game/)
+[View Simon Game website here!](https://charliejt.github.io/Simon-Memory-Game/)
 
 [View Website Development in Cloud 9!](https://ide.c9.io/charliejt/interactive_frontend_project)
+
+</div>
 
 
 ## Contents Table
@@ -50,7 +50,7 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
 
 ### Project Purpose
 
-The main purpose of the Simon game is to provide a fun, challenging yet rewarding experience to users of all ages.
+The main goal of the Simon game is to provide a fun, challenging yet rewarding experience to users of all ages.
 
 ### Player Experience
 
@@ -67,9 +67,9 @@ the player has an easy way around the game.
 
 - #### As a player, I'd like to see:
     - A professional and strong looking game to draw the player into playing.
-    - Simple and easy to use controls to ensure that the game is easy to control.
+    - Simple and easy to use controls to ensure that the game is not difficult to control.
     - Different coloured pads which have a different sound for each pad as a clear distinction between each pad.
-    - An information window showing all information about how the game is played to avoid confusion.
+    - An information window showing clear information about how the game is played to avoid confusion.
     - A sense of achievement a goal to strive for whilst playing the game.
     - Professional sounds which give a nice feel to their specific purpose.
     - Different settings of play so the player can play to a level they are comfortable with.

@@ -33,8 +33,12 @@ Jasmine testing to ensure tests were passing.
 I tested using Jasmine, taking it one step at a time. I would get my tests to first fail and then get them to
 pass to ensure they were working as they should be working. I generated a nice chunk of testing.
 
+My Intention is to learn more about Jasmine testing and the uses you can get out of it so I can incorporate
+extra testing in the future.
+
 Files used for Jasmine testing:
 
 - The HTML page where all of the Jasmine testing tools are stored: [**jasmine.html**](assets/jasmine-testing/jasmine.html)
 - The JavaScript spec where the tests are run: [**simonSpec.js**](assets/jasmine-testing/spec/simonSpec.js)
 - The JavaScript code being tested: [**simon.js**](assets/js/simon.js)
+
