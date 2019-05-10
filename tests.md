@@ -45,13 +45,19 @@ Files used for Jasmine testing:
 - The JavaScript spec where the tests are run: [**simonSpec.js**](assets/jasmine-testing/spec/simonSpec.js)
 - The JavaScript code being tested: [**simon.js**](assets/js/simon.js)
 
-**Running Jasmine tests**
+#### Running Jasmine tests
 
 If you haven't already, follow the steps in the [Main README.md file](README.md) named 'To add this repository to your local workspace'
 in the 'Deployment' section. Ensure you have the whole project up and running in your local workspace.
 
-Run the Jasmine tests by:
+**Run the Jasmine tests by:**
 
 - Opening up the [jasmine.html](assets/jasmine-testing/jasmine.html)
 - Click run and view the test results in the browser.
-- 
+ 
+#### Creating Jasmine tests
+
+- Open up [simonSpec.js](assets/jasmine-testing/spec/simonSpec.js).
+- Create your own tests using the Jasmine 3.1 framwork.
+- Opening up the [jasmine.html](assets/jasmine-testing/jasmine.html) and click run to view the test results in the browser.
+
