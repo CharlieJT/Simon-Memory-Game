@@ -134,7 +134,7 @@ I checked that:
 
 #### 2. 'Game-Info Modal'
 
-**I checked that:**
+I checked that:
 
 - It was positioned correct on the page when it's opened.
 - Background display is appearing.
@@ -143,4 +143,3 @@ I checked that:
 - Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and 
 is slightly reduced in size when clicked to indicate it's been clicked.
 - All bullet points are in the correct position.
-- 
