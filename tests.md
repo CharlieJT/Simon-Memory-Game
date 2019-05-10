@@ -124,49 +124,89 @@ I checked that:
 
 - Simon board was sitting correctly on the page.
 - The number counter was displaying "-".
-- None of the pads were clickable and no cursors were disable when hovering over the pads.
+- None of the pads were clickable and no cursors were disabled when hovering over the pads.
 - The background was fixed when scrolling up and down on the page.
-- The header and the footer where both sitting correct.
+- The header and the footer were both sitting correctly.
 - When hovering over the start button and strict button, there was a cursor that appeared to indicate that they're both clickable.
-- All spelling was correct and text was sitting where it should be.
-- "Game-Info" button was positioned just above the Simon Board.
+- All spelling was correct and the text was sitting where it should be.
+- 'Game-Info' button was positioned just above the Simon Board.
 - All controls and displays were sitting correctly on the page.
 
-#### 2. 'Game-Info Modal'
+#### 2. 'Game-Info' Modal
 
 I checked that:
 
 - It was positioned correctly on the page when it's opened.
 - Background display is appearing.
 - A cursor appears when each button is hovered over.
-- All spelling was correct, all fonts are correct and text was sitting where it should be.
+- All spelling was correct, all fonts are correct and the text was sitting where it should be.
 - Scroll icon has a cursor when hovering over, has direction animation and scrolls down to the bottom of the modal when it's clicked.
-- Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and 
-is slightly reduced in size when clicked to indicate it's been clicked.
+- Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when
+hovered over and is slightly reduced in size when clicked to indicate it's been clicked.
 - All bullet points are in the correct position.
 
-#### 3. 'Lose Modal'
+#### 3. 'Lose' Modal
 
 I checked that:
 
 - Losing sound is produced when the modal displays.
 - It was positioned correctly on the page when it's opened.
 - Background display is appearing.
-- Score is appeared with the correct score in the number display of the modal.
-- All spelling was correct, all fonts are correct and text was sitting where it should be.
-- The start button is slightly darkened when hovered over and that the modal closes and a new game begins when the button is clicked.
-- Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and 
-is slightly reduced in size when clicked to indicate it's been clicked.
+- The score appears with the correct score in the number display of the modal.
+- All spelling was correct, all fonts are correct and the text was sitting where it should be.
+- The start button is slightly darkened when hovered over and that the modal closes and a new game will begin when the button is clicked.
+- Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and is
+slightly reduced in size when clicked to indicate it's been clicked.
 
-#### 2. 'Win Modal'
+#### 4. 'Win' Modal
 
 I checked that:
 
 - Winning sound is produced when the modal displays.
 - It was positioned correctly on the page when it's opened.
 - Background display is appearing.
-- Maximum score is appeared with the correct score in the number display of the modal.
-- All spelling was correct, all fonts are correct and text was sitting where it should be.
-- The start button is slightly darkened when hovered over and that the modal closes and a new game begins when the button is clicked.
-- Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and 
-is slightly reduced in size when clicked to indicate it's been clicked.
+- The maximum score appears with the correct score in the number display of the modal.
+- All spelling was correct, all fonts are correct and the text was sitting where it should be.
+- The start button is slightly darkened when hovered over and that the modal closes and a new game will begin when the button is clicked.
+- Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and is
+- slightly reduced in size when clicked to indicate it's been clicked.
+
+#### 5. Start Buttons
+
+I checked that:
+
+- Number display was displaying "0" when start is pressed to begin a new game.
+- The start buttons in modals work in the same fashion as the start button on the Simon board.
+- The first sequence is being generated when the button has been clicked.
+- No matter where the player is in the game. When the Start button is clicked, the game will begin a new game
+without any bugs occurring.
+- The start button accounts for fast and multiple clicks at a time, no matter fast or how many times the start button is
+clicked. It will still begin a new game on the last click.
+
+#### 6. Strict Slider
+
+I checked that:
+
+- Strict slider is in 'active' state when the page is loaded so that it has the same default setting as the original game.
+- Slider is green when it's active and grey when it's not active.
+- Label is sitting just above the slider to indicate what the slider is.
+- When the page has been loaded, no matter how many times you click the slider on and off, the number display will appear as
+- '-' until a new game is started.
+- There are no bugs in the game if there is a sudden interruption from the strict button. Whether strict button is made
+active, not active, whether a light is on, whether a light is off, whether it's the computer turn or whether it's the players turn,
+whether a game is being played or not.
+
+**When Switched from active to not active**:
+    
+- Whilst the game is in play and a play is switched from active to not active, there will be no disruption to the play of the
+game. However, it will not be possible for you to win the game until you begin a new game in strict mode.
+- If a game has been played and stopped, the display will stay on the current score that's being shown in the number display.
+
+**When Switched from not active to active**:
+    
+- Whilst the game is in play and the strict slider is switched from none active to active, the game will be ended and the number display will
+start back at '0', this is to prevent the following reasons:
+    - Getting to a high number when strict mode is not active and then clicking to be active and winning the game easily,
+    the winning option is intended to feel rewarding and not cheated.
+    - If your score is higher than 20 when strict mode is not active and then suddenly you activate it, 
+    you will be able to achieve a higher number than the original winning number.
