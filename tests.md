@@ -69,35 +69,35 @@ in the 'Deployment' section. Ensure you have the whole project up and running in
 This follows on from each of the **'User Stories'** items from the **'UX'** section in [README.md](README.md).
 
 - ### As a player, I'd like to see:
-    - #### A professional and strong looking game to draw the player into playing.
+    - ### A professional and strong looking game to draw the player into playing.
         - The board has been created with a clear and distinct separation of each colour.
         - A colour tone has been added to each to give it a slightly 3D look.
         - 'Game-Info' box is added right above the board for easy availability and access.
         - A beautiful retro looking font to give the game an original feel.
-    - #### Simple and easy to use controls to ensure that the game is not difficult to control.
+    - ### Simple and easy to use controls to ensure that the game is not difficult to control.
         - Controls are nicely spaced apart and labelled with their relevant label.
         - Coloured and styled for their primary purpose.
         - Slider styled with a green and grey colour scheme as an indicator of showing when it's active and not active.
         - Only requiring a simple click for each control to take action.
-    - #### Different coloured pads which have a different sound for each pad as a clear distinction between each pad.
+    - ### Different coloured pads which have a different sound for each pad as a clear distinction between each pad.
         - A different note has been applied to each pad when clicked or when the computer is generating a sequence for the player to follow.
-    - #### An information window showing clear information about how the game is played to avoid confusion.
+    - ### An information window showing clear information about how the game is played to avoid confusion.
         The 'Game-Info' modal contains information on the following subjects.
         - **Objectives:** To let the player know how the game is played and the ideal goal.
         - **Rules for Winning:** A breakdown of the steps you need to follow to make a 'Win' possible.
         - **Buttons:** A listing of what each of the buttons represents and their function.
-    - #### A sense of achievement and a goal to strive for whilst playing the game.
+    - ### A sense of achievement and a goal to strive for whilst playing the game.
         - A winning modal has been added to the game for when the player follows 20 correct sequences from start to finish
         without making a single mistake.
-    - #### Professional sounds which give a nice feel to their specific purpose.
+    - ### Professional sounds which give a nice feel to their specific purpose.
         Professional sounds have been applied to the game to give a clear indicator of their intended use.
         - **Green Pad:** A 'ding' noise which produces the note (D#).
         - **Red Pad:** A 'ding' noise which produces the note (G).
         - **Yellow Pad:** A 'ding' noise which produces the note (A#).
-        - **Blue Pad:** A 'ding' noise which produces the note (D#).
+        - **Blue Pad:** A 'ding' noise which produces the note (D#) in a higher pitch.
         - **When a player loses:** When the losing modal appears, a losing noise is produced to indicate the sound of losing.
         - **When a player wins:** When the winning modal appears, a winning noise is produced to indicate the sound of winning.
-    - #### Different settings of play so the player can play to a level they are comfortable with.
+    - ### Different settings of play so the player can play to a level they are comfortable with.
         A Strict slider has been added to the game so that the player can pick a play that best suits them.
         - **Strict Mode (active):** When strict mode is active, the player will not be allowed to get a single sequence wrong, if they do they will lose.
         Winning the game is possible when stict mode is active.
