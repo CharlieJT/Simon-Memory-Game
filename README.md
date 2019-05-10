@@ -364,7 +364,7 @@ the project & push it up to [GitHub](https://github.com/).
     - Scroll down to where it says **Github Pages**, there is a subtitle labelled **Source**, click that and change the source to be **master branch**.
     - The page is automatically refreshed and ready for deployment, it can take up to 5-10 minutes for it to be viewable.
 
-- To add this repository to your local workspace.
+- To add this repository to your local workspace:
     - Click on the [Simon Game repository on GitHub!](https://github.com/CharlieJT/Simon-Memory-Game) link.
     - Select the green button on the right-hand side named **Clone or download** and copy the clone URL.
     - Go into your local workspace and open up a new terminal (git bash).

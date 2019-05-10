@@ -33,8 +33,11 @@ Jasmine testing to ensure tests were passing.
 I tested using Jasmine, taking it one step at a time. I would get my tests to first fail and then get them to
 pass to ensure they were working as they should be working. I generated a nice chunk of testing.
 
-My Intention is to learn more about Jasmine testing and the uses you can get out of it so I can incorporate
-extra testing in the future.
+Also, [Jasmine-Jquery CDN](https://github.com/velesin/jasmine-jquery) has been added to my jasmine html to ensure Jasmine
+can test JQuery too.
+
+The intention is to learn more about Jasmine testing and the uses you can get out of it so I can incorporate
+extra testing in to projects in the future.
 
 Files used for Jasmine testing:
 
@@ -42,3 +45,13 @@ Files used for Jasmine testing:
 - The JavaScript spec where the tests are run: [**simonSpec.js**](assets/jasmine-testing/spec/simonSpec.js)
 - The JavaScript code being tested: [**simon.js**](assets/js/simon.js)
 
+**Running Jasmine tests**
+
+If you haven't already, follow the steps in the [Main README.md file](README.md) named 'To add this repository to your local workspace'
+in the 'Deployment' section. Ensure you have the whole project up and running in your local workspace.
+
+Run the Jasmine tests by:
+
+- Opening up the [jasmine.html](assets/jasmine-testing/jasmine.html)
+- Click run and view the test results in the browser.
+- 
