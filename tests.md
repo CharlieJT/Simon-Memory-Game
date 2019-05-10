@@ -136,10 +136,37 @@ I checked that:
 
 I checked that:
 
-- It was positioned correct on the page when it's opened.
+- It was positioned correctly on the page when it's opened.
 - Background display is appearing.
+- A cursor appears when each button is hovered over.
 - All spelling was correct, all fonts are correct and text was sitting where it should be.
 - Scroll icon has a cursor when hovering over, has direction animation and scrolls down to the bottom of the modal when it's clicked.
 - Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and 
 is slightly reduced in size when clicked to indicate it's been clicked.
 - All bullet points are in the correct position.
+
+#### 3. 'Lose Modal'
+
+I checked that:
+
+- Losing sound is produced when the modal displays.
+- It was positioned correctly on the page when it's opened.
+- Background display is appearing.
+- Score is appeared with the correct score in the number display of the modal.
+- All spelling was correct, all fonts are correct and text was sitting where it should be.
+- The start button is slightly darkened when hovered over and that the modal closes and a new game begins when the button is clicked.
+- Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and 
+is slightly reduced in size when clicked to indicate it's been clicked.
+
+#### 2. 'Win Modal'
+
+I checked that:
+
+- Winning sound is produced when the modal displays.
+- It was positioned correctly on the page when it's opened.
+- Background display is appearing.
+- Maximum score is appeared with the correct score in the number display of the modal.
+- All spelling was correct, all fonts are correct and text was sitting where it should be.
+- The start button is slightly darkened when hovered over and that the modal closes and a new game begins when the button is clicked.
+- Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and 
+is slightly reduced in size when clicked to indicate it's been clicked.
