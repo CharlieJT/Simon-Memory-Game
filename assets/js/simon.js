@@ -297,6 +297,7 @@ function check() {
         $(numDisplay).text("Lose!");
         sound = false;
         let audio = document.getElementById("sound-lost");
+        audio.currentTime = 0;
         audio.play();
         $(".pad").addClass('disabled');
         setTimeout(function() {

@@ -138,7 +138,7 @@ I checked that:
 
 - It was positioned correctly on the page when it's opened.
 - Background display is appearing.
-- A cursor appears when each button is hovered over.
+- A cursor appears when each button has been hovered over.
 - All spelling was correct, all fonts are correct and the text was sitting where it should be.
 - Scroll icon has a cursor when hovering over, has direction animation and scrolls down to the bottom of the modal when it's clicked.
 - Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when
@@ -187,14 +187,14 @@ clicked. It will still begin a new game on the last click.
 
 I checked that:
 
-- Strict slider is in 'active' state when the page is loaded so that it has the same default setting as the original game.
-- Slider is green when it's active and grey when it's not active.
-- Label is sitting just above the slider to indicate what the slider is.
+- The strict slider is in 'active' state when the page is loaded so that it has the same default setting as the original game.
+- The slider is green when it's active and grey when it's not active.
+- The label is sitting just above the slider to indicate what the slider is.
 - When the page has been loaded, no matter how many times you click the strict slider on and off, the number display will appear as
 - '-' until a new game is started.
 - When a game has already been played once or more time and you click the strict slider on and off, the number display will appear as
 '0'.
-- There are no bugs in the game if there is a sudden interruption from the strict button. Whether strict button is made
+- There are no bugs in the game if there is a sudden interruption from the strict button. Whether the strict button is made
 active, not active, whether a light is on, whether a light is off, whether it's the computer turn or whether it's the players turn,
 whether a game is being played or not.
 
@@ -213,7 +213,7 @@ start back at '0', this is to prevent the following reasons:
     - If your score is higher than 20 when strict mode is not active and then suddenly you activate it, 
     you will be able to achieve a higher number than the original winning number.
 
-#### 7. When game is in play
+#### 7. When the game is in play
 
 I checked that:
 
@@ -225,4 +225,91 @@ they will not do anything.
 - When a sequence is correct. All pads are disabled, the number counter display is incremented by 1 and the computer sequence is also incremented by 1.
 - Each pad produces a completely random pattern with each sequence and with each time the player plays a game.
 - The same sequence plus 1 extra random pattern is added to the turn with each turn of the game.
-- There is no unnecessary glitches such as lighting or sound glitches that can be produced when the pads are pressed too quickly.
+- There are no unnecessary glitches such as lighting or sound glitches that can be produced when the pads are pressed too quickly.
+
+### Testing on tablet and mobile devices
+
+The website was tested on iPhone 6, iPhone 8 Plus through Chrome and Safari. It's also been run through Chrome Developer tools
+in the 'Responsive' setting changing the width and height and changed to each device setting.
+
+#### 1. Dashboard
+
+I checked that:
+
+- All functions work the same on mobile and tablet as they do on a desktop.
+- The Simon board fits nicely within the page on smaller displays.
+- Everything is large enough to be able to read and click on smaller displays.
+- No faults were occurring when scrolling up and down the page.
+- All features are not positioned incorrectly when checking on different displays, ie. each feature is
+still correctly positioned in its relevant position and not 'floating' off.
+- Paddings, margins etc. are not having a negative effect on how everything is displayed.
+
+#### 2. 'Game-Info' Modal
+
+I checked that:
+
+- All functions work the same on mobile and tablet as they do on a desktop.
+- The Modal fits nicely within the page on smaller displays.
+- Everything is large enough to be able to read and click on smaller displays.
+- No faults were occurring when scrolling up and down the modal.
+- Text is not too large for the reader to have to do a lot of scrolling to read the content
+written in the modal. Or that is unnecessary overlapping with text.
+- Paddings, margins etc. are not having a negative effect on how everything is displayed.
+
+#### 3. 'Lose' Modal
+
+I checked that:
+
+- The start button and close button works the same as on desktop display.
+- The Modal fits nicely within the page on smaller displays.
+- Everything is large enough to be able to read and click on smaller displays.
+- Text is not too large for the reader to have to do a lot of scrolling to read the content
+written in the modal. Or that is unnecessary overlapping with text.
+- The score number being generated as the correct number.
+- A losing sound is being generated when the losing modal displays.
+
+#### 4. 'Win' Modal
+
+I checked that:
+
+- The start button and close button works the same as on desktop display.
+- The Modal fits nicely within the page on smaller displays.
+- Everything is large enough to be able to read and click on smaller displays.
+- Text is not too large for the reader to have to do a lot of scrolling to read the content
+written in the modal. Or that is unnecessary overlapping with text.
+- The winning number is generated as the correct number.
+- A winning sound is being generated when the winning modal displays.
+
+#### 5. Start Buttons
+
+I checked that:
+
+- All functions work the same on mobile and tablet as they do on a desktop.
+- Buttons are not too small for them to be clicked on or read.
+- Buttons are not too large where they look too big for the display.
+- Text size is maintained to an appropriate size for the button.
+- Buttons still have the same clicking effect when they are clicked.
+- Paddings, margins etc. are not having a negative effect on how everything is displayed.
+- Start button on Simon board is not having unnecessary floating issues.
+
+#### 6. Strict Slider
+
+I checked that:
+
+- All functions work the same on mobile and tablet as they do on a desktop.
+- The slider still slides from each side an appropriate amount and doesn't slide too little or too much.
+- Colours are still kept when active and not active.
+- Text size is maintained to an appropriate size for the slider.
+- Paddings, margins etc. are not having a negative effect on how everything is displayed.
+- Start button on Simon board is not having unnecessary floating issues.
+
+#### 7. When the game is in play
+
+I checked that:
+
+- All functions work the same on mobile and tablet as they do on a desktop.
+- Lights and sounds are being generated properly with the correct amount of time delay.
+- No bugs are being generated when a pad is clicked or that a click of anything else with not cause an
+unnecessary glitch with the game.
+
+

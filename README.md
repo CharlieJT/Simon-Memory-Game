@@ -89,7 +89,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     - **Main Heading and Footer -** A white font was chosen to contrast nicely with the background of the webpage.
     A white opaque background colour was chosen to indicate the header & footer fields as well as still showing the background.
     
-    - **Simon Board Border -** A black border was chosen as a nice separation between each colour on the board. It is also,
+    - **Simon Board Border -** A black border was chosen as a nice separation between each colour on the board. It is also
     the colour that was chosen for the original Simon Game.
     
     - **Coloured Pads -** The pads were styled with the 4 original colours of the game 'green', 'red', 'yellow' and 'blue'
