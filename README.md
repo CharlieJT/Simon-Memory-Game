@@ -13,9 +13,9 @@ Interactive Frontend - Milestone Project 2 -Simon Game - Charlie Tipton
 to test memory and skill. This particular game features a strict option to make the game more challenging yet rewarding and a winning feature is also included
 to give the player a goal to achieve. In addition to friendly colours & sounds. You will have many hours of fun playing!
 <br><br>
-[View Simon Game website here!](https://charliejt.github.io/Simon-Memory-Game/)
+[**View Simon Game website here!**](https://charliejt.github.io/Simon-Memory-Game/)
 
-[View Website Development in Cloud 9!](https://ide.c9.io/charliejt/interactive_frontend_project)
+[**View Website Development in Cloud 9!**](https://ide.c9.io/charliejt/interactive_frontend_project)
 
 </div>
 

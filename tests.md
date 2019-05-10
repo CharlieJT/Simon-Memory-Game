@@ -2,9 +2,12 @@
 Simon Game - Testing
 </h1>
 
-[Main README.md file](README.md)
+<div align="center">
 
-[View Simon Game page!](https://charliejt.github.io/Simon-Memory-Game/)
+[**Main README.md file**](README.md)
+
+[**View Simon Game page!**](https://charliejt.github.io/Simon-Memory-Game/)
+</div>
 
 ## Contents Table
 
@@ -13,7 +16,9 @@ Simon Game - Testing
     - [**Jasmine Testing**](#jasmine-testing)
 
 2. [**User Stories Testing**](#user-stories-testing)
-3. 
+3. [**Manual Testing**](#manual-testing)
+    - [**Testing on Desktop**](#testing-on-desktop)
+    - 
 
 
 ## Automated Testing
@@ -87,8 +92,7 @@ This follows on from each of the **'User Stories'** items from the **'UX'** sect
         - **Rules for Winning:** A breakdown of the steps you need to follow to make a 'Win' possible.
         - **Buttons:** A listing of what each of the buttons represents and their function.
     - ### A sense of achievement and a goal to strive for whilst playing the game.
-        - A winning modal has been added to the game for when the player follows 20 correct sequences from start to finish
-        without making a single mistake.
+        - A winning modal has been added to the game for when the player follows 20 correct sequences from start to finish without making a single mistake.
     - ### Professional sounds which give a nice feel to their specific purpose.
         Professional sounds have been applied to the game to give a clear indicator of their intended use.
         - **Green Pad:** A 'ding' noise which produces the note (D#).
@@ -99,7 +103,44 @@ This follows on from each of the **'User Stories'** items from the **'UX'** sect
         - **When a player wins:** When the winning modal appears, a winning noise is produced to indicate the sound of winning.
     - ### Different settings of play so the player can play to a level they are comfortable with.
         A Strict slider has been added to the game so that the player can pick a play that best suits them.
-        - **Strict Mode (active):** When strict mode is active, the player will not be allowed to get a single sequence wrong, if they do they will lose.
-        Winning the game is possible when stict mode is active.
-        - **Strict Mode  (not active):** When strict mode is not active, if the player gets a sequence wrong, the game will repeat the sequence over and over again until
-        the player follows correctly. You will then move on to the next sequence. Winning the game is not possible strcit mode is not active.
+        - **Strict Mode (active):** When strict mode is active, the player will not be allowed to get a single sequence wrong, 
+        if they do they will lose.Winning the game is possible when strict mode is active.
+        - **Strict Mode  (not active):** When strict mode is not active, if the player gets a sequence wrong,
+        the game will repeat the sequence over and over again until the player follows correctly. 
+        You will then move on to the next sequence. Winning the game is not possible when strict mode is not active.
+
+## Manual Testing
+
+A number of manual tests were done to ensure the website was working with it's intended purpose and use.
+
+### Testing on Desktop
+
+The website was tested numerous times in Browsers: Chrome, Safari, FireFox and Internet Explorer
+on a Laptop, Macbook & Desktop PC.
+
+#### 1. Dashboard
+
+I checked that:
+
+- Simon board was sitting correctly on the page.
+- The number counter was displaying "-".
+- None of the pads were clickable and no cursors were disable when hovering over the pads.
+- The background was fixed when scrolling up and down on the page.
+- The header and the footer where both sitting correct.
+- When hovering over the start button and strict button, there was a cursor that appeared to indicate that they're both clickable.
+- All spelling was correct and text was sitting where it should be.
+- "Game-Info" button was positioned just above the Simon Board.
+- All controls and displays were sitting correctly on the page.
+
+#### 2. 'Game-Info Modal'
+
+**I checked that:**
+
+- It was positioned correct on the page when it's opened.
+- Background display is appearing.
+- All spelling was correct, all fonts are correct and text was sitting where it should be.
+- Scroll icon has a cursor when hovering over, has direction animation and scrolls down to the bottom of the modal when it's clicked.
+- Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and 
+is slightly reduced in size when clicked to indicate it's been clicked.
+- All bullet points are in the correct position.
+- 
