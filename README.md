@@ -43,6 +43,7 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
 6. [**Credits**](#credits)
     - [**Contents**](#contents)
     - [**Media**](#media)
+    - [**Help with code**](#help-with-code)
     - [**Acknowledgements**](#acknowledgements)
 
 
@@ -394,15 +395,15 @@ The process of cloning will now be completed. For further information on cloning
     
     - Sounds include 4 pad sounds, a losing sound and a winning sound. The sounds were all created in [**GarageBand**](https://www.apple.com/uk/mac/garageband/)
 
-- #### Help with code
+### Help with code
 
-    - Ideas on how to write out my HTML for the Simon Board: [How to Program a Simon Game: HTML](https://www.youtube.com/watch?v=zwKoo7VDj44)
-    - Ideas on how to write out my CSS for the Simon Board: [How to Program Simon Game: CSS](https://www.youtube.com/watch?v=muPIIfjazcU)
-    - Ideas on how to get started with the Javascript for the Simon Board: [Simon Game JavaScript Tutorial for Beginners](https://www.youtube.com/watch?v=n_ec3eowFLQ)
-    - Ideas on how to get the effect for the Strict slider for the Simon Board: [Css Custom Animated Checkbox](https://www.youtube.com/watch?v=BQSNBa3gZJU)
-    - Ideas on how to get the modal to scroll down when you click the 'arrow-down' icon in 'Game-Info' modal: [Smooth Scroll Tutorial Using jQuery](https://www.youtube.com/watch?v=6Bd37vCHQ_U)
+- Ideas on how to write out my HTML for the Simon Board: [How to Program a Simon Game: HTML](https://www.youtube.com/watch?v=zwKoo7VDj44)
+- Ideas on how to write out my CSS for the Simon Board: [How to Program Simon Game: CSS](https://www.youtube.com/watch?v=muPIIfjazcU)
+- Ideas on how to get started with the Javascript for the Simon Board: [Simon Game JavaScript Tutorial for Beginners](https://www.youtube.com/watch?v=n_ec3eowFLQ)
+- Ideas on how to get the effect for the Strict slider for the Simon Board: [Css Custom Animated Checkbox](https://www.youtube.com/watch?v=BQSNBa3gZJU)
+- Ideas on how to get the modal to scroll down when you click the 'arrow-down' icon in 'Game-Info' modal: [Smooth Scroll Tutorial Using jQuery](https://www.youtube.com/watch?v=6Bd37vCHQ_U)
     
-    The code learned from the videos were not copied into the project, they were used as help and guidance to be interpreted in a different and unique way.
+The code learned from the videos were not copied into the project, they were used as help and guidance to be interpreted in a different and unique way.
 
 ### Acknowledgements
 
