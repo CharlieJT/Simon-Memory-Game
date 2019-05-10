@@ -19,7 +19,7 @@ Simon Game - Testing
 3. [**Manual Testing**](#manual-testing)
     - [**Testing on Desktop**](#testing-on-desktop)
     - [**Testing on tablet and mobile devices**](#testing-on-tablet-and-mobile-devices)
-4. [**Bugs Found**](#bug-found)
+4. [**Bugs Found**](#bugs-found)
     - [**Bugs Solved**](#bugs-solved)
     - [**Bugs Unsolved**](#bugs-unsolved)
 
