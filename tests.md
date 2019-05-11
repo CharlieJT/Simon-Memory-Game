@@ -22,6 +22,7 @@ Simon Game - Testing
 4. [**Bugs Found**](#bugs-found)
     - [**Bugs Solved**](#bugs-solved)
     - [**Bugs Unsolved**](#bugs-unsolved)
+5. [**Further Testing**](#further-testing)
 
 ## Automated Testing
 
@@ -441,3 +442,10 @@ unnecessary glitch with the game.
     After trying to work out a section with vendor-prefixes. A solution was not found for this issue unfortunately, as stated
     in the 'Sounds being produced in Safari' section, the game would be better suited for a mobile app. I will continue to research in 
     to find out a solution to the problem.
+
+
+## Further Testing
+
+- Friends, family and fellow students were asked to check the website on all devices they had, they tested functionality and layout,
+positive and constructive criticism was provided.
+- Tested in Chrome DevTools on all different devices and by scrolling up and down in the responsive setting.
