@@ -320,27 +320,52 @@ unnecessary glitch with the game.
 ### Bugs Solved
 
 1. #### Error with clicking a pad when a computer was generating a sequence and when the game isn't in play.
-There was an issue with the pads still being clickable when a computer sequence was being generated & when the game wasn't in play.
-This caused many glithes with the game such as 'Lose' symbols showing and pad lights spiralling out of control.
+    There was an issue with the pads still being clickable when a computer sequence was being generated & when the game wasn't in play.
+    This caused many glithes with the game such as 'Lose' symbols showing and pad lights spiralling out of control.
 
-**How it was fixed**:
+    **How it was fixed**:
 
-I added `pointer-events` under the class of `disabled` in CSS & added the class to an if statement saying its computers turn,
-then add the class of `disabled`, a `setTimeout` function is added to remove the class after 299 seconds.
-so the pad is clickable when the computer generator has finished sequence.
+    - I added `pointer-events` under the class of `disabled` in CSS & added the class to an if statement saying its computers turn,
+    then add the class of `disabled`, a `setTimeout` function is added to remove the class after 299 seconds.
+    so the pad is clickable when the computer generator has finished sequence.
 
-A time of 300 was set to remove the class but it was causing a lighting glitch where the final light produced remained on.
-299 seconds worked absolutely fine.
+    - A time of 300 was set to remove the class but it was causing a lighting glitch where the final light produced remained on.
+    299 seconds worked absolutely fine.
 
-``` css
-.disabled {
+    ``` css
+    .disabled {
     pointer-events: none;
-}
-```
-``` javascript
-$(".pad").addClass('disabled');
-$(".pad").removeClass('disabled');
-```
+    }
+    ```
+    ``` javascript
+    $(".pad").addClass('disabled');
+    $(".pad").removeClass('disabled');
+    ```
 
+2. #### Error with light continuing to stay on when strict button is clicked whilst a game is in play.
+    There was an issue where the light was staying on when the strict button was pressed. It happened when the play of
+    a game was interrupted when a computer sequence was being generated. The exact point it would happen is when
+    a light had just finished flashing and then the strict slider was quickly toggled on, off and back on again, the next light
+    that was produce would stay on perminently.
+
+    **How it was fixed**:
+
+    - A `setTimeout` function with a function called `clearColor();` inside of it was added to clear the colour after a set time.
+    The `clearColor();` removes any unnecessary lighting classes that were still added to each pad.
+
+    ``` javascript
+    setTimeout(function() {
+        clearColor();
+    }, 600);
+    ```
+
+    ``` javascript
+    function clearColor() {
+        $(greenPad).removeClass("green-light");
+        $(redPad).removeClass("red-light");
+        $(yellowPad).removeClass("yellow-light");
+        $(bluePad).removeClass("blue-light");
+    }
+    ```
     
 ### Bugs Unsolved
