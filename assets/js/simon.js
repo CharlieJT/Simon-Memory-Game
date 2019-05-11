@@ -2,14 +2,9 @@
 
 let sequence = [];
 let playerSequence = [];
-let light;
-let turn;
-let correct;
-let compTurn;
-let intervalId;
+let light, turn, correct, compTurn, intervalId, win;
 let strictMode = true;
 let sound = true;
-let win;
 
 // Buttons, number displays, pads & modals targetted as variables using JQuery.
 
@@ -262,44 +257,36 @@ function displayModal() {
     $(loseModalDisplay).text((turn) - 1);
 }
 
-/* 
-Checking to see if sequences are correct or wrong.
-If player sequence is not the same as computer sequence, correct will return as false.
-If correct is false, this will mean you've lost & you will get back "Lose!" in the number display.
-A lose sound with a flashing of all of the lights will be produced. 
-Pads are also disabled using JQuery.
-*/
-
 /*
-If player is in strict mode reaches level 20, you will win the game, the win function will run & each pad will be disabled.
+This function checks to see if:
+- The player followed a sequence incorrectly.
+- The player has reached the sequence 20 when strict mode is active.
+- If correct is false.
+- If Strict mode is active & a game has been lost.
+- If player sequence matches turn count & is correct.
 */
-
-/*
-A timeout has been set up on lose for after 800 milliseconds. which will clear all colours & display the turn number as your score in the number display.
-Being in strict mode as default, it will disable all of the pads & produce a modal with your final score.
-If strict mode has been turned off, then it will repeat the previous sequence again.
-*/
-
-/*
-If player sequence matches turn count & is correct then, turn count will increase by 1, an extra number is added to sequence array & will begin the computer sequence again.
-*/
-
 function check() {
+    // If player sequence is not the same as computer sequence, correct will return as false.
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
         correct = false;
     }
+    // If player is in strict mode reaches level 20, you will win the game, the win function will run & each pad will be disabled.
     if (playerSequence.length == 20 && correct && strictButton.checked == true) {
         $(".pad").addClass('disabled');
         winGame();
     }
+    // If correct is false, this will mean you've lost & you will get back "Lose!" in the number display.
     if (correct == false) {
         lightAllColors();
         $(numDisplay).text("Lose!");
         sound = false;
+        // A lose sound with a flashing of all of the lights will be produced.
         let audio = document.getElementById("sound-lost");
         audio.currentTime = 0;
         audio.play();
+        // Pads are also disabled using JQuery.
         $(".pad").addClass('disabled');
+        //A timeout has been set up on lose for after 800 milliseconds. which will clear all colours & display the turn number as your score in the number display.
         setTimeout(function() {
             $(numDisplay).text((turn) - 1);
             clearColor();
@@ -316,6 +303,7 @@ function check() {
             }
         }, 800);
     }
+    // If player sequence matches turn count & is correct then, turn count will increase by 1, an extra number is added to sequence array & will begin the computer sequence again.
     else if (turn == playerSequence.length && correct && !win) {
         turn++;
         playerSequence = [];

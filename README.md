@@ -411,7 +411,7 @@ The code learned from the videos were not copied into the project, they were use
 
 A huge thank you to:
 
-- Spenser Barriball (spence_mentor) - For discussing ideas, providing help wherever necessary and also there as a
+- Spencer Barriball (spence_mentor) - For discussing ideas, providing help wherever necessary and also there as a
 guide if I'm ever stuck with anything.
 
 - Tim Nelson (2BN-Tim_lead) - For taking the time to review the project and offering me constructive criticism to help
