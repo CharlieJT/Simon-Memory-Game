@@ -25,6 +25,7 @@ Simon Game - Testing
 5. [**Further Testing**](#further-testing)
 <br>
 
+
 ## Automated Testing
 
 ### Validating Code
@@ -440,7 +441,7 @@ unnecessary glitch with the game.
     When the website is opened up in Mozilla Firefox and Internet Explorer, the controls of the Simon Board are floating in
     different directions and not sitting correctly on the page.
     
-    After trying to work out a section with vendor-prefixes. A solution was not found for this issue unfortunately, as stated
+    After trying to work out a solution with vendor-prefixes. A solution was not found for this issue unfortunately, as stated
     in the 'Sounds being produced in Safari' section, the game would be better suited for a mobile app. I will continue to research in 
     to find out a solution to the problem.
 
