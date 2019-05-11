@@ -420,24 +420,24 @@ unnecessary glitch with the game.
 1. #### Sounds being produced in Safari.
 
     An issue was happening with sound clips in safari where there would be a delay either be a delay with the sounds being played
-    or not playing at all, I tried on iPhone and Macbook Pro and the same issue was occuring with both devices as safari limits the
-    amount of times and audio file can be played.
+    or not playing at all, I tried on iPhone and MacBook Pro and the same issue was occurring with both devices as Safari limits the
+    amount of times the audio file can be played.
     
-    Unforunitely, I could not figure a way around this issue. The game would be better suited for a mobile app. I will
+    Unfortunately, I could not figure a way around this issue. The game would be better suited for a mobile app. I will
     continue to research deeper into the issue and hopefully figure out a solution.
     
-2. #### Sounds having a delay devices or systems with slower speeds.
+2. #### Sounds having a delay on devices or systems with slower speeds.
 
     When the game is played on slower devices or system with a slow speed. The light of a pad is flashed before the sound
     is played, signifying a slight delay with the sounds.
     
-    I could not find a way around this issue unfortunitely but I will continue to do research into resolving the delay.
+    I could not find a way around this issue unfortunately but I will continue to do research into resolving the delay.
     
-3. Controls not rendering correctly in Mozilla FireFox and Internet Explorer correctly
+3. Controls not rendering correctly in Mozilla Firefox and Internet Explorer correctly
 
-    When the website is opened up in Mozilla FireFox and Internet Explorer, the controls of the Simon Board are floating in
+    When the website is opened up in Mozilla Firefox and Internet Explorer, the controls of the Simon Board are floating in
     different directions and not sitting correctly on the page.
     
-    After trying to work out a section with vendor-prefixes. A solution was not found for this issue unfortunitely, as stated in
-    the 'Sounds being produced in Safari' section, the game would be better suited for a mobile app. I will continue to research in 
-    to finding out an issue to the problem.
+    After trying to work out a section with vendor-prefixes. A solution was not found for this issue unfortunately, as stated
+    in the 'Sounds being produced in Safari' section, the game would be better suited for a mobile app. I will continue to research in 
+    to find out a solution to the problem.
