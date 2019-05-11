@@ -423,4 +423,4 @@ make improvements.
 
 ## Disclaimer
 
-All content in the website, including images are used for educational purposes only.
+All content on the website, including images, are used for educational purposes only.
