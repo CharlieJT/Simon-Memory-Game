@@ -51,9 +51,9 @@ extra testing in to projects in the future.
 
 Files used for Jasmine testing:
 
-- The HTML page where all of the Jasmine testing tools are stored: [**jasmine.html**](assets/jasmine-testing/jasmine.html)
-- The JavaScript spec where the tests are run: [**simonSpec.js**](assets/jasmine-testing/spec/simonSpec.js)
-- The JavaScript code being tested: [**simon.js**](assets/js/simon.js)
+- The HTML page where all of the Jasmine testing tools are stored: [**jasmine.html**](assets/jasmine-testing/jasmine.html).
+- The JavaScript spec where the tests are run: [**simonSpec.js**](assets/jasmine-testing/spec/simonSpec.js).
+- The JavaScript code being tested: [**simon.js**](assets/js/simon.js).
 
 #### Running Jasmine tests
 
@@ -171,7 +171,7 @@ I checked that:
 - All spelling was correct, all fonts are correct and the text was sitting where it should be.
 - The start button is slightly darkened when hovered over and that the modal closes and a new game will begin when the button is clicked.
 - Closing items are sitting and closing correctly, the close button at the bottom slightly darkens in colour when hovered over and is
-- slightly reduced in size when clicked to indicate it's been clicked.
+slightly reduced in size when clicked to indicate it's been clicked.
 
 #### 5. Start Buttons
 
@@ -399,7 +399,7 @@ unnecessary glitch with the game.
     ```
     This was producing a random number with each cycle, however, where the number 20 is written, any number written would be the total plays
     the game would play up to. A really high number added to it was not a viable option as the higher the number, the slower
-    the website would run. A new way needed to be thought of
+    the website would run. A new way needed to be thought of.
 
     **How it was fixed**:
 
@@ -419,7 +419,7 @@ unnecessary glitch with the game.
 
 1. #### Sounds being produced in Safari.
 
-    An issue was happening with sound clips in safari where there would be a delay either be a delay with the sounds being played
+    An issue was happening with sound clips in Safari where there would be a delay either be a delay with the sounds being played
     or not playing at all, I tried on iPhone and MacBook Pro and the same issue was occurring with both devices as Safari limits the
     amount of times the audio file can be played.
     
