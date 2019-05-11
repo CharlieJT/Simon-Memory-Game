@@ -23,7 +23,7 @@ Simon Game - Testing
     - [**Bugs Solved**](#bugs-solved)
     - [**Bugs Unsolved**](#bugs-unsolved)
 5. [**Further Testing**](#further-testing)
-
+<br>
 ## Automated Testing
 
 ### Validating Code
