@@ -331,6 +331,7 @@ unnecessary glitch with the game.
 
     - A time of 300 was set to remove the class but it was causing a lighting glitch where the final light produced remained on.
     299 seconds worked absolutely fine.
+    <br>
 
     ``` css
     .disabled {
@@ -342,16 +343,16 @@ unnecessary glitch with the game.
     $(".pad").removeClass('disabled');
     ```
 
-2. #### Error with light continuing to stay on when strict button is clicked whilst a game is in play.
-    There was an issue where the light was staying on when the strict button was pressed. It happened when the play of
-    a game was interrupted when a computer sequence was being generated. The exact point it would happen is when
+2. #### Error with light continuing to stay on when the strict button is clicked whilst a game is in play.
+    There was an issue where the light was staying on when the strict button was pressed. It happened when the play of a game was interrupted when a computer sequence was being generated. The exact point it would happen is when
     a light had just finished flashing and then the strict slider was quickly toggled on, off and back on again, the next light
-    that was produce would stay on perminently.
+    that was produced would stay on permanently.
 
     **How it was fixed**:
 
     - A `setTimeout` function with a function called `clearColor();` inside of it was added to clear the colour after a set time.
     The `clearColor();` removes any unnecessary lighting classes that were still added to each pad.
+    <br>
 
     ``` javascript
     setTimeout(function() {
@@ -366,6 +367,23 @@ unnecessary glitch with the game.
         $(yellowPad).removeClass("yellow-light");
         $(bluePad).removeClass("blue-light");
     }
+    ```
+    
+3. #### Error with sounds when pads were pressed too quickly.
+    An issue that couldn't get resolved for a while was when the pad was pressed and then another straight after, the pad sound
+    was not being produced, it would only play the next sound if the entire audio on the previous pad had finished playing.
+
+    **How it was fixed**:
+
+    - A built-in `currentTime` function was added before the built-in `play` function so that the new audio file was reset to 0, 
+    allowing it to be played from the start. This meant no matter how quickly the next pad was clicked after the previous. 
+    The sound will still be produced.
+    <br>
+    
+    ``` javascript
+        let audio = document.getElementById("sound-green");
+        audio.currentTime = 0;
+        audio.play();
     ```
     
 ### Bugs Unsolved
