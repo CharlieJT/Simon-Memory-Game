@@ -127,7 +127,7 @@ The design of the game is intended to replicate the original 1978 Simon Game wit
     `box-shadow` upon clicking, the effect of a button being pressed has been achieved.
     
     - **Strict Slider** The strict slider's original state was a checkbox, the use of a `checkbox`, however, didn't look very appealing. After the help of a video seen you YouTube, I was able to achieve the effect of a Strict slider.
-    [How the effect was achieved!](https://www.youtube.com/watch?v=BQSNBa3gZJU)
+    [How the effect was achieved!](https://www.youtube.com/watch?v=BQSNBa3gZJU).
     
     - **Buttons -** All buttons are styled to slightly reduce in size when each of them is clicked. Giving them
     the effect of a real button being clicked.
@@ -342,9 +342,9 @@ function at any given time.
     - **Jasmine-JQuery** is used to ensure JQuery code can be run through Jasmine testing.
 - #### [GitHub](https://github.com/)
     - **Github** is used: 
-    1. As a remote backup of code used in the project
-    2. As a remote server for another user to see the code used in the project
-    3. For users to view the deployed version of the website. The deployed version can be viewed [here!](https://charliejt.github.io/Simon-Memory-Game/)
+    1. As a remote backup of code used in the project.
+    2. As a remote server for another user to see the code used in the project.
+    3. For users to view the deployed version of the website. The deployed version can be viewed [here!](https://charliejt.github.io/Simon-Memory-Game/).
 - #### [AutoPrefixer](https://autoprefixer.github.io/)
     - **AutoPrefixer** is used to ensure all css prefixes are running with the most up to date versions.
 
@@ -389,21 +389,21 @@ The process of cloning will now be completed. For further information on cloning
 
 - #### Images
     - The Main background image for the webpage, 'Game-Info' modal & 'Lose' was taken from [**Wallpaper Gallery**](https://wallpaper-gallery.net/).
-    - The background for the win modal was taken from [**Freepik**](https://www.freepik.com/)
-    - The Simon favicon was created in [**Ionos**](https://www.ionos.co.uk/tools/favicon-generator)
+    - The background for the win modal was taken from [**Freepik**](https://www.freepik.com/).
+    - The Simon favicon was created in [**Ionos**](https://www.ionos.co.uk/tools/favicon-generator).
 
 - #### Sounds
     
-    - Sounds include 4 pad sounds, a losing sound and a winning sound. The sounds were all created in [**GarageBand**](https://www.apple.com/uk/mac/garageband/)
+    - Sounds include 4 pad sounds, a losing sound and a winning sound. The sounds were all created in [**GarageBand**](https://www.apple.com/uk/mac/garageband/).
 
 ### Help with code
 
-- Ideas on how to write out my HTML for the Simon Board: [How to Program a Simon Game: HTML](https://www.youtube.com/watch?v=zwKoo7VDj44)
-- Ideas on how to write out my CSS for the Simon Board: [How to Program Simon Game: CSS](https://www.youtube.com/watch?v=muPIIfjazcU)
-- Ideas on how to get started with the Javascript for the Simon Board: [Simon Game JavaScript Tutorial for Beginners](https://www.youtube.com/watch?v=n_ec3eowFLQ)
-- Ideas on how to get the effect for the Strict slider for the Simon Board: [Css Custom Animated Checkbox](https://www.youtube.com/watch?v=BQSNBa3gZJU)
-- Ideas on how to get the modal to scroll down when you click the 'arrow-down' icon in 'Game-Info' modal: [Smooth Scroll Tutorial Using jQuery](https://www.youtube.com/watch?v=6Bd37vCHQ_U)
-- Ideas on how to get each of the coloured pads to light up like a real light: [Creating Glow Effects with CSS](https://codersblock.com/blog/creating-glow-effects-with-css/)
+- Ideas on how to write out my HTML for the Simon Board: [How to Program a Simon Game: HTML](https://www.youtube.com/watch?v=zwKoo7VDj44).
+- Ideas on how to write out my CSS for the Simon Board: [How to Program Simon Game: CSS](https://www.youtube.com/watch?v=muPIIfjazcU).
+- Ideas on how to get started with the Javascript for the Simon Board: [Simon Game JavaScript Tutorial for Beginners](https://www.youtube.com/watch?v=n_ec3eowFLQ).
+- Ideas on how to get the effect for the Strict slider for the Simon Board: [Css Custom Animated Checkbox](https://www.youtube.com/watch?v=BQSNBa3gZJU).
+- Ideas on how to get the modal to scroll down when you click the 'arrow-down' icon in 'Game-Info' modal: [Smooth Scroll Tutorial Using jQuery](https://www.youtube.com/watch?v=6Bd37vCHQ_U).
+- Ideas on how to get each of the coloured pads to light up like a real light: [Creating Glow Effects with CSS](https://codersblock.com/blog/creating-glow-effects-with-css/).
     
 The code learned from the videos were not copied into the project, they were used as help and guidance to be interpreted in a different and unique way.
 
