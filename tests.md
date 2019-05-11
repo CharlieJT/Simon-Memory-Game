@@ -381,9 +381,34 @@ unnecessary glitch with the game.
     <br>
     
     ``` javascript
-        let audio = document.getElementById("sound-green");
-        audio.currentTime = 0;
-        audio.play();
+    let audio = document.getElementById("sound-green");
+    audio.currentTime = 0;
+    audio.play();
+    ```
+    
+4. #### A for loop was limiting how many plays you could play.
+    Initially, a 'for' loop was added to get a random number which was for example:
+    ``` javascript
+    for (i = 0; i < 20; i++) {
+        sequence.push(Math.floor(Math.random() * 4) + 1);
+    }
+    ```
+    This was producing a random number with each cycle, however, where the number 20 is written, any number written would be the total plays
+    the game would play up to. A really high number added to it was not a viable option as the higher the number, the slower
+    the website would run. A new way needed to be thought of
+
+    **How it was fixed**:
+
+    - A function called `getRandomNumber();` was created which took a random number and pushed it into the sequence.
+    I then used this function in my `play();` function when beginning a game and in my `turn == playerSequence.length && correct && !win`
+    if statement. This was a number better approach as there were no limits made by a for loop.
+    <br>
+    
+    ``` javascript
+    function getRandomNumber() {
+        sequence.push(Math.floor(Math.random() * 4) + 1);
+        console.log(sequence);
+    }
     ```
     
 ### Bugs Unsolved
