@@ -433,7 +433,7 @@ unnecessary glitch with the game.
     
     I could not find a way around this issue unfortunately but I will continue to do research into resolving the delay.
     
-3. Controls not rendering correctly in Mozilla Firefox and Internet Explorer correctly
+3. #### Controls not rendering correctly in Mozilla Firefox and Internet Explorer correctly.
 
     When the website is opened up in Mozilla Firefox and Internet Explorer, the controls of the Simon Board are floating in
     different directions and not sitting correctly on the page.
