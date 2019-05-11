@@ -46,6 +46,8 @@ to give the player a goal to achieve. In addition to friendly colours & sounds. 
     - [**Help with code**](#help-with-code)
     - [**Acknowledgements**](#acknowledgements)
 
+7. [**Disclaimer**](#disclaimer)
+
 
 ## UX
 
@@ -419,3 +421,6 @@ make improvements.
 
 - Simen Dæhlin (Eventyret_mentor) and Anna Greaves (Anna_lead) - With help sorting a merging issue that was occurring with my README.
 
+## Disclaimer
+
+All content in the website, including images are used for educational purposes only.
