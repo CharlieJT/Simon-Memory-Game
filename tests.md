@@ -320,6 +320,7 @@ unnecessary glitch with the game.
 ### Bugs Solved
 
 1. #### Error with clicking a pad when a computer was generating a sequence and when the game isn't in play.
+
     There was an issue with the pads still being clickable when a computer sequence was being generated & when the game wasn't in play.
     This caused many glithes with the game such as 'Lose' symbols showing and pad lights spiralling out of control.
 
@@ -344,6 +345,7 @@ unnecessary glitch with the game.
     ```
 
 2. #### Error with light continuing to stay on when the strict button is clicked whilst a game is in play.
+
     There was an issue where the light was staying on when the strict button was pressed. It happened when the play of a game was interrupted when a computer sequence was being generated. The exact point it would happen is when
     a light had just finished flashing and then the strict slider was quickly toggled on, off and back on again, the next light
     that was produced would stay on permanently.
@@ -370,6 +372,7 @@ unnecessary glitch with the game.
     ```
     
 3. #### Error with sounds when pads were pressed too quickly.
+
     An issue that couldn't get resolved for a while was when the pad was pressed and then another straight after, the pad sound
     was not being produced, it would only play the next sound if the entire audio on the previous pad had finished playing.
 
@@ -387,6 +390,7 @@ unnecessary glitch with the game.
     ```
     
 4. #### A for loop was limiting how many plays you could play.
+
     Initially, a 'for' loop was added to get a random number which was for example:
     ``` javascript
     for (i = 0; i < 20; i++) {
@@ -412,3 +416,28 @@ unnecessary glitch with the game.
     ```
     
 ### Bugs Unsolved
+
+1. #### Sounds being produced in Safari.
+
+    An issue was happening with sound clips in safari where there would be a delay either be a delay with the sounds being played
+    or not playing at all, I tried on iPhone and Macbook Pro and the same issue was occuring with both devices as safari limits the
+    amount of times and audio file can be played.
+    
+    Unforunitely, I could not figure a way around this issue. The game would be better suited for a mobile app. I will
+    continue to research deeper into the issue and hopefully figure out a solution.
+    
+2. #### Sounds having a delay devices or systems with slower speeds.
+
+    When the game is played on slower devices or system with a slow speed. The light of a pad is flashed before the sound
+    is played, signifying a slight delay with the sounds.
+    
+    I could not find a way around this issue unfortunitely but I will continue to do research into resolving the delay.
+    
+3. Controls not rendering correctly in Mozilla FireFox and Internet Explorer correctly
+
+    When the website is opened up in Mozilla FireFox and Internet Explorer, the controls of the Simon Board are floating in
+    different directions and not sitting correctly on the page.
+    
+    After trying to work out a section with vendor-prefixes. A solution was not found for this issue unfortunitely, as stated in
+    the 'Sounds being produced in Safari' section, the game would be better suited for a mobile app. I will continue to research in 
+    to finding out an issue to the problem.
