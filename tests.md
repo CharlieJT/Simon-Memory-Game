@@ -317,8 +317,30 @@ unnecessary glitch with the game.
 
 ## Bugs Found
 
-
-
 ### Bugs Solved
 
+1. #### Error with clicking a pad when a computer was generating a sequence and when the game isn't in play.
+There was an issue with the pads still being clickable when a computer sequence was being generated & when the game wasn't in play.
+This caused many glithes with the game such as 'Lose' symbols showing and pad lights spiralling out of control.
+
+**How it was fixed**:
+
+I added `pointer-events` under the class of `disabled` in CSS & added the class to an if statement saying its computers turn,
+then add the class of `disabled`, a `setTimeout` function is added to remove the class after 299 seconds.
+so the pad is clickable when the computer generator has finished sequence.
+
+A time of 300 was set to remove the class but it was causing a lighting glitch where the final light produced remained on.
+299 seconds worked absolutely fine.
+
+``` css
+.disabled {
+    pointer-events: none;
+}
+```
+``` javascript
+$(".pad").addClass('disabled');
+$(".pad").removeClass('disabled');
+```
+
+    
 ### Bugs Unsolved
