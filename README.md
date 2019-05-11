@@ -341,9 +341,10 @@ function at any given time.
 - #### [Jasmine-JQuery](https://github.com/velesin/jasmine-jquery)
     - **Jasmine-JQuery** is used to ensure JQuery code can be run through Jasmine testing.
 - #### [GitHub](https://github.com/)
-    - **Github** is used as a remote backup of code used in the project
-    - Is used as a remote server for another user to see the code used in the project
-    - For users to view the deployed version of the website. The deployed version can be viewed [here!](https://charliejt.github.io/Simon-Memory-Game/)
+    - **Github** is used: 
+    1. As a remote backup of code used in the project
+    2. As a remote server for another user to see the code used in the project
+    3. For users to view the deployed version of the website. The deployed version can be viewed [here!](https://charliejt.github.io/Simon-Memory-Game/)
 - #### [AutoPrefixer](https://autoprefixer.github.io/)
     - **AutoPrefixer** is used to ensure all css prefixes are running with the most up to date versions.
 
