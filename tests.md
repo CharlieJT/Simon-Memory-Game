@@ -24,6 +24,7 @@ Simon Game - Testing
     - [**Bugs Unsolved**](#bugs-unsolved)
 5. [**Further Testing**](#further-testing)
 <br>
+
 ## Automated Testing
 
 ### Validating Code
