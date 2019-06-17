@@ -23,63 +23,87 @@ const winModalDisplay = document.getElementById("win-modal-display");
 
 // Whatever code is written inside the JQuery ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
 
-$(document).ready (function() {
-    
-    
+$(document).ready(function() {
+    $(startButton).click(function() {
+        startPlay()
+    });
+
     $('.pad').click(function() {
-        padId = $(this).attr('id');
+        let padId = $(this).attr('id');
         if (padId == 0) {
-            green();
+            greenLightAndSound();
         }
         if (padId == 1) {
-            red();
+            redLightAndSound();
         }
         if (padId == 2) {
-            yellow();
+            yellowLightAndSound();
         }
         if (padId == 3) {
-            blue();
+            blueLightAndSound();
         }
     });
 });
 
+function startPlay() {
+    randomNumber();
+}
 
-function green() {
-    let soundGreen = $('#sound-green')[0];
+function randomNumber() {
+    randomNum = Math.floor(Math.random() * 4)
+    setTimeout(function() {
+        if (randomNum == 0) {
+            greenLightAndSound();
+        }
+        if (randomNum == 1) {
+            redLightAndSound();
+        }
+        if (randomNum == 2) {
+            yellowLightAndSound();
+        }
+        if (randomNum == 3) {
+            blueLightAndSound();
+        }
+    console.log(randomNum)
+    }, 500);
+}
+
+function greenLightAndSound() {
     $(greenPad).addClass('green-light')
     setTimeout(function() {
         $(greenPad).removeClass('green-light')
     }, 300);
+    let soundGreen = $('#sound-green')[0];
     soundGreen.currentTime = 0;
     soundGreen.play();
 }
 
-function red() {
-    let soundRed = $('#sound-red')[0];
+function redLightAndSound() {
     $(redPad).addClass('red-light')
     setTimeout(function() {
         $(redPad).removeClass('red-light')
     }, 300);
+    let soundRed = $('#sound-red')[0];
     soundRed.currentTime = 0;
     soundRed.play();
 }
 
-function yellow() {
-    let soundYellow = $('#sound-yellow')[0];
+function yellowLightAndSound() {
     $(yellowPad).addClass('yellow-light')
     setTimeout(function() {
         $(yellowPad).removeClass('yellow-light')
     }, 300);
+    let soundYellow = $('#sound-yellow')[0];
     soundYellow.currentTime = 0;
     soundYellow.play();
 }
 
-function blue() {
-    let soundBlue = $('#sound-blue')[0];
+function blueLightAndSound() {
     $(bluePad).addClass('blue-light')
     setTimeout(function() {
         $(bluePad).removeClass('blue-light')
     }, 300);
+    let soundBlue = $('#sound-blue')[0];
     soundBlue.currentTime = 0;
     soundBlue.play();
 }
