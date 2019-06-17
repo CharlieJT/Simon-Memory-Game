@@ -23,21 +23,26 @@ const winModalDisplay = document.getElementById("win-modal-display");
 
 // Whatever code is written inside the JQuery ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
 
-$('.pad').click(function() {
+$(document).ready (function() {
     
-    if ($(this).attr('id') == 0) {
-        green();
-    }
-    if ($(this).attr('id') == 1) {
-        red();
-    }
-    if ($(this).attr('id') == 2) {
-        yellow();
-    }
-    if ($(this).attr('id') == 3) {
-        blue();
-    }
+    
+    $('.pad').click(function() {
+        padId = $(this).attr('id');
+        if (padId == 0) {
+            green();
+        }
+        if (padId == 1) {
+            red();
+        }
+        if (padId == 2) {
+            yellow();
+        }
+        if (padId == 3) {
+            blue();
+        }
+    });
 });
+
 
 function green() {
     let soundGreen = $('#sound-green')[0];
@@ -48,6 +53,7 @@ function green() {
     soundGreen.currentTime = 0;
     soundGreen.play();
 }
+
 function red() {
     let soundRed = $('#sound-red')[0];
     $(redPad).addClass('red-light')
@@ -57,6 +63,7 @@ function red() {
     soundRed.currentTime = 0;
     soundRed.play();
 }
+
 function yellow() {
     let soundYellow = $('#sound-yellow')[0];
     $(yellowPad).addClass('yellow-light')
