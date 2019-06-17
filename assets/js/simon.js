@@ -40,27 +40,39 @@ $('.pad').click(function() {
 });
 
 function green() {
+    let soundGreen = $('#sound-green')[0];
     $(greenPad).addClass('green-light')
     setTimeout(function() {
         $(greenPad).removeClass('green-light')
     }, 300);
+    soundGreen.currentTime = 0;
+    soundGreen.play();
 }
 function red() {
+    let soundRed = $('#sound-red')[0];
     $(redPad).addClass('red-light')
     setTimeout(function() {
         $(redPad).removeClass('red-light')
     }, 300);
+    soundRed.currentTime = 0;
+    soundRed.play();
 }
 function yellow() {
+    let soundYellow = $('#sound-yellow')[0];
     $(yellowPad).addClass('yellow-light')
     setTimeout(function() {
         $(yellowPad).removeClass('yellow-light')
     }, 300);
+    soundYellow.currentTime = 0;
+    soundYellow.play();
 }
 
 function blue() {
+    let soundBlue = $('#sound-blue')[0];
     $(bluePad).addClass('blue-light')
     setTimeout(function() {
         $(bluePad).removeClass('blue-light')
     }, 300);
+    soundBlue.currentTime = 0;
+    soundBlue.play();
 }
