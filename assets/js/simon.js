@@ -24,41 +24,56 @@ const winModalDisplay = document.getElementById("win-modal-display");
 // Whatever code is written inside the JQuery ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
 
 $(document).ready(function() {
+    
+    // jQuery function to allow modal scroll icon to scroll down upon click.
+
+    $('.modal-scroll').on('click', function(e) {
+        var linkHref = $(this).attr('href');
+        e.preventDefault();
+        $('.modal-body').animate({
+            scrollTop: $(linkHref).offset().top
+        }, 1000);
+    });
+    
     $(startButton).click(function() {
-        startPlay()
+        startPlay();
     });
 
     $('.pad').click(function() {
         let padId = $(this).attr('id');
         if (padId == 1) {
             greenLightAndSound();
-            sequence.push[padId];
-            console.log(padId)
+            playerSequence.push(parseInt(padId));
+            console.log(playerSequence);
         }
         if (padId == 2) {
             redLightAndSound();
-            sequence.push[padId];
-            console.log(padId)
+            playerSequence.push(parseInt(padId));
+            console.log(playerSequence);
         }
         if (padId == 3) {
             yellowLightAndSound();
-            sequence.push[padId];
-            console.log(padId)
+            playerSequence.push(parseInt(padId));
+            console.log(playerSequence);
         }
         if (padId == 4) {
             blueLightAndSound();
-            sequence.push[padId];
-            console.log(padId)
+            playerSequence.push(parseInt(padId));
+            console.log(playerSequence);
         }
+        checking();
     });
 });
 
 function startPlay() {
-    randomNumber();
+    playerSequence = [];
     sequence = [];
+    randomNumber();
     $(numDisplay).text('0');
-    playerSequence, sequence = [];
-    turn = 0;
+    turn = 1;
+    light = 0;
+    win = false;
+    console.log(sequence);
 }
 
 function randomNumber() {
@@ -121,9 +136,5 @@ function blueLightAndSound() {
     soundBlue.play();
 }
 
-function check() {
-    if (sequence && playerSequence == turn) {
-        
-    }
-}
+
 
