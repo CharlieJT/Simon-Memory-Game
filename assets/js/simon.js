@@ -2,7 +2,7 @@
 
 let sequence = [];
 let playerSequence = [];
-let light, turn, correct, compTurn, win;
+let computerCount, playerCount, correct, compGo, win;
 let strictMode = true;
 let sound = true;
 
@@ -44,56 +44,65 @@ $(document).ready(function() {
         if (padId == 1) {
             greenLightAndSound();
             playerSequence.push(parseInt(padId));
-            console.log(playerSequence);
         }
         if (padId == 2) {
             redLightAndSound();
             playerSequence.push(parseInt(padId));
-            console.log(playerSequence);
         }
         if (padId == 3) {
             yellowLightAndSound();
             playerSequence.push(parseInt(padId));
-            console.log(playerSequence);
         }
         if (padId == 4) {
             blueLightAndSound();
             playerSequence.push(parseInt(padId));
-            console.log(playerSequence);
         }
         checking();
     });
 });
 
 function startPlay() {
-    playerSequence = [];
-    sequence = [];
+    initialGameSettings();
     randomNumber();
     $(numDisplay).text('0');
-    turn = 1;
-    light = 0;
-    win = false;
-    console.log(sequence);
+    playInterval = setInterval(gamePlay, 800);
+}
+
+function initialGameSettings() {
+    playerSequence = [];
+    sequence = [];
+    playerCount = 1;
+    computerCount = 0;
+    compGo = true;
 }
 
 function randomNumber() {
     randomNum = Math.ceil(Math.random() * 4);
-    setTimeout(function() {
-        if (randomNum == 1) {
-            greenLightAndSound();
-        }
-        if (randomNum == 2) {
-            redLightAndSound();
-        }
-        if (randomNum == 3) {
-            yellowLightAndSound();
-        }
-        if (randomNum == 4) {
-            blueLightAndSound();
-        }
-    }, 500);
     sequence.push(randomNum)
     console.log(sequence);
+}
+
+function gamePlay() {
+    if (playerCount == computerCount) {
+        clearInterval(playInterval)
+        compGo = false;
+    } else if (compGo) {
+        setTimeout(function() {
+            if (randomNum == 1) {
+                greenLightAndSound();
+            }
+            if (randomNum == 2) {
+                redLightAndSound();
+            }
+            if (randomNum == 3) {
+                yellowLightAndSound();
+            }
+            if (randomNum == 4) {
+                blueLightAndSound();
+            }
+            computerCount++;
+        }, 500);
+    }
 }
 
 function greenLightAndSound() {
@@ -136,5 +145,13 @@ function blueLightAndSound() {
     soundBlue.play();
 }
 
-
+function checking() {
+    if (playerSequence[playerSequence.length] !== sequence[playerSequence.length]) {
+        console.log('Yes')
+    } else {
+        console.log('no')
+        console.log(playerSequence)
+        console.log(sequence)
+    }
+}
 
