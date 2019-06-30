@@ -86,6 +86,7 @@ function gamePlay() {
     if (playerCount == computerCount) {
         clearInterval(playInterval)
         compGo = false;
+        console.log('This is when it\'s players turn')
     } else if (compGo) {
         setTimeout(function() {
             if (randomNum == 1) {
@@ -147,11 +148,10 @@ function blueLightAndSound() {
 
 function checking() {
     if (playerSequence[playerSequence.length] !== sequence[playerSequence.length]) {
-        console.log('Yes')
-    } else {
+        console.log('yes')
+    }
+    else {
         console.log('no')
-        console.log(playerSequence)
-        console.log(sequence) 
     }
 }
 
