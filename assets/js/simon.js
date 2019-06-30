@@ -151,7 +151,7 @@ function checking() {
     } else {
         console.log('no')
         console.log(playerSequence)
-        console.log(sequence)
+        console.log(sequence) 
     }
 }
 
