@@ -2,7 +2,7 @@
 
 let sequence = [];
 let playerSequence = [];
-let computerCount, playerCount, correct, compGo, win;
+let computerCount, playerCount, turn, correct, compGo, win;
 let strictMode = true;
 let sound = true;
 
@@ -24,7 +24,7 @@ const winModalDisplay = document.getElementById("win-modal-display");
 // Whatever code is written inside the JQuery ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
 
 $(document).ready(function() {
-    
+
     // jQuery function to allow modal scroll icon to scroll down upon click.
 
     $('.modal-scroll').on('click', function(e) {
@@ -34,7 +34,7 @@ $(document).ready(function() {
             scrollTop: $(linkHref).offset().top
         }, 1000);
     });
-    
+
     $(startButton).click(function() {
         startPlay();
     });
@@ -65,45 +65,43 @@ function startPlay() {
     initialGameSettings();
     randomNumber();
     $(numDisplay).text('0');
-    playInterval = setInterval(gamePlay, 800);
+    gamePlay();
 }
 
 function initialGameSettings() {
-    playerSequence = [];
     sequence = [];
-    playerCount = 1;
-    computerCount = 0;
-    compGo = true;
+    turn = 0;
 }
 
 function randomNumber() {
     randomNum = Math.ceil(Math.random() * 4);
-    sequence.push(randomNum)
+    sequence.push(randomNum);
     console.log(sequence);
 }
 
 function gamePlay() {
-    if (playerCount == computerCount) {
-        clearInterval(playInterval)
-        compGo = false;
-        console.log('This is when it\'s players turn')
-    } else if (compGo) {
-        setTimeout(function() {
-            if (randomNum == 1) {
-                greenLightAndSound();
-            }
-            if (randomNum == 2) {
-                redLightAndSound();
-            }
-            if (randomNum == 3) {
-                yellowLightAndSound();
-            }
-            if (randomNum == 4) {
-                blueLightAndSound();
-            }
-            computerCount++;
-        }, 500);
-    }
+    turn++;
+    playerCount = 0;
+    computerCount = 0;
+    playerSequence = [];
+    var playInterval = setInterval(function() {
+        if (sequence.length === computerCount) {
+            clearInterval(playInterval)
+        }
+        if (sequence[computerCount] === 1) {
+            greenLightAndSound();
+        }
+        if (sequence[computerCount] === 2) {
+            redLightAndSound();
+        }
+        if (sequence[computerCount] === 3) {
+            yellowLightAndSound();
+        }
+        if (sequence[computerCount] === 4) {
+            blueLightAndSound();
+        }
+        computerCount++;
+    }, 800);
 }
 
 function greenLightAndSound() {
@@ -147,11 +145,12 @@ function blueLightAndSound() {
 }
 
 function checking() {
-    if (playerSequence[playerSequence.length] !== sequence[playerSequence.length]) {
-        console.log('yes')
-    }
-    else {
-        console.log('no')
+    playerCount++;
+    if (playerSequence[playerCount - 1] == sequence[playerCount - 1]) {
+        if (playerSequence.length == turn) {
+            randomNumber();
+            $(numDisplay).text(playerCount - 1);
+            setTimeout(gamePlay, 1000);
+        };
     }
 }
-
