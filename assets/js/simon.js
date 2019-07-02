@@ -152,6 +152,22 @@ function soundGenerate(color) {
     sound.play();
 }
 
+
+
+function removeLightOnAllPads() {
+    $(greenPad).removeClass("green-light");
+    $(redPad).removeClass("red-light");
+    $(yellowPad).removeClass("yellow-light");
+    $(bluePad).removeClass("blue-light");
+}
+
+function addLightsToAllPads() {
+    $(greenPad).addClass("green-light");
+    $(redPad).addClass("red-light");
+    $(yellowPad).addClass("yellow-light");
+    $(bluePad).addClass("blue-light");
+}
+
 function checking() {
     playerCount++;
     if (playerSequence[playerCount - 1] === sequence[playerCount - 1]) {
