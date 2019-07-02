@@ -41,7 +41,7 @@ $(document).ready(function() {
         }, 500);
     });
 
-    $('.pad').click(function() {
+    $(pad).click(function() {
         let padId = $(this).attr('id');
         if (padId == 1) {
             greenLightAndSound();
@@ -150,8 +150,6 @@ function soundGenerate(color) {
     sound.play();
 }
 
-
-
 function removeLightOnAllPads() {
     $(greenPad).removeClass("green-light");
     $(redPad).removeClass("red-light");
@@ -179,7 +177,7 @@ function checking() {
             $(".pad").addClass('disabled');
             $(numDisplay).text(playerCount);
             setTimeout(gamePlay, 500);
-        };
+        }
     }
     else {
         $(".pad").addClass('disabled');
