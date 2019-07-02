@@ -4,7 +4,6 @@ let sequence = [];
 let playerSequence = [];
 let computerCount, playerCount, turn, correct, win;
 let strictMode = true;
-let sound = true;
 
 // Buttons, number displays, pads & modals targetted as variables using JQuery.
 
@@ -180,8 +179,13 @@ function checking() {
     } else {
         addLightsToAllPads();
         $(".pad").addClass('disabled');
+        soundGenerate('lost');
+        $(numDisplay).text('Lose');
         setTimeout(function() {
             removeLightOnAllPads();
+            setTimeout(function() {
+                $(numDisplay).text(turn)
+            }, 800);
         }, 400);
     }
 }
