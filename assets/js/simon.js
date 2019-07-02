@@ -71,6 +71,7 @@ function startPlay() {
 function initialGameSettings() {
     sequence = [];
     turn = 0;
+    $(".pad").addClass('disabled');
 }
 
 function randomNumber() {
@@ -86,22 +87,28 @@ function gamePlay() {
     playerSequence = [];
     var playInterval = setInterval(function() {
         if (sequence.length === computerCount) {
-            clearInterval(playInterval)
+            clearInterval(playInterval);
+            $(".pad").removeClass('disabled');
         }
-        if (sequence[computerCount] === 1) {
-            greenLightAndSound();
-        }
-        if (sequence[computerCount] === 2) {
-            redLightAndSound();
-        }
-        if (sequence[computerCount] === 3) {
-            yellowLightAndSound();
-        }
-        if (sequence[computerCount] === 4) {
-            blueLightAndSound();
+        switch (sequence[computerCount]) {
+            case 1:
+                greenLightAndSound();
+                break;
+            case 2:
+                redLightAndSound();
+                break;
+            case 3:
+                yellowLightAndSound();
+                break;
+            case 4:
+                blueLightAndSound();
+                break;
+            default:
+                break;
         }
         computerCount++;
     }, 800);
+
 }
 
 function greenLightAndSound() {
@@ -146,11 +153,12 @@ function blueLightAndSound() {
 
 function checking() {
     playerCount++;
-    if (playerSequence[playerCount - 1] == sequence[playerCount - 1]) {
-        if (playerSequence.length == turn) {
+    if (playerSequence.length == turn) {
+        if (playerSequence[playerCount - 1] == sequence[playerCount - 1]) {
             randomNumber();
-            $(numDisplay).text(playerCount - 1);
-            setTimeout(gamePlay, 1000);
+            $(".pad").addClass('disabled');
+            $(numDisplay).text(playerCount);
+            setTimeout(gamePlay, 500);
         };
     }
 }
