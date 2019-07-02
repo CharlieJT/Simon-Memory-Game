@@ -4,6 +4,7 @@ let sequence = [];
 let playerSequence = [];
 let computerCount, playerCount, turn, correct, win;
 let strictMode = true;
+let playInterval;
 
 // Buttons, number displays, pads & modals targetted as variables using JQuery.
 
@@ -35,7 +36,10 @@ $(document).ready(function() {
     });
 
     $(startButton).click(function() {
-        startPlay();
+        clearInterval(playInterval);
+        setTimeout(function() {
+            startPlay();
+        }, 500);
     });
 
     $('.pad').click(function() {
@@ -84,7 +88,7 @@ function gamePlay() {
     playerCount = 0;
     computerCount = 0;
     playerSequence = [];
-    var playInterval = setInterval(function() {
+    playInterval = setInterval(function() {
         if (sequence.length === computerCount) {
             clearInterval(playInterval);
             $(".pad").removeClass('disabled');
@@ -107,10 +111,6 @@ function gamePlay() {
         }
         computerCount++;
     }, 800);
-}
-
-function clearColor(color) {
-    $(pad).addClass(color+'-light');
 }
 
 function greenLightAndSound() {
@@ -167,6 +167,11 @@ function addLightsToAllPads() {
     $(bluePad).addClass("blue-light");
 }
 
+function displayModal() {
+    $('#loseModal').modal('show');
+    $(loseModalDisplay).text(turn);
+}
+
 function checking() {
     playerCount++;
     if (playerSequence[playerCount - 1] === sequence[playerCount - 1]) {
@@ -176,7 +181,8 @@ function checking() {
             $(numDisplay).text(playerCount);
             setTimeout(gamePlay, 500);
         };
-    } else {
+    }
+    else {
         addLightsToAllPads();
         $(".pad").addClass('disabled');
         soundGenerate('lost');
@@ -184,8 +190,9 @@ function checking() {
         setTimeout(function() {
             removeLightOnAllPads();
             setTimeout(function() {
-                $(numDisplay).text(turn)
-            }, 800);
+                $(numDisplay).text(turn);
+                displayModal();
+            }, 600);
         }, 400);
     }
 }
