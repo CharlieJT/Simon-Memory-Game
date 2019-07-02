@@ -108,7 +108,10 @@ function gamePlay() {
         }
         computerCount++;
     }, 800);
+}
 
+function clearColor(color) {
+    $(pad).addClass(color+'-light');
 }
 
 function greenLightAndSound() {
@@ -116,9 +119,7 @@ function greenLightAndSound() {
     setTimeout(function() {
         $(greenPad).removeClass('green-light')
     }, 400);
-    let soundGreen = $('#sound-green')[0];
-    soundGreen.currentTime = 0;
-    soundGreen.play();
+    soundGenerate('green');
 }
 
 function redLightAndSound() {
@@ -126,9 +127,7 @@ function redLightAndSound() {
     setTimeout(function() {
         $(redPad).removeClass('red-light')
     }, 400);
-    let soundRed = $('#sound-red')[0];
-    soundRed.currentTime = 0;
-    soundRed.play();
+    soundGenerate('red');
 }
 
 function yellowLightAndSound() {
@@ -136,9 +135,7 @@ function yellowLightAndSound() {
     setTimeout(function() {
         $(yellowPad).removeClass('yellow-light')
     }, 400);
-    let soundYellow = $('#sound-yellow')[0];
-    soundYellow.currentTime = 0;
-    soundYellow.play();
+    soundGenerate('yellow');
 }
 
 function blueLightAndSound() {
@@ -146,19 +143,25 @@ function blueLightAndSound() {
     setTimeout(function() {
         $(bluePad).removeClass('blue-light')
     }, 400);
-    let soundBlue = $('#sound-blue')[0];
-    soundBlue.currentTime = 0;
-    soundBlue.play();
+    soundGenerate('blue');
+}
+
+function soundGenerate(color) {
+    let sound = $(`#sound-${color}`)[0];
+    sound.currentTime = 0;
+    sound.play();
 }
 
 function checking() {
     playerCount++;
-    if (playerSequence.length == turn) {
-        if (playerSequence[playerCount - 1] == sequence[playerCount - 1]) {
+    if (playerSequence[playerCount - 1] === sequence[playerCount - 1]) {
+        if (playerSequence.length === turn) {
             randomNumber();
             $(".pad").addClass('disabled');
             $(numDisplay).text(playerCount);
             setTimeout(gamePlay, 500);
         };
+    } else {
+        console.log('Nope')
     }
 }
