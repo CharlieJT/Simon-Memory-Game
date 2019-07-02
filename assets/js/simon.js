@@ -2,7 +2,7 @@
 
 let sequence = [];
 let playerSequence = [];
-let computerCount, playerCount, turn, correct, compGo, win;
+let computerCount, playerCount, turn, correct, win;
 let strictMode = true;
 let sound = true;
 
@@ -178,6 +178,10 @@ function checking() {
             setTimeout(gamePlay, 500);
         };
     } else {
-        console.log('Nope')
+        addLightsToAllPads();
+        $(".pad").addClass('disabled');
+        setTimeout(function() {
+            removeLightOnAllPads();
+        }, 400);
     }
 }
