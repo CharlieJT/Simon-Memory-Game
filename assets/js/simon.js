@@ -253,9 +253,7 @@ function winGame() {
         setTimeout(function() {
             $(winModalDisplay).text(turn - 1);
             $('#winModal').modal('show');
-            let audio = document.getElementById("sound-win");
-            audio.currentTime = 0;
-            audio.play();
+            soundGenerate('win');
         }, 700);
     }, 700);
 }
