@@ -15,6 +15,7 @@ const yellowPad = document.getElementById("3");
 const bluePad = document.getElementById("4");
 const startButton = document.getElementById("start");
 const strictButton = document.getElementById("strict");
+const modalScroll = document.getElementById('modal-scroll')
 const startModal = document.getElementById("start-modal-button");
 const startWinModal = document.getElementById("start-modal-win-button");
 const loseModalDisplay = document.getElementById("lose-modal-display");
@@ -26,7 +27,7 @@ $(document).ready(function() {
 
     // jQuery function to allow modal scroll icon to scroll down upon click.
 
-    $('.modal-scroll').on('click', function(e) {
+    $(modalScroll).on('click', function(e) {
         var linkHref = $(this).attr('href');
         e.preventDefault();
         $('.modal-body').animate({
@@ -36,6 +37,7 @@ $(document).ready(function() {
 
     $(startButton).click(function() {
         clearInterval(playInterval);
+        $(numDisplay).text('0');
         setTimeout(function() {
             startPlay();
         }, 500);
@@ -66,7 +68,6 @@ $(document).ready(function() {
 function startPlay() {
     initialGameSettings();
     randomNumber();
-    $(numDisplay).text('0');
     gamePlay();
 }
 
