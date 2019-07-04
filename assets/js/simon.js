@@ -34,26 +34,20 @@ $(document).ready(function() {
             scrollTop: $(linkHref).offset().top
         }, 1000);
     });
-    
+
     $(startButton).click(function() {
-        clearInterval(playInterval);
-        setTimeout(function() {
-            removeLightOnAllPads();  
-        }, 200);
-        $(numDisplay).text('0');
-        setTimeout(function() {
-            startPlay();
-        }, 500);
+        startButtonClick();
     });
-    
+
     $(startModal).on("click", function() {
-        clearInterval(playInterval);
-        $(numDisplay).text('0');
-        setTimeout(function() {
-            startPlay();
-        }, 500);
+        startButtonClick();
     });
-    
+
+    $(startWinModal).on("click", function() {
+        startButtonClick();
+    });
+
+
     $(strictSwitch).on("click", function() {
         if (strictSwitch.checked == true) {
             strictMode = true;
@@ -62,7 +56,8 @@ $(document).ready(function() {
             clearInterval(playInterval);
             if ($(numDisplay).text() == "-") {
                 $(numDisplay).text("-");
-            } else {
+            }
+            else {
                 $(numDisplay).text("0");
             }
             setTimeout(function() {
@@ -97,6 +92,17 @@ $(document).ready(function() {
     });
 });
 
+function startButtonClick() {
+    clearInterval(playInterval);
+    setTimeout(function() {
+        removeLightOnAllPads();
+    }, 200);
+    $(numDisplay).text('0');
+    setTimeout(function() {
+        startPlay();
+    }, 500);
+}
+
 function startPlay() {
     initialGameSettings();
     randomNumber();
@@ -110,7 +116,7 @@ function initialGameSettings() {
 }
 
 function randomNumber() {
-    randomNum = Math.ceil(Math.random() * 1);
+    randomNum = Math.ceil(Math.random() * 4);
     sequence.push(randomNum);
     console.log(sequence);
 }
@@ -204,19 +210,24 @@ function displayModal() {
 
 function checking() {
     playerCount++;
+    let playerAndCompMatch = playerSequence[playerCount - 1] === sequence[playerCount - 1]
+    let playerAndCompDontMatch = playerSequence[playerCount - 1] !== sequence[playerCount - 1];
     console.log(playerCount);
-    if (playerCount === 2 && strictMode === true) {
+    if (playerCount === 2 && strictMode === true && playerAndCompMatch) {
         clearInterval(playInterval);
         $(".pad").addClass('disabled');
         winGame();
     }
-    if (playerSequence[playerCount - 1] === sequence[playerCount - 1]) {
+    else if (playerAndCompMatch) {
         if (playerSequence.length === turn) {
             randomNumber();
             $(".pad").addClass('disabled');
             $(numDisplay).text(playerCount);
             setTimeout(gamePlay, 500);
         }
+    }
+    else if (playerAndCompDontMatch && strictMode === false) {
+        console.log('This is to be repeated')
     }
     else {
         $(".pad").addClass('disabled');
