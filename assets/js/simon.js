@@ -37,6 +37,9 @@ $(document).ready(function() {
     
     $(startButton).click(function() {
         clearInterval(playInterval);
+        setTimeout(function() {
+            removeLightOnAllPads();  
+        }, 200);
         $(numDisplay).text('0');
         setTimeout(function() {
             startPlay();
@@ -107,7 +110,7 @@ function initialGameSettings() {
 }
 
 function randomNumber() {
-    randomNum = Math.ceil(Math.random() * 4);
+    randomNum = Math.ceil(Math.random() * 1);
     sequence.push(randomNum);
     console.log(sequence);
 }
@@ -145,7 +148,7 @@ function gamePlay() {
 function greenLightAndSound() {
     $(greenPad).addClass('green-light')
     setTimeout(function() {
-        $(greenPad).removeClass('green-light')
+        removeLightOnAllPads();
     }, 400);
     soundGenerate('green');
 }
@@ -153,7 +156,7 @@ function greenLightAndSound() {
 function redLightAndSound() {
     $(redPad).addClass('red-light')
     setTimeout(function() {
-        $(redPad).removeClass('red-light')
+        removeLightOnAllPads();
     }, 400);
     soundGenerate('red');
 }
@@ -161,7 +164,7 @@ function redLightAndSound() {
 function yellowLightAndSound() {
     $(yellowPad).addClass('yellow-light')
     setTimeout(function() {
-        $(yellowPad).removeClass('yellow-light')
+        removeLightOnAllPads();
     }, 400);
     soundGenerate('yellow');
 }
@@ -169,7 +172,7 @@ function yellowLightAndSound() {
 function blueLightAndSound() {
     $(bluePad).addClass('blue-light')
     setTimeout(function() {
-        $(bluePad).removeClass('blue-light')
+        removeLightOnAllPads();
     }, 400);
     soundGenerate('blue');
 }
@@ -201,6 +204,12 @@ function displayModal() {
 
 function checking() {
     playerCount++;
+    console.log(playerCount);
+    if (playerCount === 2 && strictMode === true) {
+        clearInterval(playInterval);
+        $(".pad").addClass('disabled');
+        winGame();
+    }
     if (playerSequence[playerCount - 1] === sequence[playerCount - 1]) {
         if (playerSequence.length === turn) {
             randomNumber();
@@ -222,4 +231,20 @@ function checking() {
             }, 600);
         }, 400);
     }
+}
+
+function winGame() {
+    turn++;
+    $(numDisplay).text(turn - 1);
+    $(numDisplay).text("WIN!");
+    setTimeout(function() {
+        addLightsToAllPads();
+        setTimeout(function() {
+            $(winModalDisplay).text(turn - 1);
+            $('#winModal').modal('show');
+            let audio = document.getElementById("sound-win");
+            audio.currentTime = 0;
+            audio.play();
+        }, 700);
+    }, 700);
 }
