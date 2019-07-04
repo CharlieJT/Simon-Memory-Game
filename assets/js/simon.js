@@ -14,7 +14,7 @@ const redPad = document.getElementById("2");
 const yellowPad = document.getElementById("3");
 const bluePad = document.getElementById("4");
 const startButton = document.getElementById("start");
-const strictButton = document.getElementById("strict");
+const strictSwitch = document.getElementById("strict");
 const modalScroll = document.getElementById('modal-scroll')
 const startModal = document.getElementById("start-modal-button");
 const startWinModal = document.getElementById("start-modal-win-button");
@@ -49,6 +49,26 @@ $(document).ready(function() {
         setTimeout(function() {
             startPlay();
         }, 500);
+    });
+    
+    $(strictSwitch).on("click", function() {
+        if (strictSwitch.checked == true) {
+            strictMode = true;
+            turn = 1;
+            $(".pad").addClass('disabled');
+            clearInterval(playInterval);
+            if ($(numDisplay).text() == "-") {
+                $(numDisplay).text("-");
+            } else {
+                $(numDisplay).text("0");
+            }
+            setTimeout(function() {
+                removeLightOnAllPads();
+            }, 600);
+        }
+        else {
+            strictMode = false;
+        }
     });
 
 
