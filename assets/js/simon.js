@@ -34,7 +34,7 @@ $(document).ready(function() {
             scrollTop: $(linkHref).offset().top
         }, 1000);
     });
-
+    
     $(startButton).click(function() {
         clearInterval(playInterval);
         $(numDisplay).text('0');
@@ -42,6 +42,15 @@ $(document).ready(function() {
             startPlay();
         }, 500);
     });
+    
+    $(startModal).on("click", function() {
+        clearInterval(playInterval);
+        $(numDisplay).text('0');
+        setTimeout(function() {
+            startPlay();
+        }, 500);
+    });
+
 
     $(pad).click(function() {
         let padId = $(this).attr('id');
