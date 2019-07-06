@@ -208,7 +208,7 @@ function checking() {
     playerCount++;
     let playerAndCompMatch = playerSequence[playerCount - 1] === sequence[playerCount - 1];
     let playerAndCompDontMatch = playerSequence[playerCount - 1] !== sequence[playerCount - 1];
-    if (playerCount === 2 && strictMode === true && playerAndCompMatch) {
+    if (playerCount === 20 && strictMode === true && playerAndCompMatch) {
         clearInterval(playInterval);
         $(".pad").addClass('disabled');
         winGame();
