@@ -71,6 +71,8 @@ $(document).ready(function() {
 
 
     $(pad).click(function() {
+        clearTimeout(playTimeout);
+        removeLightOnAllPads();
         let padId = $(this).attr('id');
         if (padId == 1) {
             greenLightAndSound();
@@ -94,13 +96,9 @@ $(document).ready(function() {
 
 function startButtonClick() {
     clearInterval(playInterval);
-    setTimeout(function() {
-        removeLightOnAllPads();
-    }, 200);
+    removeLightOnAllPads();
     $(numDisplay).text('0');
-    setTimeout(function() {
-        startPlay();
-    }, 500);
+    startPlay();
 }
 
 function startPlay() {
@@ -153,7 +151,7 @@ function gamePlay() {
 
 function greenLightAndSound() {
     $(greenPad).addClass('green-light')
-    setTimeout(function() {
+    playTimeout = setTimeout(function() {
         removeLightOnAllPads();
     }, 400);
     soundGenerate('green');
@@ -161,7 +159,7 @@ function greenLightAndSound() {
 
 function redLightAndSound() {
     $(redPad).addClass('red-light')
-    setTimeout(function() {
+    playTimeout = setTimeout(function() {
         removeLightOnAllPads();
     }, 400);
     soundGenerate('red');
@@ -169,7 +167,7 @@ function redLightAndSound() {
 
 function yellowLightAndSound() {
     $(yellowPad).addClass('yellow-light')
-    setTimeout(function() {
+    playTimeout = setTimeout(function() {
         removeLightOnAllPads();
     }, 400);
     soundGenerate('yellow');
@@ -177,7 +175,7 @@ function yellowLightAndSound() {
 
 function blueLightAndSound() {
     $(bluePad).addClass('blue-light')
-    setTimeout(function() {
+    playTimeout = setTimeout(function() {
         removeLightOnAllPads();
     }, 400);
     soundGenerate('blue');
