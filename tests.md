@@ -355,18 +355,18 @@ unnecessary glitch with the game.
 
     **How it was fixed**:
 
-    - A `setTimeout` function with a function called `clearColor();` inside of it was added to clear the colour after a set time.
-    The `clearColor();` removes any unnecessary lighting classes that were still added to each pad.
+    - A `setTimeout` function with a function called `removeLightOnAllPads();` inside of it was added to remove the light
+    after a set time. The `removeLightOnAllPads();` removes any unnecessary lighting classes that were still added to each pad.
     <br>
 
     ``` javascript
     setTimeout(function() {
-        clearColor();
+        removeLightOnAllPads();
     }, 600);
     ```
 
     ``` javascript
-    function clearColor() {
+    function removeLightOnAllPads(); {
         $(greenPad).removeClass("green-light");
         $(redPad).removeClass("red-light");
         $(yellowPad).removeClass("yellow-light");
@@ -435,6 +435,31 @@ unnecessary glitch with the game.
     
     ``` javascript
     clearInterval(playInterval);
+    ```
+    ``` javascript
+    playInterval = setInterval(function() {
+        switch (sequence[computerCount]) {
+            case 1:
+                greenLightAndSound();
+                break;
+            case 2:
+                redLightAndSound();
+                break;
+            case 3:
+                yellowLightAndSound();
+                break;
+            case 4:
+                blueLightAndSound();
+                break;
+            default:
+                break;
+        }
+        if (sequence.length === computerCount) {
+            clearInterval(playInterval);
+            $(".pad").removeClass('disabled');
+        }
+        computerCount++;
+    }, 800);
     ```
     
 ### Bugs Unsolved
