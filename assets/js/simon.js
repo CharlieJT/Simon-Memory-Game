@@ -2,8 +2,8 @@
 
 let sequence = [];
 let playerSequence = [];
-let playInterval, playTimeout, computerCount, playerCount, turn;
 let strictMode = true;
+let playInterval, playTimeout, computerCount, playerCount, turn;
 
 // Buttons, number displays, pads & modals targetted as variables using JQuery.
 
@@ -41,15 +41,15 @@ $(document).ready(function() {
     */
 
     $(startButton).click(function() {
-        startButtonClick();
+        initializeGame();
     });
 
     $(startModal).on("click", function() {
-        startButtonClick();
+        initializeGame();
     });
 
     $(startWinModal).on("click", function() {
-        startButtonClick();
+        initializeGame();
     });
 
     /*
@@ -113,7 +113,7 @@ Function to allow the player to begin a new game, this will set everything back 
 and generate the first sequence of the game.
 */
 
-function startButtonClick() {
+function initializeGame() {
     clearInterval(playInterval);
     removeLightOnAllPads();
     $(numDisplay).text('0');
@@ -141,7 +141,7 @@ and set the player sequence back to an empty string.
 the player interval of 800 milliseconds is then ran which holds a switch statement that will
 check each of the numbers inside of the sequence array, it will produce a sound and light depending which number
 has been found in the switch statement & break after each avoiding each light and sound playing on the previous
-pad that's been selected. The number of times this will be ran is the number value of the computerCount.
+pad that's been selected. The number of times this will be ran is the number value of the computer count.
 When the array 'sequence' length matches the computer count it will then stop the play interval and allow
 the player to start clicking.
 The computer count is then incremented by 1.
@@ -153,7 +153,6 @@ function gamePlay() {
     computerCount = 0;
     playerSequence = [];
     playInterval = setInterval(function() {
-        
         switch (sequence[computerCount]) {
             case 1:
                 greenLightAndSound();
@@ -259,18 +258,33 @@ function displayModal() {
     $(loseModalDisplay).text(turn);
 }
 
-
+/*
+Function which does the entire checking of the game, this will increment the player count and has two variables assigned
+which checks if player sequence and computer sequence match and player sequence and computer sequence don't match.
+This will then apply an if statement to check each of the possible scenarios during the game and implement an
+outcome accordingly.
+*/
 
 function checking() {
     playerCount++;
-    let playerAndCompMatch = playerSequence[playerCount - 1] === sequence[playerCount - 1];
-    let playerAndCompDontMatch = playerSequence[playerCount - 1] !== sequence[playerCount - 1];
-    if (playerCount === 20 && strictMode === true && playerAndCompMatch) {
+    let playerAndCompSeqMatch = playerSequence[playerCount - 1] === sequence[playerCount - 1];
+    let playerAndCompSeqDontMatch = playerSequence[playerCount - 1] !== sequence[playerCount - 1];
+    /* 
+    This if statement checks if player has got to the 20th play count, strict mode is true and
+    the player sequence array matches the computer sequence array. if so then the play interval is stopped,
+    the pads are disabled and the winning function is run.
+    */
+    if (playerCount === 20 && strictMode && playerAndCompSeqMatch) {
         clearInterval(playInterval);
         $(".pad").addClass('disabled');
         winGame();
     }
-    else if (playerAndCompMatch) {
+    /* 
+    This statement checks to see if the player sequence array matches the computer sequence array. If it does,
+    then a new random number is pushed into the computer array, pads are displayed, number display is updated
+    to a new score and gameplay is then ran on a set timeout.
+    */
+    else if (playerAndCompSeqMatch) {
         if (playerSequence.length === turn) {
             randomNumber();
             $(".pad").addClass('disabled');
@@ -278,10 +292,16 @@ function checking() {
             setTimeout(gamePlay, 500);
         }
     }
-    else if (playerAndCompDontMatch && strictMode === false) {
+    /* 
+    This statement checks to see if the player sequence array doesn't match with the computer sequence array and strict
+    mode is not active, it will disable the pads, switch the turn back to the previous turn and light all pads,
+    this will then produce a losing sound along with "Try Again" displaying on the number display with a set timeout
+    function to split each word, it will then remove all of the colours on the pads after a set timeout of 400 milliseconds,
+    display the current score after a set timeout of 600 seconds and re-run the previous sequence again with the set timeout function.
+    */
+    else if (playerAndCompSeqDontMatch && !strictMode) {
         $(".pad").addClass('disabled');
         turn--;
-        console.log(playerCount);
         soundGenerate('lost');
         $(numDisplay).text('Try');
         addLightsToAllPads();
@@ -294,6 +314,13 @@ function checking() {
             }, 600);
         }, 600);
     }
+    /* 
+    With the only other option being to have the player sequence array not matching the computer sequence array and
+    strict mode to be true, an else statement is then implemented to say the game has been been lost in strict mode.
+    This will disable the pads, produce a losing sound, display "lost" in the number display and make all pad flash.
+    the flash is removed after a set timeout of 400 milliseconds. Then after 600 milliseconds it will display a losing,
+    modal informing the player of their score and display the score in the number display.
+    */
     else {
         $(".pad").addClass('disabled');
         soundGenerate('lost');
@@ -310,21 +337,19 @@ function checking() {
 }
 
 /* 
-This is called when the player wins the game. This will display "WIN!"
-in the number display a win modal with the maximum score.
+Function generated when the player wins the game. This will change the number display to say "WIN!",
+flash all pads and stop the player timeout to avoid the player timeout to carry on running and
+interrupting the lights generated by the pads all flashing. This will then set a timeout of 1400 milliseconds
+to generate a winning noise and display the winning modal with the maximum score.
 */
 
 function winGame() {
-    turn++;
-    $(numDisplay).text(turn - 1);
     $(numDisplay).text("WIN!");
     clearTimeout(playerTimeout);
     addLightsToAllPads();
     setTimeout(function() {
-        setTimeout(function() {
-            $(winModalDisplay).text(turn - 1);
-            $('#winModal').modal('show');
-            soundGenerate('win');
-        }, 700);
-    }, 700);
+        $(winModalDisplay).text(turn);
+        $('#winModal').modal('show');
+        soundGenerate('win');
+    }, 1400);
 }
