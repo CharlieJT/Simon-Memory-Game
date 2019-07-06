@@ -2,7 +2,7 @@
 
 let sequence = [];
 let playerSequence = [];
-let playInterval, computerCount, playerCount, turn, win;
+let playInterval, playTimeout, computerCount, playerCount, turn;
 let strictMode = true;
 
 // Buttons, number displays, pads & modals targetted as variables using JQuery.
@@ -15,7 +15,7 @@ const yellowPad = document.getElementById("3");
 const bluePad = document.getElementById("4");
 const startButton = document.getElementById("start");
 const strictSwitch = document.getElementById("strict");
-const modalScroll = document.getElementById('modal-scroll')
+const modalScroll = document.getElementById('modal-scroll');
 const startModal = document.getElementById("start-modal-button");
 const startWinModal = document.getElementById("start-modal-win-button");
 const loseModalDisplay = document.getElementById("lose-modal-display");
@@ -151,34 +151,32 @@ function gamePlay() {
 
 function greenLightAndSound() {
     $(greenPad).addClass('green-light')
-    playTimeout = setTimeout(function() {
-        removeLightOnAllPads();
-    }, 400);
+    playerTimeout();
     soundGenerate('green');
 }
 
 function redLightAndSound() {
     $(redPad).addClass('red-light')
-    playTimeout = setTimeout(function() {
-        removeLightOnAllPads();
-    }, 400);
+    playerTimeout();
     soundGenerate('red');
 }
 
 function yellowLightAndSound() {
     $(yellowPad).addClass('yellow-light')
-    playTimeout = setTimeout(function() {
-        removeLightOnAllPads();
-    }, 400);
+    playerTimeout();
     soundGenerate('yellow');
 }
 
 function blueLightAndSound() {
     $(bluePad).addClass('blue-light')
+    playerTimeout();
+    soundGenerate('blue');
+}
+
+function playerTimeout() {
     playTimeout = setTimeout(function() {
         removeLightOnAllPads();
     }, 400);
-    soundGenerate('blue');
 }
 
 function soundGenerate(color) {
@@ -208,9 +206,8 @@ function displayModal() {
 
 function checking() {
     playerCount++;
-    let playerAndCompMatch = playerSequence[playerCount - 1] === sequence[playerCount - 1]
+    let playerAndCompMatch = playerSequence[playerCount - 1] === sequence[playerCount - 1];
     let playerAndCompDontMatch = playerSequence[playerCount - 1] !== sequence[playerCount - 1];
-    console.log(playerCount);
     if (playerCount === 2 && strictMode === true && playerAndCompMatch) {
         clearInterval(playInterval);
         $(".pad").addClass('disabled');
@@ -225,7 +222,20 @@ function checking() {
         }
     }
     else if (playerAndCompDontMatch && strictMode === false) {
-        console.log('This is to be repeated')
+        $(".pad").addClass('disabled');
+        turn--;
+        console.log(playerCount);
+        soundGenerate('lost');
+        $(numDisplay).text('Try');
+        addLightsToAllPads();
+        setTimeout(function() {
+            removeLightOnAllPads();
+            $(numDisplay).text('Again');
+            setTimeout(function() {
+                $(numDisplay).text(turn);
+                setTimeout(gamePlay, 500);
+            }, 600);
+        }, 600);
     }
     else {
         $(".pad").addClass('disabled');
@@ -246,8 +256,9 @@ function winGame() {
     turn++;
     $(numDisplay).text(turn - 1);
     $(numDisplay).text("WIN!");
+    clearTimeout(playerTimeout);
+    addLightsToAllPads();
     setTimeout(function() {
-        addLightsToAllPads();
         setTimeout(function() {
             $(winModalDisplay).text(turn - 1);
             $('#winModal').modal('show');
