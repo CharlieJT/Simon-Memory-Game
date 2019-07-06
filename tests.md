@@ -430,7 +430,7 @@ unnecessary glitch with the game.
 
     - The 'clearInterval(playInterval)' was added to the 'initializeGame()' function to completely reset the game
     back to it's original setting, this was tested multiple times afterwards by clicking the button very quickly
-    multiple times, clicking it just once and clicking it slowly multiple times. The game then worked as intended.
+    multiple times, clicking it slowly multiple times and clicking it just once. The game then worked as intended.
     <br>
     
     ``` javascript
