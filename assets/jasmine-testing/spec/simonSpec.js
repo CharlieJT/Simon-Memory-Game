@@ -1,33 +1,16 @@
-describe('play function', function() {
+describe('initializeGame', function() {
 
     beforeEach(() => {
-        light = 0;
         turn = 1;
-        correct = true;
-        compTurn = true;
     });
 
-    describe('value of each variable in play function', function() {
+    describe('value of each variable in initializeGame function', function() {
 
-        it('should return light = 0', function() {
-            play();
-            expect(light).toBe(0);
-        });
-
-        it('should return turn = 1', function() {
-            play();
+        it('should return turn = 0', function() {
+            initializeGame();
             expect(turn).toBe(1);
         });
 
-        it('should return correct = true', function() {
-            play();
-            expect(correct).toBe(true);
-        });
-
-        it('should return compTurn = true', function() {
-            play();
-            expect(compTurn).toBe(true);
-        });
     });
 
     describe('classes of pads', function() {
@@ -44,7 +27,7 @@ describe('play function', function() {
 
         describe('display on number display', function() {
             it('should return number counter to equal -', function() {
-                let result = play();
+                let result = initializeGame();
                 expect($("#number-counter").text()).toEqual("-");
             });
         });
@@ -52,7 +35,7 @@ describe('play function', function() {
         describe('disabled pads', function() {
 
             it('should return pad as having class disabled', function() {
-                let result = play();
+                let result = initializeGame();
                 expect('.pad').toHaveClass('disabled');
             });
         });
@@ -60,32 +43,33 @@ describe('play function', function() {
         describe('light on pads', function() {
 
             it('should return green-pad as not having class green-light', function() {
-                let result = play();
+                let result = initializeGame();
                 expect('.green-pad').not.toHaveClass('green-light');
             });
 
             it('should return red-pad as not having class red-light', function() {
-                let result = play();
+                let result = initializeGame();
                 expect('.red-pad').not.toHaveClass('red-light');
             });
 
             it('should return yellow-pad as not having class yellow-light', function() {
-                let result = play();
+                let result = initializeGame();
                 expect('.yellow-pad').not.toHaveClass('yellow-light');
             });
 
             it('should return blue-pad as not having class blue-light', function() {
-                let result = play();
+                let result = initializeGame();
                 expect('.blue-pad').not.toHaveClass('blue-light');
             });
         });
     });
 });
 
-describe('gameTurn function', function() {
+describe('gamePlay function', function() {
 
     beforeEach(() => {
-        compTurn = false;
+        playerCount = 0;
+        computerCount = 0;
         jasmine.clock().install();
     });
 
@@ -93,16 +77,23 @@ describe('gameTurn function', function() {
         jasmine.clock().uninstall();
     });
 
-    describe('value of compTurn variable', function() {
-        it('should return compTurn = false', function() {
-            let result = gameTurn();
-            expect(compTurn).toBe(false);
+    describe('value of playerCount variable', function() {
+        it('should return playerCount variable to be 0', function() {
+            let result = gamePlay();
+            expect(playerCount).toBe(0);
+        });
+    });
+    
+    describe('value of computerCount variable', function() {
+        it('should return computerCount variable to be 0', function() {
+            let result = gamePlay();
+            expect(computerCount).toBe(0);
         });
     });
 
     describe('classes of pads', function() {
         it('should return pad as not having class disabled', function() {
-            let result = gameTurn();
+            let result = gamePlay();
             jasmine.clock().tick(600);
             expect('.pad').not.toHaveClass('disabled');
         });
@@ -111,25 +102,25 @@ describe('gameTurn function', function() {
     describe('lights on pads', function() {
 
         it('should return green-pad as having class of green-light', function() {
-            let result = gameTurn();
+            let result = gamePlay();
             jasmine.clock().tick(600);
             expect('.green-pad').not.toHaveClass('green-light');
         });
 
         it('should return red-pad as having class of red-light', function() {
-            let result = gameTurn();
+            let result = gamePlay();
             jasmine.clock().tick(600);
             expect('.red-pad').not.toHaveClass('red-light');
         });
 
         it('should return yellow-pad as having class of yellow-light', function() {
-            let result = gameTurn();
+            let result = gamePlay();
             jasmine.clock().tick(600);
             expect('.yellow-pad').not.toHaveClass('yellow-light');
         });
 
         it('should return blue-pad as having class of blue-light', function() {
-            let result = gameTurn();
+            let result = gamePlay();
             jasmine.clock().tick(600);
             expect('.blue-pad').not.toHaveClass('blue-light');
         });
@@ -150,22 +141,22 @@ describe('clearColor function', function() {
     describe('lights on pads', function() {
 
         it('should return green-pad as not having class of green-light', function() {
-            let result = clearColor();
+            let result = addLightsToAllPads();
             expect('.green-pad').not.toHaveClass('green-light');
         });
 
         it('should return red-pad as not having class of red-light', function() {
-            let result = clearColor();
+            let result = addLightsToAllPads();
             expect('.red-pad').not.toHaveClass('red-light');
         });
 
         it('should return yellow-pad as not having class of yellow-light', function() {
-            let result = clearColor();
+            let result = addLightsToAllPads();
             expect('.yellow-pad').not.toHaveClass('yellow-light');
         });
 
         it('should return blue-pad as not having class of blue-light', function() {
-            let result = clearColor();
+            let result = addLightsToAllPads();
             expect('.blue-pad').not.toHaveClass('blue-light');
         });
     });
@@ -186,85 +177,47 @@ describe('lightAllColors function', function() {
     describe('lights on pads', function() {
 
         it('should return green-pad as having class of green-light', function() {
-            let result = clearColor();
+            let result = removeLightOnAllPads();
             expect('.green-pad').toHaveClass('green-light');
         });
 
         it('should return red-pad as having class of red-light', function() {
-            let result = clearColor();
+            let result = removeLightOnAllPads();
             expect('.red-pad').toHaveClass('red-light');
         });
 
         it('should return yellow-pad as having class of yellow-light', function() {
-            let result = clearColor();
+            let result = removeLightOnAllPads();
             expect('.yellow-pad').toHaveClass('yellow-light');
         });
 
         it('should return blue-pad as having class of blue-light', function() {
-            let result = clearColor();
+            let result = removeLightOnAllPads();
             expect('.blue-pad').toHaveClass('blue-light');
         });
     });
 });
 
-describe('check function', function() {
-    beforeEach(() => {
-        compTurn = true;
-        sound = true;
-        correct = true;
-        light = 0;
-    });
-
-    describe('value of each variable in check function', function() {
-
-        it('should return compTurn = false', function() {
-            check();
-            expect(compTurn).toBe(true);
-        });
-
-        it('should return sound = false', function() {
-            check();
-            expect(sound).toBe(true);
-        });
-
-        it('should return correct = true', function() {
-            check();
-            expect(correct).toBe(true);
-        });
-
-        it('should return light = 0', function() {
-            check();
-            expect(light).toBe(0);
-        });
-    });
-    
-    describe('disabled pads', function() {
-
-        it('should return pad as having class disabled', function() {
-            let result = play();
-            expect('.pad').not.toHaveClass('disabled');
-        });
-    });
-
+describe('checking function', function() {
     describe('light on pads', function() {
 
         it('should return green-pad as not having class green-light', function() {
-            let result = play();
+            let result = initializeGame();
             expect('.green-pad').not.toHaveClass('green-light');
         });
 
         it('should return red-pad as not having class red-light', function() {
-            let result = play();
+            let result = initializeGame();
             expect('.red-pad').not.toHaveClass('red-light');
         });
 
         it('should return yellow-pad as not having class yellow-light', function() {
-            let result = play();
+            let result = initializeGame();
             expect('.yellow-pad').not.toHaveClass('yellow-light');
         });
 
         it('should return blue-pad as not having class blue-light', function() {
-            let result = play();
+            let result = initializeGame();
             expect('.blue-pad').not.toHaveClass('blue-light');
         });
     });
