@@ -366,7 +366,7 @@ unnecessary glitch with the game.
     ```
 
     ``` javascript
-    function removeLightOnAllPads(); {
+    function removeLightOnAllPads() {
         $(greenPad).removeClass("green-light");
         $(redPad).removeClass("red-light");
         $(yellowPad).removeClass("yellow-light");
