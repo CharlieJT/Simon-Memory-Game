@@ -381,15 +381,17 @@ unnecessary glitch with the game.
 
     **How it was fixed**:
 
-    - A built-in `currentTime` function was added before the built-in `play` function so that the new audio file was reset to 0, 
+    - A built-in `currentTime` function was added before the built-in `soundGenerate` function so that the new audio file was reset to 0, 
     allowing it to be played from the start. This meant no matter how quickly the next pad was clicked after the previous. 
     The sound will still be produced.
     <br>
     
     ``` javascript
-    let audio = document.getElementById("sound-green");
-    audio.currentTime = 0;
-    audio.play();
+    function soundGenerate(soundPerformed) {
+        let sound = $(`#sound-${soundPerformed}`)[0];
+        sound.currentTime = 0;
+        sound.play();
+    }
     ```
     
 4. #### A for loop was limiting how many plays you could play.
@@ -406,16 +408,33 @@ unnecessary glitch with the game.
 
     **How it was fixed**:
 
-    - A function called `getRandomNumber();` was created which took a random number and pushed it into the sequence.
+    - A function called `randomNumber();` was created which took a random number and pushed it into the sequence.
     I then used this function in my `play();` function when beginning a game and in my `turn == playerSequence.length && correct && !win`
     if statement. This was a number better approach as there were no limits made by a for loop.
     <br>
     
     ``` javascript
-    function getRandomNumber() {
-        sequence.push(Math.floor(Math.random() * 4) + 1);
+    function randomNumber() {
+        randomNum = Math.ceil(Math.random() * 4);
+        sequence.push(randomNum);
         console.log(sequence);
     }
+    ```
+    
+5. #### A bug when the start button was clicked very quickly multiple times:
+    
+    When the start button was clicked multiple times very quickly, this resulted in the game pads to then
+    be performed at random times when playing the games causing it to glitch.
+
+    **How it was fixed**:
+
+    - The 'clearInterval(playInterval)' was added to the 'initializeGame()' function to completely reset the game
+    back to it's original setting, this was tested multiple times afterwards by clicking the button very quickly
+    multiple times, clicking it just once and clicking it slowly multiple times. The game then worked as intended.
+    <br>
+    
+    ``` javascript
+    clearInterval(playInterval);
     ```
     
 ### Bugs Unsolved
