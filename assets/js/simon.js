@@ -36,8 +36,8 @@ $(document).ready(function() {
     });
 
     /* 
-    The startButtonClick function is assigned to each of these 3 click functions to allow the player
-    to begin a new game upon clicking each of the buttons
+    The startButtonClick jQuery function is assigned to each of these 3 click functions to allow the player
+    to begin a new game upon clicking each of the buttons.
     */
 
     $(startButton).click(function() {
@@ -53,7 +53,7 @@ $(document).ready(function() {
     });
 
     /*
-    jQuery function to check to see if strict slider is true or false when the slider is clicked.
+    jQuery function to check to see if the strict slider is true or false when the slider is clicked.
     If strict mode is true, it will return everything back to default setting ready to begin a new game.
     */
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
     });
 
     /* 
-    Events taking place when each of the pads are clicked using jQuery.
+    Events taking place when each of the pads is clicked using jQuery.
     On click on each of the pads, it will push a number into the player sequence array depending on which has been clicked.
     It then runs a light & sound function depending on colour.
     */
@@ -125,7 +125,7 @@ function initializeGame() {
 }
 
 /*
-This function will select a number at random from 1 to 4 and push that number into the sequence array
+This function will select a number at random from 1 to 4 and push that number into the sequence array.
 */
 
 function randomNumber() {
@@ -135,13 +135,13 @@ function randomNumber() {
 }
 
 /* 
-function is run when it's the computers turn to generate a sequence.
+The Function is run when it's the computers turn to generate a sequence.
 The turn will increment the turn by 1, set the player count and the computer count back to 0
 and set the player sequence back to an empty string.
-the player interval of 800 milliseconds is then ran which holds a switch statement that will
-check each of the numbers inside of the sequence array, it will produce a sound and light depending which number
+the player interval of 800 milliseconds is then run which holds a switch statement that will
+check each of the numbers inside of the sequence array, it will produce a sound and light depending on which number
 has been found in the switch statement & break after each avoiding each light and sound playing on the previous
-pad that's been selected. The number of times this will be ran is the number value of the computer count.
+pad that's been selected. The number of times this will be run is the number value of the computer count.
 When the array 'sequence' length matches the computer count it will then stop the play interval and allow
 the player to start clicking.
 The computer count is then incremented by 1.
@@ -178,7 +178,7 @@ function gamePlay() {
 }
 
 /* 
-These 4 Functions are where the sounds & lights are being generated.
+These 4 functions are where the sounds & lights are being generated.
 */
 
 function greenLightAndSound() {
@@ -206,7 +206,7 @@ function blueLightAndSound() {
 }
 
 /* 
-Function where the light of all of the pads are being removed, this has a timeout function that will
+This function where the light of all of the pads are being removed, this has a timeout function that will
 remove all lights after 400 milliseconds.
 */
 
@@ -217,7 +217,7 @@ function playerTimeout() {
 }
 
 /*
-Function where all of the sounds are generated. This takes an argument of soundPerformed and wherever the function
+This function where all of the sounds are generated. This takes an argument of 'soundPerformed' and wherever the function
 is called, it will take the argument of whatever sound needs to be implemented after 'sound-'.
 */
 
@@ -228,8 +228,8 @@ function soundGenerate(soundPerformed) {
 }
 
 /* 
-This returns all of the colours back to their original state from being flashed by removing
-class name through jQuery. 
+This function returns all of the colours back to their original state from being flashed by removing
+the light class name through jQuery. 
 */
 
 function removeLightOnAllPads() {
@@ -239,7 +239,7 @@ function removeLightOnAllPads() {
     $(bluePad).removeClass("blue-light");
 }
 
-// This will flash all of the colours at the same time using jQuery.
+// This function will flash all of the colours at the same time using jQuery.
 
 function addLightsToAllPads() {
     $(greenPad).addClass("green-light");
@@ -249,7 +249,7 @@ function addLightsToAllPads() {
 }
 
 /* 
-Function to order game over modal to appear with final score when the game is lost.
+This function is to order a game over modal to appear with the final score when the game is lost.
 This will show the modal & show the final score using jQuery.
 */
 
@@ -259,8 +259,8 @@ function displayModal() {
 }
 
 /*
-Function which does the entire checking of the game, this will increment the player count and has two variables assigned
-which checks if player sequence and computer sequence match and player sequence and computer sequence don't match.
+This is the function which does the entire checking of the game, this will increment the player count and has two variables assigned
+which checks if the player sequence and computer sequence match and player sequence and computer sequence don't match.
 This will then apply an if statement to check each of the possible scenarios during the game and implement an
 outcome accordingly.
 */
@@ -270,7 +270,7 @@ function checking() {
     let playerAndCompSeqMatch = playerSequence[playerCount - 1] === sequence[playerCount - 1];
     let playerAndCompSeqDontMatch = playerSequence[playerCount - 1] !== sequence[playerCount - 1];
     /* 
-    This if statement checks if player has got to the 20th play count, strict mode is true and
+    This if statement checks if the player has got to the 20th play count, strict mode is true and
     the player sequence array matches the computer sequence array. if so then the play interval is stopped,
     the pads are disabled and the winning function is run.
     */
@@ -282,7 +282,7 @@ function checking() {
     /* 
     This statement checks to see if the player sequence array matches the computer sequence array. If it does,
     then a new random number is pushed into the computer array, pads are displayed, number display is updated
-    to a new score and gameplay is then ran on a set timeout.
+    to a new score and gameplay is then run on a set timeout.
     */
     else if (playerAndCompSeqMatch) {
         if (playerSequence.length === turn) {
@@ -316,9 +316,9 @@ function checking() {
     }
     /* 
     With the only other option being to have the player sequence array not matching the computer sequence array and
-    strict mode to be true, an else statement is then implemented to say the game has been been lost in strict mode.
+    strict mode to be true, an else statement is then implemented to say the game has been lost in strict mode.
     This will disable the pads, produce a losing sound, display "lost" in the number display and make all pad flash.
-    the flash is removed after a set timeout of 400 milliseconds. Then after 600 milliseconds it will display a losing,
+    the flash is removed after a set timeout of 400 milliseconds. Then after 600 milliseconds, it will display a losing,
     modal informing the player of their score and display the score in the number display.
     */
     else {
