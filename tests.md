@@ -462,6 +462,40 @@ unnecessary glitch with the game.
     }, 800);
     ```
     
+5. ####  Overlapping lights & sounds when a sequence was generated:
+    
+    There was an issue with sounds and lights being produced from a previously generated pad
+    whilst a new pad sound was being generated, causing the sounds and lights to overlap.
+
+    **How it was fixed**:
+
+    A break statement was added to each case inside of the switch statement so that with each sound that
+    was being performed, it would then break out of the statement and be ready to select a new case without
+    there being an overlap in lights and sounds.
+    <br>
+    
+    ``` javascript
+   break;
+    ```
+    ``` javascript
+    switch (sequence[computerCount]) {
+        case 1:
+            greenLightAndSound();
+            break;
+        case 2:
+            redLightAndSound();
+            break;
+        case 3:
+            yellowLightAndSound();
+            break;
+        case 4:
+            blueLightAndSound();
+            break;
+        default:
+            break;
+    }
+    ```
+    
 ### Bugs Unsolved
 
 1. #### Sounds being produced in Safari.
