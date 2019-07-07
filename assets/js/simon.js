@@ -21,7 +21,10 @@ const startWinModal = document.getElementById("start-modal-win-button");
 const loseModalDisplay = document.getElementById("lose-modal-display");
 const winModalDisplay = document.getElementById("win-modal-display");
 
-// Whatever code is written inside the JQuery ready method will run once the page Document Object Modal (DOM) is ready to execute JavaScript code.
+/* 
+Whatever code is written inside the JQuery ready method will run once the page Document Object Modal (DOM)
+is ready to execute JavaScript code.
+*/
 
 $(document).ready(function() {
 
